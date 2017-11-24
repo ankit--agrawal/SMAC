@@ -5,8 +5,8 @@
 import sys, os, time, re
 from subprocess import Popen, PIPE, check_output, CalledProcessError
 
-#cmd = ['../smack/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. laptop VM
-cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. emulab
+cmd = ['/home/ankit--agrawal/smack/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. laptop VM
+#cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. emulab
 
 vo = ['-/trackAllVars', '-/staticInlining', '-/di', '-/bopt:proverOpt:OPTIMIZE_FOR_BV=true', '-/bopt:boolControlVC', '-/useArrayTheory']
 configMap = {'-verifier-options': ''}
@@ -41,17 +41,17 @@ for name, value in configMap.items():
 		cmd.append(value.replace('+',' '))
 	else: cmd.append(str(value))
 
-#print 'cmd= ',cmd
+print 'cmd= ',cmd
 
 
 #computing runtime
 start_time = time.time()
 try:
 	#stdout_ = check_output(cmd)
-	io = Popen(cmd, stdout = PIPE, stderr = PIPE, shell = True)
+	io = Popen(cmd, stdout = PIPE, stderr = PIPE)
 	stdout_, stderr_ = io.communicate()
 	#print 'stdout_: ',stdout_
-	#print 'stderr_: ',stderr_
+	print 'stderr_: ',stderr_
 except CalledProcessError as e:
 	stdout_ = e.output
 	#print 'stdout_: ',stdout_
@@ -59,8 +59,8 @@ runtime = time.time() - start_time
 
 # parsing of SMACK's output.
 status = 'CRASHED'
-for line in stdout_.splitlines():
-	print 'line: ', line
+for line in stderr_.splitlines():
+	#print 'line: ', line
 	if 'SMACK timed out' in line:
 		status = 'TIMEOUT'
 		break
