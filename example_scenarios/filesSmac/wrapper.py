@@ -9,7 +9,7 @@ cmd = ['/home/ankit--agrawal/smack/smack/bin/smack', '-x=svcomp', '--time-limit'
 #cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. emulab
 
 vo = ['-/trackAllVars', '-/staticInlining', '-/di', '-/bopt:proverOpt:OPTIMIZE_FOR_BV=true', '-/bopt:boolControlVC', '-/useArrayTheory']
-configMap = {'-verifier-options': ''}
+configMap = {'-verifier-options': ''}; status = None
 
 # Read in first 5 arguments.
 instance = sys.argv[1]
@@ -47,19 +47,19 @@ print 'cmd= ',cmd
 #computing runtime
 start_time = time.time()
 try:
-	#stdout_ = check_output(cmd)
-	io = Popen(cmd, stdout = PIPE, stderr = PIPE)
-	stdout_, stderr_ = io.communicate()
-	#print 'stdout_: ',stdout_
-	print 'stderr_: ',stderr_
+	stdout_ = check_output(cmd)
+	#io = Popen(cmd, stdout = PIPE, stderr = PIPE)
+	#stdout_, stderr_ = io.communicate()
+	print 'stdout_: ',stdout_
+	#print 'stderr_: ',stderr_
 except CalledProcessError as e:
 	stdout_ = e.output
 	#print 'stdout_: ',stdout_
 runtime = time.time() - start_time
 
 # parsing of SMACK's output.
-status = 'CRASHED'
-for line in stderr_.splitlines():
+
+for line in stdout_.splitlines():
 	#print 'line: ', line
 	if 'SMACK timed out' in line:
 		status = 'TIMEOUT'
@@ -73,13 +73,13 @@ for line in stderr_.splitlines():
 		status = 'SAT';
 		break
 
+if status == None: status = 'CRASHED'
 '''
 #setting up <quality>
 if status == 'SAT': quality = runtime;
 if status == 'UNSAT': quality = runtime + cutoff;
 else: quality = cutoff;
-'''
-if status == 'CRASHED': runtime = 10 * cutoff
+if status == 'CRASHED': runtime = 10 * cutoff'''
 
 # Output result for SMAC.
 print("Result for SMAC: %s, %s, 0, 0, %s" % (status, str(runtime), str(seed)))
