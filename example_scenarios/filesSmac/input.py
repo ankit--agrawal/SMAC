@@ -4,7 +4,7 @@
 
 import glob2, pickle, os
 from math import floor
-directory_path = '../../../../../benchmark_testing/' #the path from input.py
+directory_path = '/scratch/benchmark_testing/' #the path from input.py
 pathname = ['unreach', 'ldv']; files = [0]*len(pathname)
 extension = 'c'
 
@@ -17,13 +17,13 @@ for i in range(len(pathname)):
 
 	for item in files[i][:int(floor(len(files[i])))]:
 		#print>>file_train,'example_scenarios/smack/filesSmac/'+item
-		print>>file_train,item[14:] 
+		print>>file_train,item
 
 	'''remove the /2 above if validation --false while running smac and comment the for loop below'''
 
 	for item in files[i][int(floor(len(files[i])/2)):]:
 		#print>>file_test,'example_scenarios/smack/filesSmac/'+item
-		print>>file_test,item[14:]
+		print>>file_test,item
 
 	file_train.close()
 	file_test.close()

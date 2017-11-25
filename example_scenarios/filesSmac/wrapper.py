@@ -9,7 +9,7 @@ from subprocess import Popen, PIPE, check_output, CalledProcessError
 cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. emulab
 
 vo = ['-/trackAllVars', '-/staticInlining', '-/di', '-/bopt:proverOpt:OPTIMIZE_FOR_BV=true', '-/bopt:boolControlVC', '-/useArrayTheory']
-configMap = {'-verifier-options': ''}; status = None
+configMap = {'-verifier-options': ''}; status = 'CRASHED'
 
 # Read in first 5 arguments.
 instance = sys.argv[1]
@@ -47,30 +47,19 @@ print 'cmd= ',cmd
 #computing runtime
 start_time = time.time()
 try:
-<<<<<<< HEAD
 	stdout_ = check_output(cmd)
 	#io = Popen(cmd, stdout = PIPE, stderr = PIPE)
 	#stdout_, stderr_ = io.communicate()
 	print 'stdout_: ',stdout_
 	#print 'stderr_: ',stderr_
-=======
-	#stdout_ = check_output(cmd)
-	io = Popen(cmd, stdout = PIPE, stderr = PIPE)
-	stdout_, stderr_ = io.communicate()
-	print 'stdout_: ',stdout_
-	print 'stderr_: ',stderr_
->>>>>>> a9e87fd36aa6b59f20943c41f2f087702dc6b479
+
 except CalledProcessError as e:
 	stdout_ = e.output
 	#print 'stdout_: ',stdout_
 runtime = time.time() - start_time
 
 # parsing of SMACK's output.
-<<<<<<< HEAD
 
-=======
-status = 'CRASHED'
->>>>>>> a9e87fd36aa6b59f20943c41f2f087702dc6b479
 for line in stdout_.splitlines():
 	#print 'line: ', line
 	if 'SMACK timed out' in line:
@@ -84,14 +73,6 @@ for line in stdout_.splitlines():
 		or ('SMACK found no errors' in line and 'false-unreach' in instance):
 		status = 'SAT';
 		break
-
-if status == None: status = 'CRASHED'
-'''
-#setting up <quality>
-if status == 'SAT': quality = runtime;
-if status == 'UNSAT': quality = runtime + cutoff;
-else: quality = cutoff;
-if status == 'CRASHED': runtime = 10 * cutoff'''
 
 # Output result for SMAC.
 print("Result for SMAC: %s, %s, 0, 0, %s" % (status, str(runtime), str(seed)))
