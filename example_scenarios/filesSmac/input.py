@@ -4,7 +4,7 @@
 
 import glob2, pickle, os
 from math import floor
-directory_path = '/scratch/benchmark_testing/' #the path from input.py
+directory_path = '/benchmark_testing/' #the path from input.py
 pathname = ['unreach', 'ldv']; files = [0]*len(pathname)
 extension = 'c'
 

@@ -5,8 +5,8 @@
 import sys, os, time, re
 from subprocess import Popen, PIPE, check_output, CalledProcessError
 
-#cmd = ['/home/ankit--agrawal/smack/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. laptop VM
-cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. emulab
+cmd = ['/home/ankit/smack/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. laptop VM
+#cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. emulab
 
 vo = ['-/trackAllVars', '-/staticInlining', '-/di', '-/bopt:proverOpt:OPTIMIZE_FOR_BV=true', '-/bopt:boolControlVC', '-/useArrayTheory']
 configMap = {'-verifier-options': ''}; status = 'CRASHED'
