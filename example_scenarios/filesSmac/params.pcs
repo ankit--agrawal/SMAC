@@ -1,6 +1,10 @@
 unroll categorical {32} [32]
+bit-precise categorical {True, False} [True]
 /staticInlining categorical {True, False} [True]
 /trackAllVars categorical {True, False} [True]
 /useArrayTheory categorical {True, False} [True]
 /di categorical {True, False} [True]
 /bopt:boolControlVC categorical {True, False} [True]
+/bopt:z3opt:SMT.MBQI categorical {True, False} [True]
+/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS= integer [0,32767] [1000]
+/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS | /bopt:z3opt:SMT.MBQI == True

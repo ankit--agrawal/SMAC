@@ -8,7 +8,7 @@ from subprocess import Popen, PIPE, check_output, CalledProcessError
 cmd = ['/home/ankit/smack/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. laptop VM
 #cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. emulab
 
-vo = ['-/trackAllVars', '-/staticInlining', '-/di', '-/bopt:proverOpt:OPTIMIZE_FOR_BV=true', '-/bopt:boolControlVC', '-/useArrayTheory']
+vo = ['-/trackAllVars', '-/staticInlining', '-/di', '-/bopt:proverOpt:OPTIMIZE_FOR_BV', '-/bopt:boolControlVC', '-/useArrayTheory', '-/si', '-/unifyMaps', '-/bopt:z3opt:SMT.MBQI']
 configMap = {'-verifier-options': ''}; status = 'CRASHED'
 
 # Read in first 5 arguments.
@@ -28,6 +28,9 @@ for i in range(0,len(params),2):
 		if params[i+1] == 'True':
 			index = vo.index(params[i])
 			configMap['-verifier-options'] += '+'+params[i][1:]
+	if params[i] == '/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS=':
+		configMap['-verifier-options'] += '+'+params[i][1:]
+		configMap['-verifier-options'] += '+'+params[i+1][1:]
 	else:
 		configMap[params[i]] = params[i+1]
 
@@ -35,11 +38,17 @@ for i in range(0,len(params),2):
 
 for name, value in configMap.items():
 	cmd.append('-' + name)
+	if name == '-unroll':
+		cmd.append(str(value))
+	elif name == '-bit-precise' and value != 'True':
+		cmd.remove('--bit-precise')
+
+	#dealing with values for -verifier-options
 	if value == '/N':
 		cmd.append('')
 	elif '+' in value:
 		cmd.append(value.replace('+',' '))
-	else: cmd.append(str(value))
+		
 
 print 'cmd= ',cmd
 
