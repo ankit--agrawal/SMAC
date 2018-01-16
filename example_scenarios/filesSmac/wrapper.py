@@ -21,16 +21,17 @@ cmd.append(instance)
 
 # Read in parameter setting and build a param_name->param_value map.
 params = sys.argv[6:]
+for i in range(len(params)):
+	print "{0}:{1}".format(i,params[i])
 
 #configMap = dict((name, value) for name, value in zip(params[::2], params[1::2]))
 for i in range(0,len(params),2):
 	if params[i] in vo:
 		if params[i+1] == 'True':
-			index = vo.index(params[i])
-			configMap['-verifier-options'] += '+'+params[i][1:]
-	if params[i] == '/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS=':
-		configMap['-verifier-options'] += '+'+params[i][1:]
-		configMap['-verifier-options'] += '+'+params[i+1][1:]
+			#index = vo.index(params[i])
+			configMap['-verifier-options'] += '+'+params[i]
+	elif params[i] == '/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS':
+		configMap['-verifier-options'] += '+'+'-/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS=' + params[i+1]
 	else:
 		configMap[params[i]] = params[i+1]
 
