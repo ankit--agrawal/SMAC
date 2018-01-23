@@ -5,10 +5,10 @@
 import sys, os, time, re
 from subprocess import Popen, PIPE, check_output, CalledProcessError
 
-cmd = ['/home/ankit/smack/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. laptop VM
+cmd = ['/home/ankit/smack/smack/bin/smack', '-x=svcomp', '--time-limit', '1800'] #smack path w.r.t. laptop VM
 #cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. emulab
 
-vo = ['-/trackAllVars', '-/staticInlining', '-/di', '-/bopt:proverOpt:OPTIMIZE_FOR_BV', '-/bopt:boolControlVC', '-/useArrayTheory', '-/si', '-/unifyMaps', '-/bopt:z3opt:SMT.MBQI']
+vo = ['-/trackAllVars', '-/staticInlining', '-/di', '-/bopt:proverOpt:OPTIMIZE_FOR_BV', '-/bopt:boolControlVC', '-/si', '-/unifyMaps', '-/bopt:z3opt:SMT.MBQI']
 configMap = {'-verifier-options': ''}; status = 'CRASHED'
 
 # Read in first 5 arguments.
@@ -27,7 +27,12 @@ for i in range(len(params)):
 '''
 #configMap = dict((name, value) for name, value in zip(params[::2], params[1::2]))
 for i in range(0,len(params),2):
-	if params[i] in vo:
+	if params[i] == '-/useArrayTheoryCheck':
+		if params[i+1] == '1':
+			configMap['-verifier-options'] += '+'+'/useArrayTheory'
+		if params[i+1] == '2':
+			configMap['-verifier-options'] += '+'+'/noArrayTheory'
+	elif params[i] in vo:
 		if params[i+1] == 'True':
 			#index = vo.index(params[i])
 			configMap['-verifier-options'] += '+'+params[i][1:]
@@ -50,7 +55,7 @@ for name, value in configMap.items():
 		cmd.append('')
 	elif '+' in value:
 		cmd.append(value.replace('+',' '))
-		
+
 
 print 'cmd= ',cmd
 

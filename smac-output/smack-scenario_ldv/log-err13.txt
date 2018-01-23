@@ -1,0 +1,18 @@
+10:39:31.504 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/home/ankit/smac" ;  example_scenarios/filesSmac/wrapper.py /benchmark_testing/ldv/linux-4.2-rc1.tar.xz-32_7a-drivers--net--ethernet--broadcom--tg3.ko-entry_point_true-unreach-call.cil.out.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/di 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '2' -bit-precise 'False' -unroll '32'  
+10:39:31.507 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 2 lines of output we saw were:
+10:39:31.507 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > cmd=  ['/home/ankit/smack/smack/bin/smack', '-x=svcomp', '--time-limit', '1800', '/benchmark_testing/ldv/linux-4.2-rc1.tar.xz-32_7a-drivers--net--ethernet--broadcom--tg3.ko-entry_point_true-unreach-call.cil.out.c', '--verifier-options', ' /di /staticInlining /trackAllVars', '--/useArrayTheoryCheck', '--unroll', '32']
+10:39:31.507 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 1.53709983826, 0, 0, -1
+10:39:38.332 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - Message: First Run Crashed : [<Instance:450, Seed:-1, Config:0x000B, Kappa:2000.0, Execution Config: 0x0001> ==> <CRASHED, 1.53709983826, 0.0, 0.0, -1> W:(2.336)]
+10:39:38.334 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - A serious problem occured during target algorithm execution and we are aborting execution 
+ca.ubc.cs.beta.aeatk.targetalgorithmevaluator.exceptions.TargetAlgorithmAbortException: First Run Crashed : [<Instance:450, Seed:-1, Config:0x000B, Kappa:2000.0, Execution Config: 0x0001> ==> <CRASHED, 1.53709983826, 0.0, 0.0, -1> W:(2.336)]
+	at ca.ubc.cs.beta.aeatk.targetalgorithmevaluator.decorators.safety.AbortOnFirstRunCrashTargetAlgorithmEvaluator.validate(AbortOnFirstRunCrashTargetAlgorithmEvaluator.java:59) ~[aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.targetalgorithmevaluator.decorators.safety.AbortOnFirstRunCrashTargetAlgorithmEvaluator.access$000(AbortOnFirstRunCrashTargetAlgorithmEvaluator.java:23) ~[aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.targetalgorithmevaluator.decorators.safety.AbortOnFirstRunCrashTargetAlgorithmEvaluator$1.onSuccess(AbortOnFirstRunCrashTargetAlgorithmEvaluator.java:80) ~[aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.targetalgorithmevaluator.base.cli.CommandLineTargetAlgorithmEvaluator$1$1.run(CommandLineTargetAlgorithmEvaluator.java:164) ~[aeatk.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1152) ~[na:1.7.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:622) ~[na:1.7.0_151]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.7.0_151]
+10:39:38.395 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - We tried to call the target algorithm wrapper, but this call failed.
+10:39:38.395 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - The problem is (most likely) somewhere in the wrapper or with the arguments to SMAC.
+10:39:38.395 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - The easiest way to debug this problem is to manually execute the call we tried and see why it did not return the correct result
+10:39:38.395 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - The required output of the wrapper is something like "Result for ParamILS: x,x,x,x,x".);
