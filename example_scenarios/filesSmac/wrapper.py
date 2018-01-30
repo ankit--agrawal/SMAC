@@ -81,14 +81,11 @@ for line in stdout_.splitlines():
 	if 'SMACK timed out' in line:
 		status = 'TIMEOUT'
 		break
-	elif ('SMACK found an error' in line and 'false-unreach' in instance) \
-		or ('SMACK found no errors' in line and 'true-unreach' in instance):
+	elif ('SMACK found an error' in line) \
+		or ('SMACK found no errors'):
 		status = 'SAT';
 		break
-	elif ('SMACK found an error' in line and 'true-unreach' in instance) \
-		or ('SMACK found no errors' in line and 'false-unreach' in instance):
-		status = 'SAT';
-		break
+	else: status = 'CRASHED';
 
 # Output result for SMAC.
 print("Result for SMAC: %s, %s, 0, 0, %s" % (status, str(runtime), str(seed)))
