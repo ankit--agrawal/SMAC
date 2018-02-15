@@ -15,7 +15,7 @@ def data_structure(result):
 		# ---- check if 'run' has attributes, 'name' and 'properties' and then begin the data-structure
 		if run.hasAttribute('name'):
 			filename = str(run.getAttribute('name'))
-			g.write('/'+ filename + '\n')
+			g.write(filename + '\n')
 
 		# ---- find <tag> = 'column' as the child of <tag> = 'run'
 		columns = run.getElementsByTagName('column')
@@ -25,9 +25,9 @@ def data_structure(result):
 			if str(column.getAttribute('title')) == 'status':
 				if str(column.getAttribute('value')) == 'true' or str(column.getAttribute('value')) == 'false(reach)':
 					#print str(column.getAttribute('value'))
-					h.write('/' + filename + '\n')
+					h.write(filename + '\n')
 				else:
-					e.write('/' + filename + '\n')
+					e.write(filename + '\n')
 
 #===============================    creating a list of .xml files   ======================================================
 content = [line.rstrip('\n') for line in open('xml_files.txt')]
