@@ -1,7 +1,8 @@
 #!/usr/bin/env python2.7
 
-# Example call from SMAC root:
-# ./examples/smack/wrapper.py examples/smack/.c file "" 30.0 2147483647 1234 --unroll 1
+#single run
+#./smac --shared-model-mode true --scenario-file example_scenarios/filesSmac/ldv/smack-scenario_ldv.txt --seed 1 --validation false
+
 import sys, os, time, re
 from subprocess import Popen, PIPE, check_output, CalledProcessError
 
@@ -25,6 +26,7 @@ params = sys.argv[6:]
 for i in range(len(params)):
 	print "{0}:{1}".format(i,params[i])
 '''
+
 #configMap = dict((name, value) for name, value in zip(params[::2], params[1::2]))
 for i in range(0,len(params),2):
 	if params[i] == '-/useArrayTheoryCheck':
@@ -34,11 +36,11 @@ for i in range(0,len(params),2):
 			configMap['-verifier-options'] += '+'+'/noArrayTheory'
 	elif params[i] == '-/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS':
 		configMap['-verifier-options'] += '+'+'/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS=' + params[i+1]
-	elif params[i] == '/bopt:z3opt:SMT.MBQI':
+	elif params[i] == '-/bopt:z3opt:SMT.MBQI':
 		if params[i+1] == 'True':
-			configMap['-verifier-options'] += '/bopt:z3opt:SMT.MBQI=true'
+			configMap['-verifier-options'] += '+'+'/bopt:z3opt:SMT.MBQI=true'
 		else:
-			configMap['-verifier-options'] += '/bopt:z3opt:SMT.MBQI=false'
+			configMap['-verifier-options'] += '+'+'/bopt:z3opt:SMT.MBQI=false'
 	elif params[i] in vo:
 		if params[i+1] == 'True':
 			#index = vo.index(params[i])
@@ -83,14 +85,18 @@ runtime = time.time() - start_time
 
 for line in stdout_.splitlines():
 	#print 'line: ', line
-	if 'SMACK timed out' in line:
+	if 'SMACK timed out' or 'SMACK result is unknown' in line:
 		status = 'TIMEOUT'
+		runtime = 4000
 		break
-	elif ('SMACK found an error' in line) \
-		or ('SMACK found no errors'):
+	elif (('SMACK found an error' in line) and ('false-unreach' in instance)) \
+		or (('SMACK found no errors') and ('true-unreach' in instance)):
 		status = 'SAT';
 		break
-	else: status = 'CRASHED';
+	else:
+		status = 'UNSAT';
+		runtime = 2500
 
 # Output result for SMAC.
+
 print("Result for SMAC: %s, %s, 0, 0, %s" % (status, str(runtime), str(seed)))
