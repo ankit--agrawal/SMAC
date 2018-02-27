@@ -85,9 +85,8 @@ runtime = time.time() - start_time
 
 for line in stdout_.splitlines():
 	#print 'line: ', line
-	if 'SMACK timed out' or 'SMACK result is unknown' in line:
+	if 'SMACK timed out' in line:
 		status = 'TIMEOUT'
-		runtime = 4000
 		break
 	elif (('SMACK found an error' in line) and ('false-unreach' in instance)) \
 		or (('SMACK found no errors') and ('true-unreach' in instance)):
@@ -95,7 +94,6 @@ for line in stdout_.splitlines():
 		break
 	else:
 		status = 'UNSAT';
-		runtime = 2500
 
 # Output result for SMAC.
 
