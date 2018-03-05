@@ -16778,7 +16778,7 @@
       "algo-pcs" : {
         "@pcs-id" : 2,
         "pcs-filename" : "/home/ankit/smac/example_scenarios/filesSmac/params.pcs",
-        "pcs-text" : "unroll categorical {16} [16]\nbit-precise categorical {True, False} [False]\n/staticInlining categorical {True, False} [True]\n/trackAllVars categorical {True, False} [True]\n/useArrayTheoryCheck categorical {0,1,2} [1]\n/di categorical {True, False} [True]\n/bopt:boolControlVC categorical {True, False} [False]\n/bopt:z3opt:SMT.MBQI categorical {True, False} [True]\n/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS integer [0,32767] [1000]\n/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS | /bopt:z3opt:SMT.MBQI == True\n",
+        "pcs-text" : "unroll categorical {16} [16]\nbit-precise categorical {True, False} [False]\n/staticInlining categorical {True, False} [True]\n/trackAllVars categorical {True, False} [True]\n/useArrayTheoryCheck categorical {0,1,2} [1]\n/di categorical {True, False} [True]\n/noCallTreeReuse {True, False} [False]\n/nonUniformUnfolding {True, False} [False]\n/noInitPruning {True, False} [False]\n/deepAsserts {True, False} [False]\n/doNotUseLabels {True, False} [False]\n/bopt:boolControlVC categorical {True, False} [False]\n/bopt:z3opt:SMT.MBQI categorical {True, False} [True]\n/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS integer [0,32767] [1000]\n/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS | /bopt:z3opt:SMT.MBQI == True\n",
         "pcs-subspace" : { }
       },
       "algo-cutoff" : 2000.0,
@@ -16802,26 +16802,31 @@
         "/bopt:boolControlVC" : "False",
         "/bopt:z3opt:SMT.MBQI" : "True",
         "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "1000",
+        "/deepAsserts" : "False",
         "/di" : "True",
+        "/doNotUseLabels" : "False",
+        "/noCallTreeReuse" : "False",
+        "/noInitPruning" : "False",
+        "/nonUniformUnfolding" : "False",
         "/staticInlining" : "True",
         "/trackAllVars" : "True",
         "/useArrayTheoryCheck" : "1",
         "bit-precise" : "False",
         "unroll" : "16"
       },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
+      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS", "/deepAsserts", "/di", "/doNotUseLabels", "/noCallTreeReuse", "/noInitPruning", "/nonUniformUnfolding", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
       "pc-forbidden" : false,
       "pc-default" : true
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 1980.00639105,
+  "r-runtime" : 1969.93186498,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1984.806
+  "r-wallclock-time" : 1974.755
 } {
   "r-rc" : {
     "@rc-id" : 3,
@@ -16842,12 +16847,12 @@
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 1884.38547587,
+  "r-runtime" : 1884.604321,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1889.69
+  "r-wallclock-time" : 1891.715
 } {
   "r-rc" : {
     "@rc-id" : 4,
@@ -16866,27 +16871,32 @@
       "pc-settings" : {
         "/bopt:boolControlVC" : "True",
         "/bopt:z3opt:SMT.MBQI" : "False",
-        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "4448",
-        "/di" : "True",
+        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "8231",
+        "/deepAsserts" : "True",
+        "/di" : "False",
+        "/doNotUseLabels" : "False",
+        "/noCallTreeReuse" : "True",
+        "/noInitPruning" : "True",
+        "/nonUniformUnfolding" : "False",
         "/staticInlining" : "False",
-        "/trackAllVars" : "True",
+        "/trackAllVars" : "False",
         "/useArrayTheoryCheck" : "1",
-        "bit-precise" : "False",
+        "bit-precise" : "True",
         "unroll" : "16"
       },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
+      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/deepAsserts", "/di", "/doNotUseLabels", "/noCallTreeReuse", "/noInitPruning", "/nonUniformUnfolding", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
       "pc-forbidden" : false,
       "pc-default" : false
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 1994.25036407,
+  "r-runtime" : 1970.38129115,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1996.574
+  "r-wallclock-time" : 1972.14
 } {
   "r-rc" : {
     "@rc-id" : 5,
@@ -16907,12 +16917,12 @@
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 3520.28522706,
+  "r-runtime" : 3473.80231595,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 3520.819
+  "r-wallclock-time" : 3475.056
 } {
   "r-rc" : {
     "@rc-id" : 6,
@@ -16932,26 +16942,31 @@
         "/bopt:boolControlVC" : "True",
         "/bopt:z3opt:SMT.MBQI" : "False",
         "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "7790",
+        "/deepAsserts" : "True",
         "/di" : "True",
+        "/doNotUseLabels" : "True",
+        "/noCallTreeReuse" : "True",
+        "/noInitPruning" : "False",
+        "/nonUniformUnfolding" : "False",
         "/staticInlining" : "True",
-        "/trackAllVars" : "True",
-        "/useArrayTheoryCheck" : "2",
+        "/trackAllVars" : "False",
+        "/useArrayTheoryCheck" : "1",
         "bit-precise" : "False",
         "unroll" : "16"
       },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
+      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/deepAsserts", "/di", "/doNotUseLabels", "/noCallTreeReuse", "/noInitPruning", "/nonUniformUnfolding", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
       "pc-forbidden" : false,
       "pc-default" : false
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 3490.45190787,
+  "r-runtime" : 3559.84572721,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 3492.656
+  "r-wallclock-time" : 3560.052
 } {
   "r-rc" : {
     "@rc-id" : 7,
@@ -16960,20 +16975,24 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 2
+      "@pisp-id" : 7,
+      "pisp-pi" : {
+        "@pi-id" : 1447
+      },
+      "pisp-seed" : -1
     },
     "rc-pc" : {
-      "@pc-id" : 6
+      "@pc-id" : 2
     },
     "rc-sample-idx" : 0
   },
-  "r-run-result" : "SAT",
-  "r-runtime" : 1980.69312787,
+  "r-run-result" : "UNSAT",
+  "r-runtime" : 1876.11086607,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1981.34
+  "r-wallclock-time" : 1877.043
 } {
   "r-rc" : {
     "@rc-id" : 8,
@@ -16982,20 +17001,42 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 3
+      "@pisp-id" : 2
     },
     "rc-pc" : {
-      "@pc-id" : 6
+      "@pc-id" : 8,
+      "pc-pcs" : {
+        "@pcs-id" : 2
+      },
+      "pc-settings" : {
+        "/bopt:boolControlVC" : "True",
+        "/bopt:z3opt:SMT.MBQI" : "True",
+        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "6878",
+        "/deepAsserts" : "False",
+        "/di" : "False",
+        "/doNotUseLabels" : "False",
+        "/noCallTreeReuse" : "False",
+        "/noInitPruning" : "True",
+        "/nonUniformUnfolding" : "True",
+        "/staticInlining" : "False",
+        "/trackAllVars" : "False",
+        "/useArrayTheoryCheck" : "1",
+        "bit-precise" : "True",
+        "unroll" : "16"
+      },
+      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS", "/deepAsserts", "/di", "/doNotUseLabels", "/noCallTreeReuse", "/noInitPruning", "/nonUniformUnfolding", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
+      "pc-forbidden" : false,
+      "pc-default" : false
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 1870.09594393,
+  "r-runtime" : 1984.91541791,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1870.867
+  "r-wallclock-time" : 1984.993
 } {
   "r-rc" : {
     "@rc-id" : 9,
@@ -17006,22 +17047,22 @@
     "rc-pisp" : {
       "@pisp-id" : 9,
       "pisp-pi" : {
-        "@pi-id" : 1447
+        "@pi-id" : 2187
       },
       "pisp-seed" : -1
     },
     "rc-pc" : {
-      "@pc-id" : 6
+      "@pc-id" : 2
     },
     "rc-sample-idx" : 0
   },
-  "r-run-result" : "UNSAT",
-  "r-runtime" : 1869.99976707,
+  "r-run-result" : "SAT",
+  "r-runtime" : 2118.56528592,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1870.886
+  "r-wallclock-time" : 2119.367
 } {
   "r-rc" : {
     "@rc-id" : 10,
@@ -17030,7 +17071,7 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 5
+      "@pisp-id" : 3
     },
     "rc-pc" : {
       "@pc-id" : 10,
@@ -17038,32 +17079,59 @@
         "@pcs-id" : 2
       },
       "pc-settings" : {
-        "/bopt:boolControlVC" : "False",
-        "/bopt:z3opt:SMT.MBQI" : "True",
-        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "23235",
-        "/di" : "True",
+        "/bopt:boolControlVC" : "True",
+        "/bopt:z3opt:SMT.MBQI" : "False",
+        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "7612",
+        "/deepAsserts" : "True",
+        "/di" : "False",
+        "/doNotUseLabels" : "False",
+        "/noCallTreeReuse" : "False",
+        "/noInitPruning" : "True",
+        "/nonUniformUnfolding" : "True",
         "/staticInlining" : "True",
-        "/trackAllVars" : "False",
+        "/trackAllVars" : "True",
         "/useArrayTheoryCheck" : "1",
         "bit-precise" : "False",
         "unroll" : "16"
       },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
+      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/deepAsserts", "/di", "/doNotUseLabels", "/noCallTreeReuse", "/noInitPruning", "/nonUniformUnfolding", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
       "pc-forbidden" : false,
       "pc-default" : false
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 3413.51859283,
+  "r-runtime" : 1864.310215,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 3414.643
+  "r-wallclock-time" : 1864.862
 } {
   "r-rc" : {
     "@rc-id" : 11,
+    "rc-algo-exec-config" : {
+      "@algo-exec-config-id" : 2
+    },
+    "rc-cutoff" : 2000.0,
+    "rc-pisp" : {
+      "@pisp-id" : 7
+    },
+    "rc-pc" : {
+      "@pc-id" : 10
+    },
+    "rc-sample-idx" : 0
+  },
+  "r-run-result" : "UNSAT",
+  "r-runtime" : 1868.11893511,
+  "r-run-length" : 0.0,
+  "r-quality" : 0.0,
+  "r-result-seed" : -1,
+  "r-addl-run-data" : "",
+  "r-wallclock-time" : 1868.64
+} {
+  "r-rc" : {
+    "@rc-id" : 12,
     "rc-algo-exec-config" : {
       "@algo-exec-config-id" : 2
     },
@@ -17077,34 +17145,12 @@
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 1978.76602793,
+  "r-runtime" : 1982.45788908,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1979.489
-} {
-  "r-rc" : {
-    "@rc-id" : 12,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 2000.0,
-    "rc-pisp" : {
-      "@pisp-id" : 3
-    },
-    "rc-pc" : {
-      "@pc-id" : 10
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "SAT",
-  "r-runtime" : 1865.32236481,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 1865.839
+  "r-wallclock-time" : 1982.472
 } {
   "r-rc" : {
     "@rc-id" : 13,
@@ -17113,20 +17159,20 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 9
+      "@pisp-id" : 5
     },
     "rc-pc" : {
       "@pc-id" : 10
     },
     "rc-sample-idx" : 0
   },
-  "r-run-result" : "UNSAT",
-  "r-runtime" : 1876.27934909,
+  "r-run-result" : "SAT",
+  "r-runtime" : 3537.169487,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1877.683
+  "r-wallclock-time" : 3538.036
 } {
   "r-rc" : {
     "@rc-id" : 14,
@@ -17135,11 +17181,7 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 14,
-      "pisp-pi" : {
-        "@pi-id" : 2187
-      },
-      "pisp-seed" : -1
+      "@pisp-id" : 9
     },
     "rc-pc" : {
       "@pc-id" : 10
@@ -17147,12 +17189,12 @@
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 2110.46805406,
+  "r-runtime" : 2133.74453616,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 2110.794
+  "r-wallclock-time" : 2134.66
 } {
   "r-rc" : {
     "@rc-id" : 15,
@@ -17161,37 +17203,24 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 9
+      "@pisp-id" : 15,
+      "pisp-pi" : {
+        "@pi-id" : 941
+      },
+      "pisp-seed" : -1
     },
     "rc-pc" : {
-      "@pc-id" : 15,
-      "pc-pcs" : {
-        "@pcs-id" : 2
-      },
-      "pc-settings" : {
-        "/bopt:boolControlVC" : "False",
-        "/bopt:z3opt:SMT.MBQI" : "True",
-        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "14758",
-        "/di" : "False",
-        "/staticInlining" : "True",
-        "/trackAllVars" : "True",
-        "/useArrayTheoryCheck" : "1",
-        "bit-precise" : "False",
-        "unroll" : "16"
-      },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
-      "pc-forbidden" : false,
-      "pc-default" : false
+      "@pc-id" : 2
     },
     "rc-sample-idx" : 0
   },
-  "r-run-result" : "UNSAT",
-  "r-runtime" : 1867.7297821,
+  "r-run-result" : "SAT",
+  "r-runtime" : 91.4248299599,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1868.268
+  "r-wallclock-time" : 92.2
 } {
   "r-rc" : {
     "@rc-id" : 16,
@@ -17203,17 +17232,39 @@
       "@pisp-id" : 2
     },
     "rc-pc" : {
-      "@pc-id" : 15
+      "@pc-id" : 16,
+      "pc-pcs" : {
+        "@pcs-id" : 2
+      },
+      "pc-settings" : {
+        "/bopt:boolControlVC" : "True",
+        "/bopt:z3opt:SMT.MBQI" : "False",
+        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "25396",
+        "/deepAsserts" : "False",
+        "/di" : "True",
+        "/doNotUseLabels" : "False",
+        "/noCallTreeReuse" : "False",
+        "/noInitPruning" : "True",
+        "/nonUniformUnfolding" : "True",
+        "/staticInlining" : "False",
+        "/trackAllVars" : "True",
+        "/useArrayTheoryCheck" : "1",
+        "bit-precise" : "False",
+        "unroll" : "16"
+      },
+      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/deepAsserts", "/di", "/doNotUseLabels", "/noCallTreeReuse", "/noInitPruning", "/nonUniformUnfolding", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
+      "pc-forbidden" : false,
+      "pc-default" : false
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 1989.6239419,
+  "r-runtime" : 1983.35128093,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1990.178
+  "r-wallclock-time" : 1984.091
 } {
   "r-rc" : {
     "@rc-id" : 17,
@@ -17222,20 +17273,24 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 14
+      "@pisp-id" : 17,
+      "pisp-pi" : {
+        "@pi-id" : 1952
+      },
+      "pisp-seed" : -1
     },
     "rc-pc" : {
-      "@pc-id" : 15
+      "@pc-id" : 2
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 2120.28793406,
+  "r-runtime" : 4498.93462515,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 2120.698
+  "r-wallclock-time" : 4499.628
 } {
   "r-rc" : {
     "@rc-id" : 18,
@@ -17244,24 +17299,42 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 18,
-      "pisp-pi" : {
-        "@pi-id" : 941
-      },
-      "pisp-seed" : -1
+      "@pisp-id" : 7
     },
     "rc-pc" : {
-      "@pc-id" : 10
+      "@pc-id" : 18,
+      "pc-pcs" : {
+        "@pcs-id" : 2
+      },
+      "pc-settings" : {
+        "/bopt:boolControlVC" : "True",
+        "/bopt:z3opt:SMT.MBQI" : "False",
+        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "25158",
+        "/deepAsserts" : "True",
+        "/di" : "False",
+        "/doNotUseLabels" : "False",
+        "/noCallTreeReuse" : "True",
+        "/noInitPruning" : "True",
+        "/nonUniformUnfolding" : "False",
+        "/staticInlining" : "True",
+        "/trackAllVars" : "True",
+        "/useArrayTheoryCheck" : "2",
+        "bit-precise" : "True",
+        "unroll" : "16"
+      },
+      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/deepAsserts", "/di", "/doNotUseLabels", "/noCallTreeReuse", "/noInitPruning", "/nonUniformUnfolding", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
+      "pc-forbidden" : false,
+      "pc-default" : false
     },
     "rc-sample-idx" : 0
   },
-  "r-run-result" : "SAT",
-  "r-runtime" : 167.942535877,
+  "r-run-result" : "UNSAT",
+  "r-runtime" : 1867.96610999,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 168.679
+  "r-wallclock-time" : 1868.846
 } {
   "r-rc" : {
     "@rc-id" : 19,
@@ -17270,37 +17343,20 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 14
+      "@pisp-id" : 2
     },
     "rc-pc" : {
-      "@pc-id" : 19,
-      "pc-pcs" : {
-        "@pcs-id" : 2
-      },
-      "pc-settings" : {
-        "/bopt:boolControlVC" : "True",
-        "/bopt:z3opt:SMT.MBQI" : "True",
-        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "13207",
-        "/di" : "False",
-        "/staticInlining" : "False",
-        "/trackAllVars" : "False",
-        "/useArrayTheoryCheck" : "1",
-        "bit-precise" : "False",
-        "unroll" : "16"
-      },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
-      "pc-forbidden" : false,
-      "pc-default" : false
+      "@pc-id" : 18
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 2106.49920177,
+  "r-runtime" : 1988.07428384,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 2106.829
+  "r-wallclock-time" : 1988.387
 } {
   "r-rc" : {
     "@rc-id" : 20,
@@ -17309,20 +17365,20 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 9
+      "@pisp-id" : 17
     },
     "rc-pc" : {
-      "@pc-id" : 19
+      "@pc-id" : 18
     },
     "rc-sample-idx" : 0
   },
-  "r-run-result" : "UNSAT",
-  "r-runtime" : 1863.76303005,
+  "r-run-result" : "SAT",
+  "r-runtime" : 4371.632689,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1864.174
+  "r-wallclock-time" : 4371.684
 } {
   "r-rc" : {
     "@rc-id" : 21,
@@ -17331,20 +17387,20 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 5
+      "@pisp-id" : 9
     },
     "rc-pc" : {
-      "@pc-id" : 19
+      "@pc-id" : 18
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 3362.09048104,
+  "r-runtime" : 2102.41575813,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 3362.652
+  "r-wallclock-time" : 2103.079
 } {
   "r-rc" : {
     "@rc-id" : 22,
@@ -17353,20 +17409,20 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 2
+      "@pisp-id" : 15
     },
     "rc-pc" : {
-      "@pc-id" : 19
+      "@pc-id" : 18
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 1985.56884885,
+  "r-runtime" : 791.127643108,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1985.863
+  "r-wallclock-time" : 791.932
 } {
   "r-rc" : {
     "@rc-id" : 23,
@@ -17375,42 +17431,42 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 3
+      "@pisp-id" : 5
     },
     "rc-pc" : {
-      "@pc-id" : 19
+      "@pc-id" : 18
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 1864.02516007,
+  "r-runtime" : 3433.82119799,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1864.479
+  "r-wallclock-time" : 3434.569
 } {
   "r-rc" : {
     "@rc-id" : 24,
     "rc-algo-exec-config" : {
       "@algo-exec-config-id" : 2
     },
-    "rc-cutoff" : 948.608843785125,
+    "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 18
+      "@pisp-id" : 3
     },
     "rc-pc" : {
-      "@pc-id" : 19
+      "@pc-id" : 18
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 61.3646140099,
+  "r-runtime" : 1863.1731782,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 61.93
+  "r-wallclock-time" : 1863.657
 } {
   "r-rc" : {
     "@rc-id" : 25,
@@ -17421,31 +17477,31 @@
     "rc-pisp" : {
       "@pisp-id" : 25,
       "pisp-pi" : {
-        "@pi-id" : 1952
+        "@pi-id" : 1563
       },
       "pisp-seed" : -1
     },
     "rc-pc" : {
-      "@pc-id" : 19
+      "@pc-id" : 18
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 4176.07653999,
+  "r-runtime" : 1820.38614297,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 4176.624
+  "r-wallclock-time" : 1820.747
 } {
   "r-rc" : {
     "@rc-id" : 26,
     "rc-algo-exec-config" : {
       "@algo-exec-config-id" : 2
     },
-    "rc-cutoff" : 2000.0,
+    "rc-cutoff" : 1029.4685369249164,
     "rc-pisp" : {
-      "@pisp-id" : 3
+      "@pisp-id" : 15
     },
     "rc-pc" : {
       "@pc-id" : 26,
@@ -17453,29 +17509,34 @@
         "@pcs-id" : 2
       },
       "pc-settings" : {
-        "/bopt:boolControlVC" : "False",
-        "/bopt:z3opt:SMT.MBQI" : "True",
-        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "855",
+        "/bopt:boolControlVC" : "True",
+        "/bopt:z3opt:SMT.MBQI" : "False",
+        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "31194",
+        "/deepAsserts" : "False",
         "/di" : "True",
-        "/staticInlining" : "True",
-        "/trackAllVars" : "True",
+        "/doNotUseLabels" : "False",
+        "/noCallTreeReuse" : "True",
+        "/noInitPruning" : "True",
+        "/nonUniformUnfolding" : "True",
+        "/staticInlining" : "False",
+        "/trackAllVars" : "False",
         "/useArrayTheoryCheck" : "2",
-        "bit-precise" : "True",
+        "bit-precise" : "False",
         "unroll" : "16"
       },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
+      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/deepAsserts", "/di", "/doNotUseLabels", "/noCallTreeReuse", "/noInitPruning", "/nonUniformUnfolding", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
       "pc-forbidden" : false,
       "pc-default" : false
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 1865.17262602,
+  "r-runtime" : 53.8785300255,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1865.648
+  "r-wallclock-time" : 54.22
 } {
   "r-rc" : {
     "@rc-id" : 27,
@@ -17484,270 +17545,23 @@
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 27,
-      "pisp-pi" : {
-        "@pi-id" : 1563
-      },
-      "pisp-seed" : -1
+      "@pisp-id" : 9
     },
     "rc-pc" : {
-      "@pc-id" : 19
+      "@pc-id" : 26
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 115.158316851,
+  "r-runtime" : 2089.33498287,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 115.659
+  "r-wallclock-time" : 2089.884
 } {
   "r-rc" : {
     "@rc-id" : 28,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 80.77659903873801,
-    "rc-pisp" : {
-      "@pisp-id" : 18
-    },
-    "rc-pc" : {
-      "@pc-id" : 28,
-      "pc-pcs" : {
-        "@pcs-id" : 2
-      },
-      "pc-settings" : {
-        "/bopt:boolControlVC" : "False",
-        "/bopt:z3opt:SMT.MBQI" : "False",
-        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "30865",
-        "/di" : "False",
-        "/staticInlining" : "True",
-        "/trackAllVars" : "False",
-        "/useArrayTheoryCheck" : "0",
-        "bit-precise" : "False",
-        "unroll" : "16"
-      },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
-      "pc-forbidden" : false,
-      "pc-default" : false
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "SAT",
-  "r-runtime" : 181.02019906,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 182.58
-} {
-  "r-rc" : {
-    "@rc-id" : 29,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 2000.0,
-    "rc-pisp" : {
-      "@pisp-id" : 29,
-      "pisp-pi" : {
-        "@pi-id" : 2727
-      },
-      "pisp-seed" : -1
-    },
-    "rc-pc" : {
-      "@pc-id" : 19
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "UNSAT",
-  "r-runtime" : 1870.77180099,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 1873.42
-} {
-  "r-rc" : {
-    "@rc-id" : 30,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 2000.0,
-    "rc-pisp" : {
-      "@pisp-id" : 29
-    },
-    "rc-pc" : {
-      "@pc-id" : 30,
-      "pc-pcs" : {
-        "@pcs-id" : 2
-      },
-      "pc-settings" : {
-        "/bopt:boolControlVC" : "True",
-        "/bopt:z3opt:SMT.MBQI" : "False",
-        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "13569",
-        "/di" : "True",
-        "/staticInlining" : "False",
-        "/trackAllVars" : "False",
-        "/useArrayTheoryCheck" : "1",
-        "bit-precise" : "False",
-        "unroll" : "16"
-      },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
-      "pc-forbidden" : false,
-      "pc-default" : false
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "UNSAT",
-  "r-runtime" : 1883.86542797,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 1887.902
-} {
-  "r-rc" : {
-    "@rc-id" : 31,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 2000.0,
-    "rc-pisp" : {
-      "@pisp-id" : 31,
-      "pisp-pi" : {
-        "@pi-id" : 1684
-      },
-      "pisp-seed" : -1
-    },
-    "rc-pc" : {
-      "@pc-id" : 19
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "UNSAT",
-  "r-runtime" : 1885.84250808,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 1887.074
-} {
-  "r-rc" : {
-    "@rc-id" : 32,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 2000.0,
-    "rc-pisp" : {
-      "@pisp-id" : 31
-    },
-    "rc-pc" : {
-      "@pc-id" : 28
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "UNSAT",
-  "r-runtime" : 1887.34842896,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 1888.688
-} {
-  "r-rc" : {
-    "@rc-id" : 33,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 2000.0,
-    "rc-pisp" : {
-      "@pisp-id" : 33,
-      "pisp-pi" : {
-        "@pi-id" : 959
-      },
-      "pisp-seed" : -1
-    },
-    "rc-pc" : {
-      "@pc-id" : 19
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "SAT",
-  "r-runtime" : 39.9438521862,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 40.313
-} {
-  "r-rc" : {
-    "@rc-id" : 34,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 52.92960851301551,
-    "rc-pisp" : {
-      "@pisp-id" : 33
-    },
-    "rc-pc" : {
-      "@pc-id" : 34,
-      "pc-pcs" : {
-        "@pcs-id" : 2
-      },
-      "pc-settings" : {
-        "/bopt:boolControlVC" : "False",
-        "/bopt:z3opt:SMT.MBQI" : "True",
-        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "21653",
-        "/di" : "True",
-        "/staticInlining" : "False",
-        "/trackAllVars" : "False",
-        "/useArrayTheoryCheck" : "0",
-        "bit-precise" : "True",
-        "unroll" : "16"
-      },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
-      "pc-forbidden" : false,
-      "pc-default" : false
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "CRASHED",
-  "r-runtime" : 536.4355499999999,
-  "r-run-length" : 0.0,
-  "r-quality" : 1.0E9,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "Run Exceeded Captime -- Treating as CRASHED;Killed Manually",
-  "r-wallclock-time" : 564.669
-} {
-  "r-rc" : {
-    "@rc-id" : 35,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 2000.0,
-    "rc-pisp" : {
-      "@pisp-id" : 35,
-      "pisp-pi" : {
-        "@pi-id" : 2284
-      },
-      "pisp-seed" : -1
-    },
-    "rc-pc" : {
-      "@pc-id" : 19
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "SAT",
-  "r-runtime" : 3629.20001101,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 3630.087
-} {
-  "r-rc" : {
-    "@rc-id" : 36,
     "rc-algo-exec-config" : {
       "@algo-exec-config-id" : 2
     },
@@ -17756,233 +17570,20 @@
       "@pisp-id" : 2
     },
     "rc-pc" : {
-      "@pc-id" : 36,
-      "pc-pcs" : {
-        "@pcs-id" : 2
-      },
-      "pc-settings" : {
-        "/bopt:boolControlVC" : "True",
-        "/bopt:z3opt:SMT.MBQI" : "False",
-        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "12071",
-        "/di" : "False",
-        "/staticInlining" : "True",
-        "/trackAllVars" : "False",
-        "/useArrayTheoryCheck" : "0",
-        "bit-precise" : "False",
-        "unroll" : "16"
-      },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
-      "pc-forbidden" : false,
-      "pc-default" : false
+      "@pc-id" : 26
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 1996.80434394,
+  "r-runtime" : 1992.07744408,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1997.262
+  "r-wallclock-time" : 1992.605
 } {
   "r-rc" : {
-    "@rc-id" : 37,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 2000.0,
-    "rc-pisp" : {
-      "@pisp-id" : 37,
-      "pisp-pi" : {
-        "@pi-id" : 832
-      },
-      "pisp-seed" : -1
-    },
-    "rc-pc" : {
-      "@pc-id" : 19
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "SAT",
-  "r-runtime" : 33.7290380001,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 34.11
-} {
-  "r-rc" : {
-    "@rc-id" : 38,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 2000.0,
-    "rc-pisp" : {
-      "@pisp-id" : 9
-    },
-    "rc-pc" : {
-      "@pc-id" : 38,
-      "pc-pcs" : {
-        "@pcs-id" : 2
-      },
-      "pc-settings" : {
-        "/bopt:boolControlVC" : "False",
-        "/bopt:z3opt:SMT.MBQI" : "False",
-        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "19280",
-        "/di" : "False",
-        "/staticInlining" : "False",
-        "/trackAllVars" : "False",
-        "/useArrayTheoryCheck" : "0",
-        "bit-precise" : "True",
-        "unroll" : "16"
-      },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
-      "pc-forbidden" : false,
-      "pc-default" : false
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "UNSAT",
-  "r-runtime" : 1864.50395584,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 1864.764
-} {
-  "r-rc" : {
-    "@rc-id" : 39,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 2000.0,
-    "rc-pisp" : {
-      "@pisp-id" : 39,
-      "pisp-pi" : {
-        "@pi-id" : 2742
-      },
-      "pisp-seed" : -1
-    },
-    "rc-pc" : {
-      "@pc-id" : 19
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "UNSAT",
-  "r-runtime" : 6069.4748261,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 6070.0
-} {
-  "r-rc" : {
-    "@rc-id" : 40,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 150.70841199566723,
-    "rc-pisp" : {
-      "@pisp-id" : 27
-    },
-    "rc-pc" : {
-      "@pc-id" : 40,
-      "pc-pcs" : {
-        "@pcs-id" : 2
-      },
-      "pc-settings" : {
-        "/bopt:boolControlVC" : "True",
-        "/bopt:z3opt:SMT.MBQI" : "False",
-        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "28594",
-        "/di" : "False",
-        "/staticInlining" : "False",
-        "/trackAllVars" : "True",
-        "/useArrayTheoryCheck" : "1",
-        "bit-precise" : "False",
-        "unroll" : "16"
-      },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
-      "pc-forbidden" : false,
-      "pc-default" : false
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "SAT",
-  "r-runtime" : 56.6968779564,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 57.538
-} {
-  "r-rc" : {
-    "@rc-id" : 41,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 2000.0,
-    "rc-pisp" : {
-      "@pisp-id" : 9
-    },
-    "rc-pc" : {
-      "@pc-id" : 40
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "UNSAT",
-  "r-runtime" : 1867.95137906,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 1868.338
-} {
-  "r-rc" : {
-    "@rc-id" : 42,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 123.48722535033824,
-    "rc-pisp" : {
-      "@pisp-id" : 33
-    },
-    "rc-pc" : {
-      "@pc-id" : 40
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "SAT",
-  "r-runtime" : 41.594096899,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 42.264
-} {
-  "r-rc" : {
-    "@rc-id" : 43,
-    "rc-algo-exec-config" : {
-      "@algo-exec-config-id" : 2
-    },
-    "rc-cutoff" : 2000.0,
-    "rc-pisp" : {
-      "@pisp-id" : 29
-    },
-    "rc-pc" : {
-      "@pc-id" : 40
-    },
-    "rc-sample-idx" : 0
-  },
-  "r-run-result" : "UNSAT",
-  "r-runtime" : 1862.56888604,
-  "r-run-length" : 0.0,
-  "r-quality" : 0.0,
-  "r-result-seed" : -1,
-  "r-addl-run-data" : "",
-  "r-wallclock-time" : 1862.956
-} {
-  "r-rc" : {
-    "@rc-id" : 44,
+    "@rc-id" : 29,
     "rc-algo-exec-config" : {
       "@algo-exec-config-id" : 2
     },
@@ -17991,80 +17592,287 @@
       "@pisp-id" : 25
     },
     "rc-pc" : {
-      "@pc-id" : 40
+      "@pc-id" : 26
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 4498.13201594,
+  "r-runtime" : 99.2862849236,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 4502.342
+  "r-wallclock-time" : 99.626
 } {
   "r-rc" : {
-    "@rc-id" : 45,
+    "@rc-id" : 30,
     "rc-algo-exec-config" : {
       "@algo-exec-config-id" : 2
     },
     "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 45,
-      "pisp-pi" : {
-        "@pi-id" : 1471
-      },
-      "pisp-seed" : -1
+      "@pisp-id" : 17
     },
     "rc-pc" : {
-      "@pc-id" : 19
+      "@pc-id" : 26
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 492.746715069,
+  "r-runtime" : 4539.23929691,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 494.717
+  "r-wallclock-time" : 4540.279
 } {
   "r-rc" : {
-    "@rc-id" : 46,
+    "@rc-id" : 31,
     "rc-algo-exec-config" : {
       "@algo-exec-config-id" : 2
     },
-    "rc-cutoff" : 641.573330376643,
+    "rc-cutoff" : 2000.0,
     "rc-pisp" : {
-      "@pisp-id" : 45
+      "@pisp-id" : 7
     },
     "rc-pc" : {
-      "@pc-id" : 46,
+      "@pc-id" : 26
+    },
+    "rc-sample-idx" : 0
+  },
+  "r-run-result" : "UNSAT",
+  "r-runtime" : 1876.35528803,
+  "r-run-length" : 0.0,
+  "r-quality" : 0.0,
+  "r-result-seed" : -1,
+  "r-addl-run-data" : "",
+  "r-wallclock-time" : 1876.819
+} {
+  "r-rc" : {
+    "@rc-id" : 32,
+    "rc-algo-exec-config" : {
+      "@algo-exec-config-id" : 2
+    },
+    "rc-cutoff" : 2000.0,
+    "rc-pisp" : {
+      "@pisp-id" : 3
+    },
+    "rc-pc" : {
+      "@pc-id" : 26
+    },
+    "rc-sample-idx" : 0
+  },
+  "r-run-result" : "SAT",
+  "r-runtime" : 1875.77630496,
+  "r-run-length" : 0.0,
+  "r-quality" : 0.0,
+  "r-result-seed" : -1,
+  "r-addl-run-data" : "",
+  "r-wallclock-time" : 1876.598
+} {
+  "r-rc" : {
+    "@rc-id" : 33,
+    "rc-algo-exec-config" : {
+      "@algo-exec-config-id" : 2
+    },
+    "rc-cutoff" : 2000.0,
+    "rc-pisp" : {
+      "@pisp-id" : 5
+    },
+    "rc-pc" : {
+      "@pc-id" : 26
+    },
+    "rc-sample-idx" : 0
+  },
+  "r-run-result" : "SAT",
+  "r-runtime" : 3768.07635498,
+  "r-run-length" : 0.0,
+  "r-quality" : 0.0,
+  "r-result-seed" : -1,
+  "r-addl-run-data" : "",
+  "r-wallclock-time" : 3768.786
+} {
+  "r-rc" : {
+    "@rc-id" : 34,
+    "rc-algo-exec-config" : {
+      "@algo-exec-config-id" : 2
+    },
+    "rc-cutoff" : 2000.0,
+    "rc-pisp" : {
+      "@pisp-id" : 34,
+      "pisp-pi" : {
+        "@pi-id" : 2727
+      },
+      "pisp-seed" : -1
+    },
+    "rc-pc" : {
+      "@pc-id" : 18
+    },
+    "rc-sample-idx" : 0
+  },
+  "r-run-result" : "UNSAT",
+  "r-runtime" : 1863.81265783,
+  "r-run-length" : 0.0,
+  "r-quality" : 0.0,
+  "r-result-seed" : -1,
+  "r-addl-run-data" : "",
+  "r-wallclock-time" : 1865.009
+} {
+  "r-rc" : {
+    "@rc-id" : 35,
+    "rc-algo-exec-config" : {
+      "@algo-exec-config-id" : 2
+    },
+    "rc-cutoff" : 1029.4685369249164,
+    "rc-pisp" : {
+      "@pisp-id" : 15
+    },
+    "rc-pc" : {
+      "@pc-id" : 35,
       "pc-pcs" : {
         "@pcs-id" : 2
       },
       "pc-settings" : {
         "/bopt:boolControlVC" : "False",
-        "/bopt:z3opt:SMT.MBQI" : "False",
-        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "22188",
-        "/di" : "True",
-        "/staticInlining" : "True",
-        "/trackAllVars" : "True",
+        "/bopt:z3opt:SMT.MBQI" : "True",
+        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "7484",
+        "/deepAsserts" : "False",
+        "/di" : "False",
+        "/doNotUseLabels" : "True",
+        "/noCallTreeReuse" : "True",
+        "/noInitPruning" : "False",
+        "/nonUniformUnfolding" : "True",
+        "/staticInlining" : "False",
+        "/trackAllVars" : "False",
         "/useArrayTheoryCheck" : "2",
         "bit-precise" : "True",
         "unroll" : "16"
       },
-      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/di", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
+      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS", "/deepAsserts", "/di", "/doNotUseLabels", "/noCallTreeReuse", "/noInitPruning", "/nonUniformUnfolding", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
       "pc-forbidden" : false,
       "pc-default" : false
     },
     "rc-sample-idx" : 0
   },
   "r-run-result" : "SAT",
-  "r-runtime" : 1916.07221985,
+  "r-runtime" : 1821.19658995,
   "r-run-length" : 0.0,
   "r-quality" : 0.0,
   "r-result-seed" : -1,
   "r-addl-run-data" : "",
-  "r-wallclock-time" : 1916.3
+  "r-wallclock-time" : 1822.75
+} {
+  "r-rc" : {
+    "@rc-id" : 36,
+    "rc-algo-exec-config" : {
+      "@algo-exec-config-id" : 2
+    },
+    "rc-cutoff" : 2000.0,
+    "rc-pisp" : {
+      "@pisp-id" : 36,
+      "pisp-pi" : {
+        "@pi-id" : 1684
+      },
+      "pisp-seed" : -1
+    },
+    "rc-pc" : {
+      "@pc-id" : 18
+    },
+    "rc-sample-idx" : 0
+  },
+  "r-run-result" : "UNSAT",
+  "r-runtime" : 1883.80211997,
+  "r-run-length" : 0.0,
+  "r-quality" : 0.0,
+  "r-result-seed" : -1,
+  "r-addl-run-data" : "",
+  "r-wallclock-time" : 1885.205
+} {
+  "r-rc" : {
+    "@rc-id" : 37,
+    "rc-algo-exec-config" : {
+      "@algo-exec-config-id" : 2
+    },
+    "rc-cutoff" : 2000.0,
+    "rc-pisp" : {
+      "@pisp-id" : 5
+    },
+    "rc-pc" : {
+      "@pc-id" : 37,
+      "pc-pcs" : {
+        "@pcs-id" : 2
+      },
+      "pc-settings" : {
+        "/bopt:boolControlVC" : "False",
+        "/bopt:z3opt:SMT.MBQI" : "False",
+        "/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS" : "16699",
+        "/deepAsserts" : "False",
+        "/di" : "True",
+        "/doNotUseLabels" : "False",
+        "/noCallTreeReuse" : "True",
+        "/noInitPruning" : "False",
+        "/nonUniformUnfolding" : "True",
+        "/staticInlining" : "False",
+        "/trackAllVars" : "True",
+        "/useArrayTheoryCheck" : "1",
+        "bit-precise" : "False",
+        "unroll" : "16"
+      },
+      "pc-active-parameters" : [ "/bopt:boolControlVC", "/bopt:z3opt:SMT.MBQI", "/deepAsserts", "/di", "/doNotUseLabels", "/noCallTreeReuse", "/noInitPruning", "/nonUniformUnfolding", "/staticInlining", "/trackAllVars", "/useArrayTheoryCheck", "bit-precise", "unroll" ],
+      "pc-forbidden" : false,
+      "pc-default" : false
+    },
+    "rc-sample-idx" : 0
+  },
+  "r-run-result" : "SAT",
+  "r-runtime" : 3388.90871,
+  "r-run-length" : 0.0,
+  "r-quality" : 0.0,
+  "r-result-seed" : -1,
+  "r-addl-run-data" : "",
+  "r-wallclock-time" : 3391.735
+} {
+  "r-rc" : {
+    "@rc-id" : 38,
+    "rc-algo-exec-config" : {
+      "@algo-exec-config-id" : 2
+    },
+    "rc-cutoff" : 2000.0,
+    "rc-pisp" : {
+      "@pisp-id" : 7
+    },
+    "rc-pc" : {
+      "@pc-id" : 37
+    },
+    "rc-sample-idx" : 0
+  },
+  "r-run-result" : "UNSAT",
+  "r-runtime" : 1867.35543704,
+  "r-run-length" : 0.0,
+  "r-quality" : 0.0,
+  "r-result-seed" : -1,
+  "r-addl-run-data" : "",
+  "r-wallclock-time" : 1867.659
+} {
+  "r-rc" : {
+    "@rc-id" : 39,
+    "rc-algo-exec-config" : {
+      "@algo-exec-config-id" : 2
+    },
+    "rc-cutoff" : 2000.0,
+    "rc-pisp" : {
+      "@pisp-id" : 17
+    },
+    "rc-pc" : {
+      "@pc-id" : 37
+    },
+    "rc-sample-idx" : 0
+  },
+  "r-run-result" : "SAT",
+  "r-runtime" : 4296.21595001,
+  "r-run-length" : 0.0,
+  "r-quality" : 0.0,
+  "r-result-seed" : -1,
+  "r-addl-run-data" : "",
+  "r-wallclock-time" : 4296.841
 }

@@ -1,61 +1,88 @@
-14:54:23.418 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-14:54:42.416 [CLI TAE Callback Threads (3-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 4124.37573195 (secs) that exceeded it's cutoff time of 2000.0 (secs) by 2124.37573195 (secs). Next warning at 2125.37573195 (secs)  
-14:54:42.478 [CLI TAE Callback Threads (3-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 4128.938 (secs) that exceeded it's cutoff time of 2000.0 (secs) by 2128.938 (secs). Next warning at 2129.938 (secs)  
-15:32:00.471 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-16:14:18.749 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  Traceback (most recent call last):
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    File "/home/ankit/smack/smack/bin/smack", line 13, in <module>
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]      smack.top.main()
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    File "/home/ankit/smack/smack/bin/../share/smack/top.py", line 679, in main
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]      verify_bpl(args)
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    File "/home/ankit/smack/smack/bin/../share/smack/top.py", line 548, in verify_bpl
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]      verifier_output = try_command(command, timeout=args.time_limit)
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    File "/home/ankit/smack/smack/bin/../share/smack/utils.py", line 69, in try_command
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]      raise Exception(output)
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  Exception: Single threaded program detected
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  /home/ankit/smac/a-rHcLzV.bpl(118395,22): Error: invalid type for argument 0 in application of $store.ref: [ref]bv8 (expected: [ref]ref)
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  /home/ankit/smac/a-rHcLzV.bpl(118395,2): Error: mismatched types in assignment command (cannot assign [ref]ref to [ref]bv8)
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  /home/ankit/smac/a-rHcLzV.bpl(118408,22): Error: invalid type for argument 0 in application of $store.ref: [ref]bv8 (expected: [ref]ref)
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  /home/ankit/smac/a-rHcLzV.bpl(118408,2): Error: mismatched types in assignment command (cannot assign [ref]ref to [ref]bv8)
-16:14:18.750 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  4 type checking errors in /home/ankit/smac/a-rHcLzV.bpl
-16:14:18.751 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  
-16:14:18.751 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  Unhandled Exception:
-16:14:18.751 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  cba.Util.InvalidProg: Cannot typecheck /home/ankit/smac/a-rHcLzV.bpl
-16:14:18.751 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.GetInputProgram (cba.Configs config) [0x004d0] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
-16:14:18.751 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.run (System.String[] args) [0x00046] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
-16:14:18.751 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.Main (System.String[] args) [0x0005a] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
-16:14:18.751 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  [ERROR] FATAL UNHANDLED EXCEPTION: cba.Util.InvalidProg: Cannot typecheck /home/ankit/smac/a-rHcLzV.bpl
-16:14:18.751 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.GetInputProgram (cba.Configs config) [0x004d0] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
-16:14:18.751 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.run (System.String[] args) [0x00046] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
-16:14:18.751 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.Main (System.String[] args) [0x0005a] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
-16:14:18.751 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  
-16:48:02.650 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-17:18:36.676 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-18:26:43.468 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-18:57:35.047 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-19:28:07.052 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-20:46:39.461 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-21:20:11.374 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-21:50:54.762 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-22:21:31.096 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-22:54:57.482 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-00:29:44.986 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-01:00:06.817 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR] SMACK timed out.
-01:33:35.706 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-02:20:34.238 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-04:07:24.882 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-04:07:25.569 [CLI TAE Callback Threads (3-22)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 4191.75781417 (secs) that exceeded it's cutoff time of 2000.0 (secs) by 2191.7578141699996 (secs). Next warning at 2192.7578141699996 (secs)  
-04:07:25.587 [CLI TAE Callback Threads (3-22)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 4192.602 (secs) that exceeded it's cutoff time of 2000.0 (secs) by 2192.602 (secs). Next warning at 2193.602 (secs)  
-04:11:14.077 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK found an error.
-04:44:48.422 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-05:18:48.062 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-06:49:03.325 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-06:49:09.460 [CLI TAE Callback Threads (3-27)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 5188.10064387 (secs) that exceeded it's cutoff time of 2000.0 (secs) by 3188.1006438699997 (secs). Next warning at 3189.1006438699997 (secs)  
-06:49:09.482 [CLI TAE Callback Threads (3-27)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 5190.951 (secs) that exceeded it's cutoff time of 2000.0 (secs) by 3190.951 (secs). Next warning at 3191.951 (secs)  
-07:20:03.470 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-07:59:29.834 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-09:21:27.351 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-09:23:16.773 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK found an error.
-09:56:50.934 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-11:32:47.544 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-12:39:11.579 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
-13:55:46.790 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+12:35:46.819 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+12:36:06.006 [CLI TAE Callback Threads (3-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 4154.52870202 (secs) that exceeded it's cutoff time of 2000.0 (secs) by 2154.5287020200003 (secs). Next warning at 2155.5287020200003 (secs)  
+12:36:06.176 [CLI TAE Callback Threads (3-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 4164.074 (secs) that exceeded it's cutoff time of 2000.0 (secs) by 2164.0739999999996 (secs). Next warning at 2165.0739999999996 (secs)  
+13:12:06.549 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+13:56:35.719 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  Traceback (most recent call last):
+13:56:35.720 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    File "/home/ankit/smack/smack/bin/smack", line 13, in <module>
+13:56:35.720 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]      smack.top.main()
+13:56:35.720 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    File "/home/ankit/smack/smack/bin/../share/smack/top.py", line 679, in main
+13:56:35.721 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]      verify_bpl(args)
+13:56:35.721 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    File "/home/ankit/smack/smack/bin/../share/smack/top.py", line 548, in verify_bpl
+13:56:35.721 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]      verifier_output = try_command(command, timeout=args.time_limit)
+13:56:35.721 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    File "/home/ankit/smack/smack/bin/../share/smack/utils.py", line 69, in try_command
+13:56:35.721 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]      raise Exception(output)
+13:56:35.725 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  Exception: Single threaded program detected
+13:56:35.725 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  /home/ankit/smac/a-fMMW7b.bpl(118395,22): Error: invalid type for argument 0 in application of $store.ref: [ref]bv8 (expected: [ref]ref)
+13:56:35.725 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  /home/ankit/smac/a-fMMW7b.bpl(118395,2): Error: mismatched types in assignment command (cannot assign [ref]ref to [ref]bv8)
+13:56:35.727 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  /home/ankit/smac/a-fMMW7b.bpl(118408,22): Error: invalid type for argument 0 in application of $store.ref: [ref]bv8 (expected: [ref]ref)
+13:56:35.727 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  /home/ankit/smac/a-fMMW7b.bpl(118408,2): Error: mismatched types in assignment command (cannot assign [ref]ref to [ref]bv8)
+13:56:35.727 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  4 type checking errors in /home/ankit/smac/a-fMMW7b.bpl
+13:56:35.727 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  
+13:56:35.728 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  Unhandled Exception:
+13:56:35.728 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  cba.Util.InvalidProg: Cannot typecheck /home/ankit/smac/a-fMMW7b.bpl
+13:56:35.728 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.GetInputProgram (cba.Configs config) [0x004d0] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
+13:56:35.728 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.run (System.String[] args) [0x00046] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
+13:56:35.732 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.Main (System.String[] args) [0x0005a] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
+13:56:35.732 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  [ERROR] FATAL UNHANDLED EXCEPTION: cba.Util.InvalidProg: Cannot typecheck /home/ankit/smac/a-fMMW7b.bpl
+13:56:35.807 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.GetInputProgram (cba.Configs config) [0x004d0] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
+13:56:35.809 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.run (System.String[] args) [0x00046] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
+13:56:35.809 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.Main (System.String[] args) [0x0005a] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
+13:56:35.809 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  
+14:30:30.047 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR] SMACK timed out.
+15:00:54.021 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR] SMACK timed out.
+16:36:36.473 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+17:07:06.518 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+18:15:32.460 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+18:49:14.452 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+19:19:45.493 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+19:53:56.300 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+21:02:25.480 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+21:33:08.519 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR] SMACK timed out.
+22:03:26.383 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+22:47:09.356 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  Traceback (most recent call last):
+22:47:09.428 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    File "/home/ankit/smack/smack/bin/smack", line 13, in <module>
+22:47:09.441 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]      smack.top.main()
+22:47:09.441 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    File "/home/ankit/smack/smack/bin/../share/smack/top.py", line 679, in main
+22:47:09.441 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]      verify_bpl(args)
+22:47:09.441 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    File "/home/ankit/smack/smack/bin/../share/smack/top.py", line 548, in verify_bpl
+22:47:09.441 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]      verifier_output = try_command(command, timeout=args.time_limit)
+22:47:09.441 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    File "/home/ankit/smack/smack/bin/../share/smack/utils.py", line 69, in try_command
+22:47:09.441 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]      raise Exception(output)
+22:47:09.442 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  Exception: Single threaded program detected
+22:47:09.452 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  /home/ankit/smac/a-pFxwkz.bpl(118395,22): Error: invalid type for argument 0 in application of $store.ref: [ref]bv8 (expected: [ref]ref)
+22:47:09.452 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  /home/ankit/smac/a-pFxwkz.bpl(118395,2): Error: mismatched types in assignment command (cannot assign [ref]ref to [ref]bv8)
+22:47:09.452 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  /home/ankit/smac/a-pFxwkz.bpl(118408,22): Error: invalid type for argument 0 in application of $store.ref: [ref]bv8 (expected: [ref]ref)
+22:47:09.452 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  /home/ankit/smac/a-pFxwkz.bpl(118408,2): Error: mismatched types in assignment command (cannot assign [ref]ref to [ref]bv8)
+22:47:09.452 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  4 type checking errors in /home/ankit/smac/a-pFxwkz.bpl
+22:47:09.452 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  
+22:47:09.452 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  Unhandled Exception:
+22:47:09.452 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  cba.Util.InvalidProg: Cannot typecheck /home/ankit/smac/a-pFxwkz.bpl
+22:47:09.452 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.GetInputProgram (cba.Configs config) [0x004d0] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
+22:47:09.452 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.run (System.String[] args) [0x00046] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
+22:47:09.453 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.Main (System.String[] args) [0x0005a] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
+22:47:09.453 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  [ERROR] FATAL UNHANDLED EXCEPTION: cba.Util.InvalidProg: Cannot typecheck /home/ankit/smac/a-pFxwkz.bpl
+22:47:09.453 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.GetInputProgram (cba.Configs config) [0x004d0] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
+22:47:09.453 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.run (System.String[] args) [0x00046] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
+22:47:09.453 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]    at cba.Driver.Main (System.String[] args) [0x0005a] in <8dfff4741c064a42bc2abb10ffeadbf6>:0 
+22:47:09.453 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  
+23:20:44.067 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+23:54:11.997 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR] SMACK timed out.
+00:25:11.749 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+00:55:48.175 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+01:26:13.768 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+01:56:41.920 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+03:04:50.707 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR] SMACK timed out.
+03:51:30.059 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+05:06:04.580 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+05:08:59.040 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK found an error.
+06:24:33.820 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+06:24:34.364 [CLI TAE Callback Threads (3-31)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 4533.9268229 (secs) that exceeded it's cutoff time of 2000.0 (secs) by 2533.9268229 (secs). Next warning at 2534.9268229 (secs)  
+06:24:34.454 [CLI TAE Callback Threads (3-31)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 4534.303 (secs) that exceeded it's cutoff time of 2000.0 (secs) by 2534.303 (secs). Next warning at 2535.303 (secs)  
+07:21:03.968 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+08:45:03.727 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+08:45:05.689 [CLI TAE Callback Threads (3-34)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 5024.05565691 (secs) that exceeded it's cutoff time of 2000.0 (secs) by 3024.05565691 (secs). Next warning at 3025.05565691 (secs)  
+08:45:05.713 [CLI TAE Callback Threads (3-34)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 5024.884 (secs) that exceeded it's cutoff time of 2000.0 (secs) by 3024.884 (secs). Next warning at 3025.884 (secs)  
+09:15:58.900 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+09:47:11.900 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+10:54:59.028 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
+12:12:54.785 [CLI TAE (STDERR Thread - #0)] WARN  c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - [PROCESS-ERR]  SMACK timed out.
