@@ -6,8 +6,8 @@
 import sys, os, time, re
 from subprocess import Popen, PIPE, check_output, CalledProcessError
 
-cmd = ['/home/ankit/smack/smack/bin/smack', '-x=svcomp', '--time-limit', '1800'] #smack path w.r.t. laptop VM
-#cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp', '--time-limit', '900'] #smack path w.r.t. emulab
+#cmd = ['/home/ankit/smack/smack/bin/smack', '-x=svcomp', '--time-limit', '1800'] #smack path w.r.t. laptop VM
+cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp', '--time-limit', '1800'] #smack path w.r.t. emulab
 #cmd = ['/proj/SMACK/smack/bin/smack', '-x=svcomp','--time-limit','1800'] #modified smack path for Emulab
 
 vo = ['-/trackAllVars',
