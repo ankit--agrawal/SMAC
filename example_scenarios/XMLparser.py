@@ -33,13 +33,13 @@ def data_structure(result):
 #content = [line.rstrip('\n') for line in open('xml_files.txt')]
 #finding the .xml file to extract all filenames for respective benchmark
 benchmark = str(sys.argv[1])
-path = '/proj/SMACK/'
+path = '/proj/SMACK/smac/example_scenarios/'
 content = glob2.glob(benchmark+'/*.xml')
 
-h = open(benchmark+"/goodLDV.txt","w")
-g = open(benchmark+"/allLDV.txt","w")
-e = open(benchmark+"/badldv.txt","w")
-f = open(benchmark+"/Test_ldv.txt","w")
+h = open(benchmark+"/good"+benchmark+".txt","w")
+g = open(benchmark+"/all"+benchmark+".txt","w")
+e = open(benchmark+"/bad"+benchmark+".txt","w")
+f = open(benchmark+"/Test"+benchmark+".txt","w")
 
 # ---- creating tree root for .xml files
 for i in range(len(content)):
@@ -48,7 +48,7 @@ for i in range(len(content)):
 	data_structure(result_1)
 	h.close(); g.close(); e.close();
 
-g = open(benchmark+"/allLDV.txt",'r')
+g = open(benchmark+"/all"+benchmark+".txt",'r')
 test_content = g.readlines()
 for i in range(0,len(test_content),3):
 	f.write(test_content[i])
