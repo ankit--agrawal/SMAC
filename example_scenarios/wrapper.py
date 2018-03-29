@@ -7,7 +7,8 @@ import sys, os, time, re
 from subprocess import Popen, PIPE, check_output, CalledProcessError
 
 #cmd = ['/home/ankit/smack/smack/bin/smack', '-x=svcomp', '--time-limit', '1800'] #smack path w.r.t. laptop VM
-cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp', '--time-limit', '1800'] #smack path w.r.t. emulab
+cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp',
+		'--verifier=svcomp', '--clang-options=-m64'] #smack path w.r.t. emulab
 #cmd = ['/proj/SMACK/smack/bin/smack', '-x=svcomp','--time-limit','1800'] #modified smack path for Emulab
 
 vo = ['-/trackAllVars',
@@ -46,6 +47,8 @@ for i in range(0,len(params),2):
 			configMap['-verifier-options'] += '+'+'/noArrayTheory'
 	elif params[i] == '-/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS':
 		configMap['-verifier-options'] += '+'+'/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS=' + params[i+1]
+	elif params[i] == '-/bopt:z3opt:SMT.RELEVANCY':
+		configMap['-verifier-options'] += '+'+'/bopt:z3opt:SMT.RELEVANCY=' + params[i+1]
 	elif params[i] == '-/bopt:z3opt:SMT.MBQI':
 		if params[i+1] == 'True':
 			configMap['-verifier-options'] += '+'+'/bopt:z3opt:SMT.MBQI=true'
