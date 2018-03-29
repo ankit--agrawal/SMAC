@@ -33,7 +33,7 @@ def data_structure(result):
 #content = [line.rstrip('\n') for line in open('xml_files.txt')]
 #finding the .xml file to extract all filenames for respective benchmark
 benchmark = str(sys.argv[1])
-path = '/proj/SMACK/smac/example_scenarios/'
+path = '/proj/SMACK/'
 content = glob2.glob(benchmark+'/*.xml')
 
 h = open(benchmark+"/good"+benchmark+".txt","w")
