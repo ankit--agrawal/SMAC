@@ -100,13 +100,15 @@ for line in stdout_.splitlines():
 	#print 'line: ', line
 	if 'SMACK timed out' in line:
 		status = 'TIMEOUT'
+		runtime = 100 * 900
 		break
 	elif (('SMACK found an error' in line) and ('false-unreach' in instance)) \
 		or (('SMACK found no errors') and ('true-unreach' in instance)):
-		status = 'SAT';
+		status = 'SAT'
 		break
 	else:
 		status = 'UNSAT';
+		runtime = 10 * 900
 
 # Output result for SMAC.
 
