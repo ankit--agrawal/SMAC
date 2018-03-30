@@ -86,7 +86,7 @@ try:
 	stdout_ = check_output(cmd)
 	#io = Popen(cmd, stdout = PIPE, stderr = PIPE)
 	#stdout_, stderr_ = io.communicate()
-	print 'stdout_: ',stdout_
+	#print 'stdout_: ',stdout_
 	#print 'stderr_: ',stderr_
 
 except CalledProcessError as e:
@@ -94,13 +94,12 @@ except CalledProcessError as e:
 	#print 'stdout_: ',stdout_
 runtime = time.time() - start_time
 
-# parsing of SMACK's output.
+# parsing of SMACK's output and assigning status.
 
 for line in stdout_.splitlines():
 	#print 'line: ', line
 	if 'SMACK timed out' in line:
 		status = 'TIMEOUT'
-		runtime = 100 * 900
 		break
 	elif (('SMACK found an error' in line) and ('false-unreach' in instance)) \
 		or (('SMACK found no errors') and ('true-unreach' in instance)):
@@ -108,7 +107,12 @@ for line in stdout_.splitlines():
 		break
 	else:
 		status = 'UNSAT';
-		runtime = 10 * 900
+
+#updating the runtime based on the status
+if status == 'TIMEOUT':
+	runtime = 100 * 900
+elif status == 'UNSAT':
+	runtime = 10 * 900
 
 # Output result for SMAC.
 
