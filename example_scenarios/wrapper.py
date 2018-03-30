@@ -101,15 +101,16 @@ f.close()
 
 for line in stdout_.splitlines():
 	#print 'line: ', line
-	if 'SMACK timed out' in line:
-		status = 'TIMEOUT'
-		break
-	elif (('SMACK found an error' in line) and ('false-unreach' in instance)) \
+	if (('SMACK found an error' in line) and ('false-unreach' in instance)) \
 		or (('SMACK found no errors') and ('true-unreach' in instance)):
 		status = 'SAT'
 		break
-	else:
+	elif (('SMACK found an error' in line) and ('true-unreach' in instance)) \
+		or (('SMACK found no errors') and ('false-unreach' in instance)):
 		status = 'UNSAT';
+		break
+	else:
+		status = 'TIMEOUT'
 
 #updating the runtime based on the status
 if status == 'TIMEOUT':
