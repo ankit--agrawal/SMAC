@@ -10,6 +10,7 @@ from subprocess import Popen, PIPE, check_output, CalledProcessError
 cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp',
 		'--verifier=svcomp', '--clang-options=-m64'] #smack path w.r.t. emulab
 #cmd = ['/proj/SMACK/smack/bin/smack', '-x=svcomp','--time-limit','1800'] #modified smack path for Emulab
+f = open("outLDV_smack.txt","w")
 
 vo = ['-/trackAllVars',
 	'-/staticInlining',
@@ -94,6 +95,8 @@ except CalledProcessError as e:
 	#print 'stdout_: ',stdout_
 runtime = time.time() - start_time
 
+f.write(stdout_)
+f.close()
 # parsing of SMACK's output and assigning status.
 
 for line in stdout_.splitlines():
