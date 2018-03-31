@@ -94,12 +94,12 @@ f.write(stdout_)
 
 for line in stdout_.splitlines():
 	#print 'line: ', line
-	if (('SMACK found an error' in tmp[i]) and ('false-unreach' in instance)) \
-		or (('SMACK found no errors' in tmp[i]) and ('true-unreach' in instance)):
+	if (('SMACK found an error' in line) and ('false-unreach' in instance)) \
+		or (('SMACK found no errors' in line) and ('true-unreach' in instance)):
 		status = 'SAT'
 		break
-	elif (('SMACK found an error' in tmp[i]) and ('true-unreach' in instance)) \
-		or (('SMACK found no errors' in tmp[i]) and ('false-unreach' in instance)):
+	elif (('SMACK found an error' in line) and ('true-unreach' in instance)) \
+		or (('SMACK found no errors' in line) and ('false-unreach' in instance)):
 		status = 'UNSAT';
 		break
 	else:

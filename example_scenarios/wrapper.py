@@ -88,7 +88,6 @@ except CalledProcessError as e:
 	#print 'stdout_: ',stdout_
 runtime = time.time() - start_time
 
-f.write(stdout_)
 
 # parsing of SMACK's output and assigning status.
 
@@ -112,6 +111,5 @@ elif status == 'UNSAT':
 	runtime = 10 * 900
 
 # Output result for SMAC.
-f.close(); g.close()
 
 print("Result for SMAC: %s, %s, 0, 0, %s" % (status, str(runtime), str(seed)))
