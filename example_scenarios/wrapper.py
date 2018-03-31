@@ -6,11 +6,10 @@
 import sys, os, time, re
 from subprocess import Popen, PIPE, check_output, CalledProcessError
 
-#cmd = ['/home/ankit/smack/smack/bin/smack', '-x=svcomp', '--time-limit', '1800'] #smack path w.r.t. laptop VM
 cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp',
 		'--verifier=svcomp', '--clang-options=-m64'] #smack path w.r.t. emulab
+
 #cmd = ['/proj/SMACK/smack/bin/smack', '-x=svcomp','--time-limit','1800'] #modified smack path for Emulab
-f = open("../outLDV_smack.txt","w+")
 
 vo = ['-/trackAllVars',
 	'-/staticInlining',
@@ -34,10 +33,6 @@ cmd.append(instance)
 
 # Read in parameter setting and build a param_name->param_value map.
 params = sys.argv[6:]
-'''
-for i in range(len(params)):
-	print "{0}:{1}".format(i,params[i])
-'''
 
 #configMap = dict((name, value) for name, value in zip(params[::2], params[1::2]))
 for i in range(0,len(params),2):
@@ -62,8 +57,6 @@ for i in range(0,len(params),2):
 	else:
 		configMap[params[i]] = params[i+1]
 
-#print 'configMap: ', configMap
-
 for name, value in configMap.items():
 	cmd.append('-' + name)
 	if name == '-unroll':
@@ -77,9 +70,7 @@ for name, value in configMap.items():
 	elif '+' in value:
 		cmd.append(value.replace('+',' '))
 
-
 print 'cmd= ',cmd
-
 
 #computing runtime
 start_time = time.time()
@@ -91,7 +82,7 @@ try:
 	#stdout_, stderr_ = io.communicate()
 	print 'stdout_: ',stdout_
 	#print 'stderr_: ',stderr_
-#print "------------------------------------"
+
 except CalledProcessError as e:
 	stdout_ = e.output
 	#print 'stdout_: ',stdout_
@@ -99,21 +90,16 @@ runtime = time.time() - start_time
 
 f.write(stdout_)
 
-exe = "cat " + "../outLDV_smack.txt"
-os.system(exe)
-
 # parsing of SMACK's output and assigning status.
-with open("../outLDV_smack.txt") as g:
-	tmp = g.read().splitlines()
 
-for i in range(len(tmp)):
+for line in stdout_.splitlines():
 	#print 'line: ', line
-	if (('SMACK found an error' in tmp[i]) and ('false-unreach' in instance)) \
-		or (('SMACK found no errors' in tmp[i]) and ('true-unreach' in instance)):
+	if (('SMACK found an error' in line) and ('false-unreach' in instance)) \
+		or (('SMACK found no errors' in line) and ('true-unreach' in instance)):
 		status = 'SAT'
 		break
-	elif (('SMACK found an error' in tmp[i]) and ('true-unreach' in instance)) \
-		or (('SMACK found no errors' in tmp[i]) and ('false-unreach' in instance)):
+	elif (('SMACK found an error' in line) and ('true-unreach' in instance)) \
+		or (('SMACK found no errors' in line) and ('false-unreach' in instance)):
 		status = 'UNSAT';
 		break
 	else:
