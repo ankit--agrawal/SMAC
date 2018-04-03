@@ -101,11 +101,13 @@ for line in stdout_.splitlines():
 		or (('SMACK found no errors' in line) and ('false-unreach' in instance)):
 		status = 'UNSAT';
 		break
-	else:
+	elif ('SMACK timed out' in line):
 		status = 'TIMEOUT'
+	else:
+		status = 'Exception'
 
 #updating the runtime based on the status
-if status == 'TIMEOUT':
+if status == 'TIMEOUT' or status == 'Exception':
 	runtime = 100 * 900
 elif status == 'UNSAT':
 	runtime = 10 * 900
