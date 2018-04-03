@@ -6,8 +6,8 @@
 import sys, os, time, re
 from subprocess import Popen, PIPE, check_output, CalledProcessError
 
-cmd = ['/mnt/local/smack-project/smack/bin/smack ', '-x=svcomp ',
-		'--verifier=svcomp ', '--clang-options=-m64 '] #smack path w.r.t. emulab
+cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp',
+		'--verifier=svcomp', '--clang-options=-m64'] #smack path w.r.t. emulab
 
 #cmd = ['/proj/SMACK/smack/bin/smack', '-x=svcomp','--time-limit','1800'] #modified smack path for Emulab
 
@@ -75,13 +75,11 @@ print 'cmd= ',cmd
 #computing runtime
 start_time = time.time()
 try:
-	print "before running the check_output"
+	#print "before running the check_output"
 	stdout_ = check_output(cmd)
-	print "after running the check_output"
+	#print "after running the check_output"
 	#io = Popen(cmd, stdout = PIPE, stderr = PIPE)
 	#stdout_, stderr_ = io.communicate()
-	print 'stdout_: ',stdout_
-	#print 'stderr_: ',stderr_
 
 except CalledProcessError as e:
 	stdout_ = e.output
@@ -100,17 +98,18 @@ for line in stdout_.splitlines():
 	elif (('SMACK found an error' in line) and ('true-unreach' in instance)) \
 		or (('SMACK found no errors' in line) and ('false-unreach' in instance)):
 		status = 'UNSAT';
+		runtime = 10 * 900
 		break
 	elif ('SMACK timed out' in line):
 		status = 'TIMEOUT'
+		runtime = 100 * 900
+		break
 	else:
 		status = 'Exception'
 
 #updating the runtime based on the status
-if status == 'TIMEOUT' or status == 'Exception':
+if status == 'Exception':
 	runtime = 100 * 900
-elif status == 'UNSAT':
-	runtime = 10 * 900
 
 # Output result for SMAC.
 
