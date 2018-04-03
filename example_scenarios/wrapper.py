@@ -6,8 +6,8 @@
 import sys, os, time, re
 from subprocess import Popen, PIPE, check_output, CalledProcessError
 
-cmd = ['/mnt/local/smack-project/smack/bin/smack', '-x=svcomp',
-		'--verifier=svcomp', '--clang-options=-m64'] #smack path w.r.t. emulab
+cmd = ['/mnt/local/smack-project/smack/bin/smack ', '-x=svcomp ',
+		'--verifier=svcomp ', '--clang-options=-m64 '] #smack path w.r.t. emulab
 
 #cmd = ['/proj/SMACK/smack/bin/smack', '-x=svcomp','--time-limit','1800'] #modified smack path for Emulab
 
