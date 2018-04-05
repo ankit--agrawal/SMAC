@@ -70,26 +70,21 @@ for name, value in configMap.items():
 	elif '+' in value:
 		cmd.append(value.replace('+',' '))
 
-print 'cmd= ',cmd
+#print 'cmd= ',cmd
 
 #computing runtime
 start_time = time.time()
-try:
-	#print "before running the check_output"
-	stdout_ = check_output(cmd)
-	#print "after running the check_output"
-	#io = Popen(cmd, stdout = PIPE, stderr = PIPE)
-	#stdout_, stderr_ = io.communicate()
 
-except CalledProcessError as e:
-	stdout_ = e.output
-	#print 'stdout_: ',stdout_
+io = Popen(cmd, stdout = PIPE, stderr = PIPE)
+out, err = io.communicate()
+print 'stderr: ',err
+
 runtime = time.time() - start_time
 
 
 # parsing of SMACK's output and assigning status.
 
-for line in stdout_.splitlines():
+for line in err_.splitlines():
 	#print 'line: ', line
 	if (('SMACK found an error' in line) and ('false-unreach' in instance)) \
 		or (('SMACK found no errors' in line) and ('true-unreach' in instance)):
