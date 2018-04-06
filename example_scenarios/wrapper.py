@@ -21,7 +21,7 @@ vo = ['-/trackAllVars',
 	'-/noInitPruning',
 	'-/deepAsserts',
 	'-/doNotUseLabels']
-configMap = {'-verifier-options': ''}; status = 'CRASHED'
+configMap = {'-verifier-options': ''}
 
 # Read in first 5 arguments.
 instance = sys.argv[1]
@@ -59,32 +59,33 @@ for i in range(0,len(params),2):
 
 for name, value in configMap.items():
 	cmd.append('-' + name)
-	if name == '-unroll':
+
+	'''if name == '-unroll':
 		cmd.append(str(value))
 	elif name == '-bit-precise' and value != 'True':
 		cmd.remove('--bit-precise')
-
+	'''
 	#dealing with values for -verifier-options
-	if value == '/N':
+	if name == '-verifier-options' and len(value) == 0:
 		cmd.append('')
 	elif '+' in value:
 		cmd.append(value.replace('+',' '))
 
-#print 'cmd= ',cmd
+print 'cmd= ',cmd
 
 #computing runtime
 start_time = time.time()
 
-io = Popen(cmd, stdout = PIPE, stderr = PIPE)
+io = Popen(cmd, stdout = PIPE, stderr = PIPE, shell = False)
 out, err = io.communicate()
-print 'stderr: ',err
+print out
 
 runtime = time.time() - start_time
 
 
 # parsing of SMACK's output and assigning status.
 
-for line in err_.splitlines():
+for line in err.splitlines():
 	#print 'line: ', line
 	if (('SMACK found an error' in line) and ('false-unreach' in instance)) \
 		or (('SMACK found no errors' in line) and ('true-unreach' in instance)):
@@ -100,10 +101,10 @@ for line in err_.splitlines():
 		runtime = 100 * 900
 		break
 	else:
-		status = 'Exception'
+		status = 'CRASHED'
 
 #updating the runtime based on the status
-if status == 'Exception':
+if status == 'CRASHED':
 	runtime = 100 * 900
 
 # Output result for SMAC.
