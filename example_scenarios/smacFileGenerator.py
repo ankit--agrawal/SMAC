@@ -12,7 +12,7 @@ tmp = [i for i in range(1,(n+1)*k,k)]
 os.system('mkdir -p ' + benchmark)
 
 for i in range(len(tmp)-1):
-    f = open(benchmark+'/'+benchmark+str(k)+'_'+str(i+1)+'.sh','w')
+    f = open(benchmark+'/'+benchmark+str(k)+'_'+str(i)+'.sh','w')
     for j in range(tmp[i],tmp[i+1]):
         cmd = '../../smac --shared-model-mode true'\
         ' --scenario-file ' + 'smack-scenario_' \

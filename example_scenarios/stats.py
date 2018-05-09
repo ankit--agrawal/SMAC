@@ -26,11 +26,13 @@ def collectParameterStats(filename, d):
 	return d
 
 if __name__ == "__main__":
-	pathname = '/proj/SMACK/smac/example_scenarios/ldv/smac-output/**'
+	pathname1 = '/proj/SMACK/smac/example_scenarios/'
+	benchmark = str(sys.argv[1]) #type of benchmark files	
+	pathname = pathname1 + benchmark + '/smac-output/**'
 	files = glob.glob(pathname+'/traj-run*.txt')
-	t = open("optimizedSMACK.txt","w")
-	stats = {'/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS': 1, 'total': 0}
-	bestCollection = "outBestSMACK.txt" 
+	t = open(pathname1 + benchmark + '/optimizedSMACK.txt',"w")
+	stats = {'/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS': 0, 'total': 0}
+	bestCollection = pathname1 + benchmark + "/outBestSMACK.txt" 
 	collectBestIncumbents(bestCollection)
 	stats = collectParameterStats(bestCollection,stats)
 	#sorted_stats = sorted(stats.items(), key=operator.itemgetter(1))

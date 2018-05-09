@@ -12,7 +12,7 @@ def runningSMACK(cmd, instance):
 
 	io = Popen(cmd, stdout = PIPE, stderr = PIPE)
 	out, err = io.communicate()
-	print err
+	#print err
 
 	runtime = time.time() - start_time
 
