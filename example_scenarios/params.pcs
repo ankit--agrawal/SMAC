@@ -14,20 +14,20 @@
 /bopt:/liveVariableAnalysis categorical {0,1,2} [0]
 /bopt:/removeEmptyBlocks categorical {0,1} [0]
 /bopt:/coalesceBlocks categorical {0,1} [0]
-/bopt:/vc categorical {n,m,b,r,s,l,d}
-/bopt:/subsumption categorical {0,1,2}
-/bopt:/typeEncoding categorical {p,a,m}
-/bopt:/monomorphize categorical {True, False}
-/bopt:/z3types categorical {True, False}
-/bopt:/z3lets categorical {0,1,2,3}
+/bopt:/vc categorical {n,m,b,r,s,l,d} [n]
+/bopt:/subsumption categorical {0,1,2} [0]
+/bopt:/typeEncoding categorical {p,a,m} [p]
+/bopt:/monomorphize categorical {True, False} [True]
+/bopt:/z3types categorical {True, False} [True]
+/bopt:/z3lets categorical {0,1,2,3} [0]
 /bopt:z3opt:SMT.PHASE_SELECTION categorical {0,1,2,3,4,5,6} [0]
 /bopt:z3opt:SMT.RESTART_STRATEGY categorical {0,1,2,3,4} [0]
-/bopt:z3opt:SMT.RESTART_FACTOR [0.1-4.0] default is 1.5
+/bopt:z3opt:SMT.RESTART_FACTOR real [0.1, 4.0] [1.5]
 /bopt:z3opt:SMT.ARITH.RANDOM_INITIAL_VALUE categorical {false,true} [true]
 /bopt:z3opt:SMT.CASE_SPLIT categorical {0,1,2,3,4,5,6} [3]
 /bopt:z3opt:SMT.DELAY_UNITS categorical {false,true} [true]
 /bopt:z3opt:NNF.SK_HACK categorical {false,true} [true]
-/bopt:z3opt:SMT.QI.EAGER_THRESHOLD [1-1000] default is 100
+/bopt:z3opt:SMT.QI.EAGER_THRESHOLD integer [1, 1000] [100]
 /bopt:z3opt:SMT.BV.REFLECT categorical {false,true} [true]
 /bopt:z3opt:SMT.ARRAY.WEAK categorical {false,true} [true]
 /bopt:z3opt:SMT.ARRAY.EXTENSIONAL categorical {false,true} [false]
