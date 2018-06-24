@@ -1,4 +1,4 @@
-import os, sys, glob, operator
+import os, sys, glob2, operator
 
 
 def collectBestIncumbents(filename):
@@ -27,12 +27,13 @@ def collectParameterStats(filename, d):
 
 if __name__ == "__main__":
 	pathname1 = '/proj/SMACK/smac/example_scenarios/'
-	benchmark = str(sys.argv[1]) #type of benchmark files	
-	pathname = pathname1 + benchmark + '/smac-output/**'
-	files = glob.glob(pathname+'/traj-run*.txt')
-	t = open(pathname1 + benchmark + '/optimizedSMACK.txt',"w")
+	benchmark = str(sys.argv[1]) #type of benchmark files
+	pathname = pathname1 + benchmark + '/smac-output/smack-scenario_ldv_new/**'
+	files = glob2.glob(pathname+'/traj-run*.txt')
+	print files
+	t = open(pathname1 + benchmark + '/NewOptimizedSMACK.txt',"w")
 	stats = {'/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS': 0, 'total': 0}
-	bestCollection = pathname1 + benchmark + "/outBestSMACK.txt" 
+	bestCollection = pathname1 + benchmark + "/NewOutBestSMACK.txt"
 	collectBestIncumbents(bestCollection)
 	stats = collectParameterStats(bestCollection,stats)
 	#sorted_stats = sorted(stats.items(), key=operator.itemgetter(1))
