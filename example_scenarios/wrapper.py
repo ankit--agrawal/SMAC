@@ -39,12 +39,25 @@ def runningSMACK(cmd, instance):
 	#updating the runtime based on the status
 	if status == 'CRASHED':
 		runtime = 100 * 900
-	
+
 	return status, runtime
 
 def generatingCMD(cmd, params, configMap, instance):
 	#configMap = dict((name, value) for name, value in zip(params[::2], params[1::2]))
 	for i in range(0,len(params),2):
+		if '-/bopt' not in params[i]:
+			if params[i] == '-/useArrayTheoryCheck':
+				if params[i+1] == '1': configMap['-verifier-options'] += '+' + '/useArrayTheory';
+				elif params[i+1] == '2': configMap['-verifier-options'] += '+' + '/noArrayTheory';
+			elif params[i+1] == 'True': configMap['-verifier-options'] += '+' + params[i][1:]
+
+		else:
+			if params[i] == '-/bopt:/monomorphize' or params[i] == '-/bopt:/z3types' or params[i] == '-/bopt:boolControlVC':
+				if params[i+1] == 'True': configMap['-verifier-options'] += '+' + params[i][1:]
+			else:
+				configMap['-verifier-options'] += '+' + (params[i][1:] + '=' + params[i+1])
+
+		'''
 		if params[i] == '-/useArrayTheoryCheck':
 			if params[i+1] == '1': configMap['-verifier-options'] += '+'+'/useArrayTheory';
 			elif params[i+1] == '2': configMap['-verifier-options'] += '+'+'/noArrayTheory';
@@ -59,7 +72,8 @@ def generatingCMD(cmd, params, configMap, instance):
 			if params[i+1] == 'True': configMap['-verifier-options'] += '+'+params[i][1:];
 		else:
 			configMap[params[i]] = params[i+1]
-	
+		'''
+
 	tmp_cmd = []
 	for name, value in configMap.items():
 		if name == '-unroll': tmp_cmd += ['-'+name,value];
@@ -68,8 +82,9 @@ def generatingCMD(cmd, params, configMap, instance):
 		elif name == '-verifier-options' and len(value) > 0:
 				if '+' in value: tmp_cmd += ['-'+name,value.replace('+',' ')[1:]];
 
-	cmd += tmp_cmd; 
+	cmd += tmp_cmd;
 
+	print '---------------- ','\n',cmd
 	istatus, iruntime = runningSMACK(cmd, instance)
 	return istatus, iruntime
 
@@ -89,20 +104,9 @@ if __name__ == '__main__':
 			'--verifier=svcomp', '--clang-options=-m64'] + [inputFile] #smack path w.r.t. emulab
 
 	#cmd = ['/proj/SMACK/smack/bin/smack', '-x=svcomp','--time-limit','1800'] #modified smack path for Emulab
-
-	vo = ['-/trackAllVars',
-		'-/staticInlining',
-		'-/di',
-		'-/bopt:proverOpt:OPTIMIZE_FOR_BV',
-		'-/bopt:boolControlVC',
-		'-/noCallTreeReuse',
-		'-/nonUniformUnfolding',
-		'-/noInitPruning',
-		'-/deepAsserts',
-		'-/doNotUseLabels']
 	configurationMap = {'-verifier-options': ''}
 
 	s,r = generatingCMD(cmd, parameters, configurationMap, inputFile)
-	
+
 	# Output result for SMAC.
 	print("Result for SMAC: %s, %s, 0, 0, %s" % (s, str(r), str(seed)))
