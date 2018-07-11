@@ -22,14 +22,14 @@ def collectBestIncumbents():
 if __name__ == "__main__":    
     pathname = '/proj/SMACK/smac/example_scenarios/'
     benchmark = 'ldv/' #benchmark = str(sys.argv[1])
-    path = pathname + benchmark + 'smac-output/**'
-    files = glob2.glob(pathname + '/traj-run*.txt')    
-    collectBestIncumbents()
+    #path = pathname + benchmark + 'smac-output/**'
+    #files = glob2.glob(pathname + '/traj-run*.txt')    
+    #collectBestIncumbents()
     
     import pandas as pd
     #change the name to BestIncumbents.csv
     dataset = pd.read_csv(pathname+benchmark+'NewOutBestSMACK.csv', sep=' ', header = None)
-    dataset = dataset.iloc[:,7:]
+    dataset = dataset.iloc[:,7:]; count = 0
     #tmp = dataset[7].values_count()
     (m,n) = dataset.shape
     for i in range(7,40):
@@ -37,7 +37,9 @@ if __name__ == "__main__":
         #print(tmp)
         mod = pd.DataFrame({'flags':tmp.index, 'count':tmp.values})
         mod = mod.nlargest(2,'count')
-        if abs(mod.iloc[0,1] - mod.iloc[1,1]) > 10:
-            print(mod)
-    
+        if abs(mod.iloc[0,1] - mod.iloc[1,1]) > 15:# and mod.iloc[0,1] > 50:
+            print(mod.iloc[0,0])
+            count += 1
+            #print(mod)
+#print(count)    
     
