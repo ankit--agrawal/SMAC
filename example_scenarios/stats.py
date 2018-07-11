@@ -1,58 +1,43 @@
-<<<<<<< HEAD
-import os, sys, glob2
-=======
-import os, sys, glob2, operator
->>>>>>> 59e55f6ccc0ed4812cab406f673ff5a31500fa87
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jul 11 14:16:03 2018
 
+@author: backupldv
+"""
 
-def collectBestIncumbents(tmpList):
+#import sys,
+import glob2
+
+#collect best configurations for a given benchmark
+
+def collectBestIncumbents():
+    g = open(pathname+benchmark+'BestIncumbents.csv','w')
     for i in range(len(files)):
         with open(files[i],'r') as f: tmp = f.readlines();
         tmp = [x.strip() for x in tmp]
-        tmpList.append(tmp[-1])
-    return tmpList
+        g.write(tmp[-1]+'\n')
 
-def collectParameterStats(filename, d):
-	f = open(filename,'r')
-	for line in f:
-		d['total'] += 1
-		tmp = line.split(',')
-		tmp = tmp[6:]
-		for i in range(len(tmp)):
-			if '/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS' in tmp[i]: d['/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS'] += 1;
-			else:
-				if tmp[i] in d: d[tmp[i]] += 1;
-				else: d[tmp[i]] = 1;
-	f.close()
-	return d
 
-<<<<<<< HEAD
 if __name__ == "__main__":    
     pathname = '/proj/SMACK/smac/example_scenarios/'
-    benchmark = str(sys.argv[1])
+    benchmark = 'ldv/' #benchmark = str(sys.argv[1])
     path = pathname + benchmark + 'smac-output/**'
-    files = glob2.glob(pathname + '/traj-run*.txt')
-    bestConfig = []
-    bestConfig = collectBestIncumbents(bestConfig)
+    files = glob2.glob(pathname + '/traj-run*.txt')    
+    collectBestIncumbents()
     
-    #creating matrix with different configurations 'bag of words NLP problem'
-    from sklearn.feature_extraction.text import CountVectorizer
-    cv = CountVectorizer()
-    X = cv.fit_transform(bestConfig).toarray()
-=======
-if __name__ == "__main__":
-	pathname1 = '/proj/SMACK/smac/example_scenarios/'
-	benchmark = str(sys.argv[1]) #type of benchmark files
-	pathname = pathname1 + benchmark + '/smac-output/smack-scenario_ldv_new/**'
-	files = glob2.glob(pathname+'/traj-run*.txt')
-	print files
-	t = open(pathname1 + benchmark + '/NewOptimizedSMACK.txt',"w")
-	stats = {'/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS': 0, 'total': 0}
-	bestCollection = pathname1 + benchmark + "/NewOutBestSMACK.txt"
-	collectBestIncumbents(bestCollection)
-	stats = collectParameterStats(bestCollection,stats)
-	#sorted_stats = sorted(stats.items(), key=operator.itemgetter(1))
-	for name,value in stats.items():
-		print name, value
-		t.write(name + ' '+ str(value) + '\n')
->>>>>>> 59e55f6ccc0ed4812cab406f673ff5a31500fa87
+    import pandas as pd
+    #change the name to BestIncumbents.csv
+    dataset = pd.read_csv(pathname+benchmark+'NewOutBestSMACK.csv', sep=' ', header = None)
+    dataset = dataset.iloc[:,7:]
+    #tmp = dataset[7].values_count()
+    (m,n) = dataset.shape
+    for i in range(7,40):
+        tmp = dataset[i].value_counts()
+        #print(tmp)
+        mod = pd.DataFrame({'flags':tmp.index, 'count':tmp.values})
+        mod = mod.nlargest(2,'count')
+        if abs(mod.iloc[0,1] - mod.iloc[1,1]) > 10:
+            print(mod)
+    
+    
