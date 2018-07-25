@@ -1,0 +1,1061 @@
+10:35:30.623 [main] INFO  c.u.c.b.a.l.ComplexLoggingOptions - Logging to: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/log-run16.txt
+10:35:30.638 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Algorithm Execution & Abstraction Toolkit is v2.10.03-master-814 (ebf4c8c913d5) 
+10:35:30.639 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Java Runtime Environment is OpenJDK 64-Bit Server VM (1.8.0_162) 
+10:35:30.639 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of OS is Linux 3.19.0-80-generic (amd64) 
+10:35:30.639 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Random Forest Library is v1.10.01-master-120 (b68439c2c391) 
+10:35:30.639 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of SMAC is v2.10.03-master-778 (3ee628ef9bf2) 
+10:35:30.640 [main] INFO  c.u.c.b.a.m.j.JCommanderHelper - Call String: smac --shared-model-mode true --scenario-file smack-scenario_seq_rs.txt --seed 16 --validation false 
+10:35:30.640 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - ********** The next bit of output can be ignored, it is merely useful for debugging **********
+10:35:30.640 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - ==========Enviroment Variables===========
+BOOGIE=mono /mnt/local/smack-project/boogie/Binaries/Boogie.exe
+CORRAL=mono /mnt/local/smack-project/corral/bin/Release/corral.exe
+HOME=/root
+LANG=en_US.UTF-8
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LESSOPEN=| /usr/bin/lesspipe %s
+LOCKPWN=mono /mnt/local/smack-project/lockpwn/Binaries/lockpwn.exe
+LOGNAME=root
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+MAIL=/var/mail/root
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+PWD=/proj/SMACK/smac/example_scenarios/seq_rs
+SHELL=/bin/bash
+SHLVL=2
+STY=5067.pts-0.node-1
+SUDO_COMMAND=/bin/su
+SUDO_GID=7938
+SUDO_UID=18233
+SUDO_USER=ankitagr
+SYMBOOGLIX=mono /mnt/local/smack-project/symbooglix/src/SymbooglixDriver/bin/Release/sbx.exe
+TERM=screen
+TERMCAP=SC|screen|VT 100/ANSI X3.64 virtual terminal:\
+	:DO=\E[%dB:LE=\E[%dD:RI=\E[%dC:UP=\E[%dA:bs:bt=\E[Z:\
+	:cd=\E[J:ce=\E[K:cl=\E[H\E[J:cm=\E[%i%d;%dH:ct=\E[3g:\
+	:do=^J:nd=\E[C:pt:rc=\E8:rs=\Ec:sc=\E7:st=\EH:up=\EM:\
+	:le=^H:bl=^G:cr=^M:it#8:ho=\E[H:nw=\EE:ta=^I:is=\E)0:\
+	:li#39:co#144:am:xn:xv:LP:sr=\EM:al=\E[L:AL=\E[%dL:\
+	:cs=\E[%i%d;%dr:dl=\E[M:DL=\E[%dM:dc=\E[P:DC=\E[%dP:\
+	:im=\E[4h:ei=\E[4l:mi:IC=\E[%d@:ks=\E[?1h\E=:\
+	:ke=\E[?1l\E>:vi=\E[?25l:ve=\E[34h\E[?25h:vs=\E[34l:\
+	:ti=\E[?1049h:te=\E[?1049l:us=\E[4m:ue=\E[24m:so=\E[3m:\
+	:se=\E[23m:mb=\E[5m:md=\E[1m:mr=\E[7m:me=\E[m:ms:\
+	:Co#8:pa#64:AF=\E[3%dm:AB=\E[4%dm:op=\E[39;49m:AX:\
+	:vb=\Eg:G0:as=\E(0:ae=\E(B:\
+	:ac=\140\140aaffggjjkkllmmnnooppqqrrssttuuvvwwxxyyzz{{||}}~~..--++,,hhII00:\
+	:po=\E[5i:pf=\E[4i:Km=\E[M:k0=\E[10~:k1=\EOP:k2=\EOQ:\
+	:k3=\EOR:k4=\EOS:k5=\E[15~:k6=\E[17~:k7=\E[18~:\
+	:k8=\E[19~:k9=\E[20~:k;=\E[21~:F1=\E[23~:F2=\E[24~:\
+	:F3=\E[1;2P:F4=\E[1;2Q:F5=\E[1;2R:F6=\E[1;2S:\
+	:F7=\E[15;2~:F8=\E[17;2~:F9=\E[18;2~:FA=\E[19;2~:kb=:\
+	:K2=\EOE:kB=\E[Z:kF=\E[1;2B:kR=\E[1;2A:*4=\E[3;2~:\
+	:*7=\E[1;2F:#2=\E[1;2H:#3=\E[2;2~:#4=\E[1;2D:%c=\E[6;2~:\
+	:%e=\E[5;2~:%i=\E[1;2C:kh=\E[1~:@1=\E[1~:kH=\E[4~:\
+	:@7=\E[4~:kN=\E[6~:kP=\E[5~:kI=\E[2~:kD=\E[3~:ku=\EOA:\
+	:kd=\EOB:kr=\EOC:kl=\EOD:km:
+USER=root
+USERNAME=root
+WINDOW=0
+XDG_RUNTIME_DIR=/run/user/18233
+XDG_SESSION_ID=1
+
+10:35:30.641 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - Hostname:node-1.spare.smack.emulab.net
+10:35:30.641 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - ==========System Properties==============
+ERRLOG=/proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/log-err16.txt
+NUMRUN=16
+OUTPUTDIR=/proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs
+ROOT-LEVEL=INFO
+RUNLOG=/proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/log-run16.txt
+STDOUT-LEVEL=INFO
+WARNLOG=/proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/log-warn16.txt
+awt.toolkit=sun.awt.X11.XToolkit
+file.encoding=UTF-8
+file.encoding.pkg=sun.io
+file.separator=/
+java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment
+java.awt.printerjob=sun.print.PSPrinterJob
+java.class.path=/proj/SMACK/smac/conf/:/proj/SMACK/smac/patches/:/proj/SMACK/smac/lib/aeatk.jar:/proj/SMACK/smac/lib/aeatk-src.jar:/proj/SMACK/smac/lib/commons-collections-3.2.1.jar:/proj/SMACK/smac/lib/commons-collections-3.2.1-sources.jar:/proj/SMACK/smac/lib/commons-io-2.1.jar:/proj/SMACK/smac/lib/commons-math-2.2.jar:/proj/SMACK/smac/lib/commons-math3-3.3.jar:/proj/SMACK/smac/lib/DomainInter.jar:/proj/SMACK/smac/lib/exp4j-0.3.10.jar:/proj/SMACK/smac/lib/exp4j-0.4.3.BETA-3.jar:/proj/SMACK/smac/lib/fastrf.jar:/proj/SMACK/smac/lib/fastrf-src.jar:/proj/SMACK/smac/lib/guava-14.0.1.jar:/proj/SMACK/smac/lib/jackson-annotations-2.3.1.jar:/proj/SMACK/smac/lib/jackson-core-2.3.1.jar:/proj/SMACK/smac/lib/jackson-databind-2.3.1.jar:/proj/SMACK/smac/lib/Jama-1.0.2.jar:/proj/SMACK/smac/lib/jcip-annotations.jar:/proj/SMACK/smac/lib/jcip-annotations-src.jar:/proj/SMACK/smac/lib/jcommander.jar:/proj/SMACK/smac/lib/jmatharray.jar:/proj/SMACK/smac/lib/logback-access-1.1.2.jar:/proj/SMACK/smac/lib/logback-classic-1.1.2.jar:/proj/SMACK/smac/lib/logback-core-1.1.2.jar:/proj/SMACK/smac/lib/numerics4j-1.3.jar:/proj/SMACK/smac/lib/opencsv-2.3.jar:/proj/SMACK/smac/lib/slf4j-api-1.7.5.jar:/proj/SMACK/smac/lib/smac.jar:/proj/SMACK/smac/lib/smac-src.jar:/proj/SMACK/smac/lib/spi-0.2.4.jar:/proj/SMACK/smac/*.jar:/proj/SMACK/smac/patches/
+java.class.version=52.0
+java.endorsed.dirs=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
+java.ext.dirs=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
+java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+java.io.tmpdir=/tmp
+java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+java.runtime.name=OpenJDK Runtime Environment
+java.runtime.version=1.8.0_162-8u162-b12-1~14.04-b12
+java.specification.name=Java Platform API Specification
+java.specification.vendor=Oracle Corporation
+java.specification.version=1.8
+java.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+java.version=1.8.0_162
+java.vm.info=mixed mode
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+java.vm.version=25.162-b12
+line.separator=
+
+logback.configurationFile=ca/ubc/cs/beta/aeatk/logging/complex-logback.xml
+os.arch=amd64
+os.name=Linux
+os.version=3.19.0-80-generic
+path.separator=:
+sun.arch.data.model=64
+sun.boot.class.path=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+sun.boot.library.path=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+sun.cpu.endian=little
+sun.cpu.isalist=
+sun.io.unicode.encoding=UnicodeLittle
+sun.java.command=ca.ubc.cs.beta.aeatk.ant.execscript.Launcher ca.ubc.cs.beta.smac.executors.SMACExecutor --shared-model-mode true --scenario-file smack-scenario_seq_rs.txt --seed 16 --validation false
+sun.java.launcher=SUN_STANDARD
+sun.jnu.encoding=UTF-8
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+sun.os.patch.level=unknown
+user.country=US
+user.dir=/proj/SMACK/smac/example_scenarios/seq_rs
+user.home=/root
+user.language=en
+user.name=root
+user.timezone=America/Denver
+
+10:35:30.646 [main] INFO  c.u.c.b.a.m.j.JCommanderHelper - ==========Configuration Options==========
+[SMACOptions]
+ adaptiveCapping = true
+ alwaysRunInitialConfiguration = false
+ capAddSlack = 1.0
+ capSlack = 1.3
+classicInitModeOpts = [ClassicInitializationProcedureOptions]
+		 initialIncumbentRuns = 1
+
+dciModeOpts = [DoublingCappingInitializationProcedureOptions]
+		 numberOfChallengers = 2
+		 numberOfRunsPerChallenger = 2
+
+ucip = [UnbiasChallengerInitializationProcedureOptions]
+		 numberOfChallengers = 2
+		 numberOfRunsPerChallenger = 2
+		 cpulimit = 0
+
+ deterministicInstanceOrdering = false
+ doValidation = false
+ execMode = SMAC
+ experimentDir = /proj/SMACK/smac/example_scenarios/seq_rs/
+ expFunc = null
+help = [HelpOptions]
+		 showHiddenParameters = false
+		 showHelp = false
+		 helpLevel = BASIC
+		 showVersion = false
+		 helpDefaults = /root/.aeatk/help.opt
+
+ initialChallengeRuns = 1
+ initialIncumbent = DEFAULT
+ initializationMode = CLASSIC
+ intensificationPercentage = 0.5
+ initialChallengers = []
+ initialChallengersIntensificationTime = 2147483647
+ iterativeCappingBreakOnFirstCompletion = false
+ iterativeCappingK = 1
+logOptions = [ComplexLoggingOptions]
+		 consoleLogLevel = INFO
+		 logLevel = INFO
+
+ maxIncumbentRuns = 2000
+mbOptions = [ModelBuildingOptions]
+		 maskCensoredDataAsKappaMax = false
+		 maskInactiveConditionalParametersAsDefaultValue = true
+		 maskCensoredDataAsUncensored = false
+		 imputationIterations = 2
+
+ modelHashCodeFile = null
+ numberOfChallengers = 10
+ numberOfRandomConfigsInEI = 10000
+ numberOfRandomConfigsUsedForLocalSearch = 0
+ numPCA = 7
+ optionFile = null
+ optionFile2 = null
+randomForestOptions = [RandomForestOptions]
+		 brokenVarianceCalculation = false
+		 freeMemoryPercentageToSubsample = 0.25
+		 fullTreeBootstrap = false
+		 ignoreConditionality = false
+		 imputeMean = false
+		 logModel = true
+		 minVariance = 1.0E-14
+		 numTrees = 10
+		 penalizeImputedValues = false
+		 preprocessMarginal = true
+		 ratioFeatures = 0.8333333333333334
+		 shuffleImputedValues = false
+		 splitMin = 10
+		 storeDataInLeaves = false
+		 subsamplePercentage = 0.9
+		 subsampleValuesWhenLowMemory = false
+
+runGroupOptions = [RunGroupOptions]
+		 runGroupName = %SCENARIO_NAME
+		 runGroupExit = false
+		 replacementChar = %
+
+scenarioConfig = [ScenarioOptions]
+		 _runObj = RUNTIME
+		 intraInstanceObj = null
+		 interInstanceObj = MEAN
+		limitOptions = [TerminationCriteriaOptions]
+				 tunerTimeout = 2147483647
+				 numIterations = 2147483647
+				 runtimeLimit = 378000
+				 totalNumRunsLimit = 9223372036854775807
+				 countSMACTimeAsTunerTime = true
+				 challengeIncumbentAttempts = 1000
+				 fileToWatch = null
+
+		instanceOptions = [ProblemInstanceOptions]
+				 instanceFile = allseq_rs.txt
+				 instanceFeatureFile = null
+				 testInstanceFile = Testseq_rs.txt
+				 checkInstanceFilesExist = false
+				 useInstances = true
+				 instanceSuffix = null
+				 testInstanceSuffix = null
+				 ignoreFeatures = false
+
+		 scenarioFile = /proj/SMACK/smac/example_scenarios/seq_rs/smack-scenario_seq_rs.txt
+		 outputDirectory = /proj/SMACK/smac/example_scenarios/seq_rs/smac-output
+		 invalidScenarioReason = null
+		algoExecOptions = [AlgorithmExecutionOptions]
+				 algoExec = ../wrapper.py
+				 algoExecDir = /proj/SMACK/smac/example_scenarios/seq_rs
+				 deterministic = true
+				 cutoffTime = 2000.0
+				 cutoffLength = -1.0
+				 additionalContext = {}
+				taeOpts = [TargetAlgorithmEvaluatorOptions]
+						 targetAlgorithmEvaluator = CLI
+						 abortOnCrash = false
+						 abortOnFirstRunCrash = false
+						 retryCount = 0
+						 cacheRuns = false
+						 cacheDebug = false
+						 useDynamicCappingExclusively = false
+						 reportStrictlyIncreasingRuntimes = false
+						 boundRuns = false
+						 maxConcurrentAlgoExecs = 1
+						 exitOnFailure = false
+						 runHashCodeFile = null
+						 leakMemory = false
+						 leakMemoryAmount = 1024
+						 verifySAT = null
+						 checkSATConsistency = true
+						 checkSATConsistencyException = true
+						 callObserverBeforeCompletion = true
+						prePostOptions = [PrePostCommandOptions]
+								 preCommand = null
+								 postCommand = null
+								 exceptionOnError = false
+								 logOutput = true
+								 directory = /proj/SMACK/smac/example_scenarios/seq_rs/.
+
+						 checkResultOrderConsistent = false
+						 skipOutstandingEvaluationsTAE = false
+						 logRequestResponses = false
+						 logRequestResponsesRCOnly = false
+						 trackRunsScheduled = false
+						 trackRunsScheduledResolution = 1.0
+						 uncleanShutdownCheck = true
+						 killCaptimeExceedingRun = true
+						 killCaptimeExceedingRunFactor = 10.0
+						 checkRunConfigsUnique = true
+						 checkRunConfigsUniqueException = true
+						 observeWalltimeIfNoRuntime = true
+						 observeWalltimeScale = 0.95
+						 observeWalltimeDelay = 5.0
+						 synchronousObserver = true
+						 taeDefaults = /root/.aeatk/tae.opt
+						ttaedo = [TransformTargetAlgorithmEvaluatorDecoratorOptions]
+								 transform = false
+								 transformValidValuesOnly = true
+								 SAT_runtime_transform = R
+								 SAT_quality_transform = Q
+								 UNSAT_runtime_transform = R
+								 UNSAT_quality_transform = Q
+								 TIMEOUT_runtime_transform = R
+								 TIMEOUT_quality_transform = Q
+								 other_runtime_transform = R
+								 other_quality_transform = Q
+
+						tForkOptions = [ForkingTargetAlgorithmEvaluatorDecoratorOptions]
+								 forkToTAE = null
+								fPolicyOptions = [ForkingTargetAlgorithmEvaluatorDecoratorPolicyOptions]
+										 fPolicy = null
+										 duplicateOnSlaveQuickTimeout = 5
+
+
+						 fileToWatch = null
+						 warnIfNoResponseFromTAE = 120
+						 taeStopProcessingOnShutdown = true
+						 filecache = false
+						 fileCacheSource = /proj/SMACK/smac/example_scenarios/seq_rs/./runcache
+						 fileCacheOutput = /proj/SMACK/smac/example_scenarios/seq_rs/./runcache
+						 fileCacheCrashOnMiss = false
+						 transformCrashedQuality = true
+						 transformCrashedQualityValue = 1.0E9
+						 filterZeroCutoffRuns = true
+
+				paramFileDelegate = [ParamConfigurationSpaceOptions]
+						 paramFile = ../params.pcs
+						 searchSubspace = null
+						 searchSubspaceFile = null
+						 continuousNeighbours = 4
+
+
+
+seedOptions = [SeedOptions]
+		 seedOffset = 0
+		 numRun = 16
+		 initialSeedMap = {}
+
+ smacDefaults = /root/.aeatk/smac.opt
+stateOpts = [StateFactoryOptions]
+		 stateSerializer = LEGACY
+		 statedeSerializer = LEGACY
+		 restoreStateFrom = null
+		 restoreIteration = null
+		 restoreScenario = null
+		 cleanOldStatesOnSuccess = true
+		 saveContextWithState = true
+
+trackingOptions = [ParamConfigurationOriginTrackingOptions]
+		 configTracking = false
+
+validationOptions = [ValidationOptions]
+		 maxTimestamp = -1.0
+		 minTimestamp = 0.0
+		 multFactor = 2.0
+		 numberOfTestInstances = 2147483647
+		 numberOfTestSeedsPerInstance = 1000
+		 numberOfValidationRuns = 1
+		 outputFileSuffix = 
+		 saveStateFile = false
+		 useWallClockTime = true
+		 validateAll = false
+		 validateOnlyIfTunerTimeReached = 0.0
+		 validateOnlyIfWallTimeReached = 0.0
+		 validateOnlyLastIncumbent = true
+		 validationHeaders = true
+		 validationRoundingMode = UP
+
+warmStartOptions = [WarmStartOptions]
+		 warmStartStateFrom = null
+		 restoreIteration = 2147483647
+
+ validationSeed = 0
+ saveRunsEveryIteration = false
+ stateQuickSaves = true
+ shutdownTAEWhenDone = true
+ validationCores = null
+ shareModelMode = true
+ shareRunDataFrequency = 300
+ shareModeModeTAE = true
+ writeRunData = true
+ defaultHandler = USE_ALL
+ sharedModeModeAssymetricMode = false
+
+[AnalyticTargetAlgorithmEvaluatorOptions]
+ simulateDelay = false
+ cores = 0
+ observerFrequency = 100
+ func = CAMELBACK
+ scaleDelay = 1.0
+
+[BlackHoleTargetAlgorithmEvaluatorOptions]
+ warnings = true
+
+[CommandLineTargetAlgorithmEvaluatorOptions]
+ observerFrequency = 500
+ concurrentExecution = true
+ cores = 1
+ logAllCallStrings = false
+ logAllResultLines = false
+ logAllCallsAndResultLines = false
+ logAllProcessOutput = false
+ listenForUpdates = true
+ paramArgumentsContainQuotes = false
+ pgEnvKillCommand = null
+ pgNiceKillCommand = bash -c "kill -s TERM -%pid"
+ pgForceKillCommand = bash -c "kill -s KILL -%pid"
+ procNiceKillCommand = kill -s TERM %pid
+ procForceKillCommand = kill -s KILL %pid
+ smacDefaults = /root/.aeatk/cli-tae.opt
+
+[ConstantTargetAlgorithmEvaluatorOptions]
+ runResult = SAT
+ runtime = 1.0
+ quality = 0.0
+ runlength = 0.0
+ additionalRunData = 
+
+[IPCTargetAlgorithmEvaluatorOptions]
+ persistent = false
+ ipcMechanism = UDP
+ encodingMechanism = CALL_STRING
+ remoteHost = 127.0.0.1
+ remotePort = 5050
+ udpPacketSize = 4096
+ localPort = 0
+ execScript = null
+ execScriptOutput = false
+ poolConnections = false
+ ipcDefaults = /root/.aeatk/ipc-tae.opt
+ asyncThreads = 33
+
+[PreloadedResponseTargetAlgorithmEvaluatorOptions]
+ preloadedResponses = 
+ runLength = -1.0
+ quality = 0.0
+ additionalRunData = 
+
+[RandomResponseTargetAlgorithmEvaluatorOptions]
+ simulateDelay = false
+ additionalRunData = 
+ cores = 0
+ maxResponse = 10.0
+ minResponse = 0.0
+ observerFrequency = 500
+ trendCoefficient = 0.0
+ seed = 1526402126677
+ persistent = false
+ scaleDelay = 1.0
+
+
+10:35:33.606 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - SMAC started at: May 15, 2018 10:35:33 AM. Minimizing penalized average runtime (PAR10).
+10:35:47.658 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.3_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '1000' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+10:35:47.658 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+10:35:47.659 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+10:35:47.682 [CLI TAE Callback Threads (3-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 90000.0 (secs) that exceeded it's cutoff time of 2000.0 (secs) by 88000.0 (secs). Next warning at 88001.0 (secs)  
+10:35:47.683 [CLI TAE Callback Threads (3-1)] WARN  c.u.c.b.a.t.d.s.CrashedSolutionQualityTransformingTargetAlgorithmEvaluatorDecorator - Detected CRASHED run. The Solution Quality of CRASHED runs will be transformed to the MAX(quality, 1.0E9), to disable this use --transform-crashed-quality false to change the value use --transform-crashed-quality-value
+10:35:47.905 [main] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Detected new source(s) of run data which we will read from : [live-rundata-7.json]
+10:35:47.953 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - First incumbent: config 1 (internal ID: 0x000B), with penalized average runtime (PAR10): 20000.0; estimate based on 1 runs.
+10:35:47.955 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample call for new incumbent config 1 (internal ID: 0x000B): 
+cd /proj/SMACK/smac/example_scenarios/seq_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.3_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '1000' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+10:36:28.193 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-pthread/cs_time_var_mutex_true-unreach-call.i 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '1000' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+10:36:28.193 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+10:36:28.193 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+10:36:28.233 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 20000.0; estimate now based on 2 runs.
+10:45:00.894 [main] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Detected new source(s) of run data which we will read from : [live-rundata-1.json, live-rundata-10.json, live-rundata-12.json, live-rundata-14.json, live-rundata-15.json, live-rundata-17.json, live-rundata-18.json, live-rundata-19.json, live-rundata-20.json, live-rundata-21.json, live-rundata-23.json, live-rundata-24.json, live-rundata-25.json, live-rundata-26.json, live-rundata-27.json, live-rundata-28.json, live-rundata-29.json, live-rundata-30.json, live-rundata-31.json, live-rundata-32.json, live-rundata-4.json, live-rundata-46.json, live-rundata-5.json, live-rundata-6.json, live-rundata-8.json, live-rundata-9.json]
+10:45:00.895 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent changed to: config 2 (internal ID: 0x3E8C), with penalized average runtime (PAR10): 255.4065965415; estimate based on 2 runs.
+10:45:00.896 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample call for new incumbent config 2 (internal ID: 0x3E8C): 
+cd /proj/SMACK/smac/example_scenarios/seq_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.3_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+10:45:55.703 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 188.49333270396667; estimate now based on 3 runs.
+11:04:38.209 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 1122.102 seconds for a run that should have taken at most 373.8674659173667 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.3_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 373.8674659173667 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '28925' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+11:17:18.168 [CLI TAE Callback Threads (3-4)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 90000.0 (secs) that exceeded it's cutoff time of 373.8674659173667 (secs) by 89626.13253408263 (secs). Next warning at 89627.13253408263 (secs)  
+11:17:18.177 [CLI TAE Callback Threads (3-4)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 1882.411 (secs) that exceeded it's cutoff time of 373.8674659173667 (secs) by 1508.5435340826334 (secs). Next warning at 1509.5435340826334 (secs)  
+11:17:18.899 [main] WARN  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Error occurred reading file in shared run history /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-44.json. We will keep trying to read this file, but will only log another error after it succeeds once. We may not be able to get it's run data but we should be able to continue
+java.lang.RuntimeException: Illegal character ((CTRL-CHAR, code 0)): only regular white space (\r, \n, \t) is allowed between tokens
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-44.json; line: 1764, column: 3]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNext(MappingIterator.java:112) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.readRunsFromFile(FileSharingRunHistoryDecorator.java:418) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.reReadFiles(FileSharingRunHistoryDecorator.java:339) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:239) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:502) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.TeeRunHistory.append(TeeRunHistory.java:33) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.ThreadSafeRunHistoryWrapper.append(ThreadSafeRunHistoryWrapper.java:60) [aeatk.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.updateRunHistory(AbstractAlgorithmFramework.java:1229) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.evaluateRun(AbstractAlgorithmFramework.java:1279) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:948) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:778) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.intensify(AbstractAlgorithmFramework.java:766) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.run(AbstractAlgorithmFramework.java:580) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.oldMain(SMACExecutor.java:140) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.main(SMACExecutor.java:104) [smac.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_162]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_162]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_162]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_162]
+	at ca.ubc.cs.beta.aeatk.ant.execscript.Launcher.main(Launcher.java:37) [aeatk.jar:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal character ((CTRL-CHAR, code 0)): only regular white space (\r, \n, \t) is allowed between tokens
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-44.json; line: 1764, column: 3]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1524) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwInvalidSpace(ParserMinimalBase.java:503) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._reportInvalidChar(UTF8StreamJsonParser.java:3103) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipWSOrEnd(UTF8StreamJsonParser.java:2585) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:650) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNextValue(MappingIterator.java:159) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNext(MappingIterator.java:108) ~[jackson-databind-2.3.1.jar:2.3.1]
+	... 19 common frames omitted
+11:17:19.075 [main] WARN  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Error occurred reading file in shared run history /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-36.json. We will keep trying to read this file, but will only log another error after it succeeds once. We may not be able to get it's run data but we should be able to continue
+java.lang.RuntimeException: Unrecognized token 'algo': was expecting ('true', 'false' or 'null')
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-36.json; line: 1764, column: 7]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNext(MappingIterator.java:112) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.readRunsFromFile(FileSharingRunHistoryDecorator.java:418) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.reReadFiles(FileSharingRunHistoryDecorator.java:339) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:239) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:502) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.TeeRunHistory.append(TeeRunHistory.java:33) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.ThreadSafeRunHistoryWrapper.append(ThreadSafeRunHistoryWrapper.java:60) [aeatk.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.updateRunHistory(AbstractAlgorithmFramework.java:1229) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.evaluateRun(AbstractAlgorithmFramework.java:1279) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:948) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:778) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.intensify(AbstractAlgorithmFramework.java:766) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.run(AbstractAlgorithmFramework.java:580) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.oldMain(SMACExecutor.java:140) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.main(SMACExecutor.java:104) [smac.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_162]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_162]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_162]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_162]
+	at ca.ubc.cs.beta.aeatk.ant.execscript.Launcher.main(Launcher.java:37) [aeatk.jar:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'algo': was expecting ('true', 'false' or 'null')
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-36.json; line: 1764, column: 7]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1524) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._reportInvalidToken(UTF8StreamJsonParser.java:3095) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2340) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:818) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:698) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNextValue(MappingIterator.java:159) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNext(MappingIterator.java:108) ~[jackson-databind-2.3.1.jar:2.3.1]
+	... 19 common frames omitted
+11:17:19.120 [main] WARN  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Error occurred reading file in shared run history /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-33.json. We will keep trying to read this file, but will only log another error after it succeeds once. We may not be able to get it's run data but we should be able to continue
+java.lang.RuntimeException: Unexpected close marker '}': expected ']' (for ROOT starting at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-33.json; line: 1, column: 0])
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-33.json; line: 1722, column: 3]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNext(MappingIterator.java:112) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.readRunsFromFile(FileSharingRunHistoryDecorator.java:418) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.reReadFiles(FileSharingRunHistoryDecorator.java:339) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:239) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:502) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.TeeRunHistory.append(TeeRunHistory.java:33) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.ThreadSafeRunHistoryWrapper.append(ThreadSafeRunHistoryWrapper.java:60) [aeatk.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.updateRunHistory(AbstractAlgorithmFramework.java:1229) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.evaluateRun(AbstractAlgorithmFramework.java:1279) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:948) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:778) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.intensify(AbstractAlgorithmFramework.java:766) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.run(AbstractAlgorithmFramework.java:580) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.oldMain(SMACExecutor.java:140) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.main(SMACExecutor.java:104) [smac.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_162]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_162]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_162]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_162]
+	at ca.ubc.cs.beta.aeatk.ant.execscript.Launcher.main(Launcher.java:37) [aeatk.jar:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected close marker '}': expected ']' (for ROOT starting at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-33.json; line: 1, column: 0])
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-33.json; line: 1722, column: 3]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1524) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserBase._reportMismatchedEndMarker(ParserBase.java:501) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:679) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNextValue(MappingIterator.java:159) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNext(MappingIterator.java:108) ~[jackson-databind-2.3.1.jar:2.3.1]
+	... 19 common frames omitted
+11:17:19.264 [main] WARN  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Error occurred reading file in shared run history /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-45.json. We will keep trying to read this file, but will only log another error after it succeeds once. We may not be able to get it's run data but we should be able to continue
+java.lang.RuntimeException: Illegal character ((CTRL-CHAR, code 0)): only regular white space (\r, \n, \t) is allowed between tokens
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-45.json; line: 1764, column: 3]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNext(MappingIterator.java:112) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.readRunsFromFile(FileSharingRunHistoryDecorator.java:418) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.reReadFiles(FileSharingRunHistoryDecorator.java:339) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:239) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:502) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.TeeRunHistory.append(TeeRunHistory.java:33) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.ThreadSafeRunHistoryWrapper.append(ThreadSafeRunHistoryWrapper.java:60) [aeatk.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.updateRunHistory(AbstractAlgorithmFramework.java:1229) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.evaluateRun(AbstractAlgorithmFramework.java:1279) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:948) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:778) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.intensify(AbstractAlgorithmFramework.java:766) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.run(AbstractAlgorithmFramework.java:580) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.oldMain(SMACExecutor.java:140) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.main(SMACExecutor.java:104) [smac.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_162]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_162]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_162]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_162]
+	at ca.ubc.cs.beta.aeatk.ant.execscript.Launcher.main(Launcher.java:37) [aeatk.jar:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal character ((CTRL-CHAR, code 0)): only regular white space (\r, \n, \t) is allowed between tokens
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-45.json; line: 1764, column: 3]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1524) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwInvalidSpace(ParserMinimalBase.java:503) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._reportInvalidChar(UTF8StreamJsonParser.java:3103) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipWSOrEnd(UTF8StreamJsonParser.java:2585) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:650) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNextValue(MappingIterator.java:159) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNext(MappingIterator.java:108) ~[jackson-databind-2.3.1.jar:2.3.1]
+	... 19 common frames omitted
+11:17:19.405 [main] WARN  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Error occurred reading file in shared run history /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-35.json. We will keep trying to read this file, but will only log another error after it succeeds once. We may not be able to get it's run data but we should be able to continue
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('{' (code 123)): was expecting comma to separate OBJECT entries
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-35.json; line: 1722, column: 3]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1524) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:475) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:688) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase.nextValue(ParserMinimalBase.java:123) ~[jackson-core-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.json.serializers.AlgorithmRunResultJson$AlgorithmRunDeserializer.deserialize(AlgorithmRunResultJson.java:57) ~[aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.json.serializers.AlgorithmRunResultJson$AlgorithmRunDeserializer.deserialize(AlgorithmRunResultJson.java:30) ~[aeatk.jar:na]
+	at com.fasterxml.jackson.databind.MappingIterator.nextValue(MappingIterator.java:189) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.readRunsFromFile(FileSharingRunHistoryDecorator.java:421) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.reReadFiles(FileSharingRunHistoryDecorator.java:339) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:239) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:502) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.TeeRunHistory.append(TeeRunHistory.java:33) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.ThreadSafeRunHistoryWrapper.append(ThreadSafeRunHistoryWrapper.java:60) [aeatk.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.updateRunHistory(AbstractAlgorithmFramework.java:1229) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.evaluateRun(AbstractAlgorithmFramework.java:1279) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:948) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:778) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.intensify(AbstractAlgorithmFramework.java:766) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.run(AbstractAlgorithmFramework.java:580) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.oldMain(SMACExecutor.java:140) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.main(SMACExecutor.java:104) [smac.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_162]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_162]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_162]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_162]
+	at ca.ubc.cs.beta.aeatk.ant.execscript.Launcher.main(Launcher.java:37) [aeatk.jar:na]
+11:17:19.419 [main] WARN  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Error occurred reading file in shared run history /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-43.json. We will keep trying to read this file, but will only log another error after it succeeds once. We may not be able to get it's run data but we should be able to continue
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('{' (code 123)): was expecting comma to separate OBJECT entries
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-43.json; line: 1722, column: 3]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1524) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:475) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:688) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase.nextValue(ParserMinimalBase.java:123) ~[jackson-core-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.json.serializers.AlgorithmRunResultJson$AlgorithmRunDeserializer.deserialize(AlgorithmRunResultJson.java:57) ~[aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.json.serializers.AlgorithmRunResultJson$AlgorithmRunDeserializer.deserialize(AlgorithmRunResultJson.java:30) ~[aeatk.jar:na]
+	at com.fasterxml.jackson.databind.MappingIterator.nextValue(MappingIterator.java:189) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.readRunsFromFile(FileSharingRunHistoryDecorator.java:421) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.reReadFiles(FileSharingRunHistoryDecorator.java:339) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:239) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:502) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.TeeRunHistory.append(TeeRunHistory.java:33) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.ThreadSafeRunHistoryWrapper.append(ThreadSafeRunHistoryWrapper.java:60) [aeatk.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.updateRunHistory(AbstractAlgorithmFramework.java:1229) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.evaluateRun(AbstractAlgorithmFramework.java:1279) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:948) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:778) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.intensify(AbstractAlgorithmFramework.java:766) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.run(AbstractAlgorithmFramework.java:580) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.oldMain(SMACExecutor.java:140) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.main(SMACExecutor.java:104) [smac.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_162]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_162]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_162]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_162]
+	at ca.ubc.cs.beta.aeatk.ant.execscript.Launcher.main(Launcher.java:37) [aeatk.jar:na]
+11:17:19.437 [main] WARN  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Error occurred reading file in shared run history /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-39.json. We will keep trying to read this file, but will only log another error after it succeeds once. We may not be able to get it's run data but we should be able to continue
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('{' (code 123)): was expecting comma to separate OBJECT entries
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-39.json; line: 1721, column: 32]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1524) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:475) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:688) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase.nextValue(ParserMinimalBase.java:123) ~[jackson-core-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.json.serializers.AlgorithmRunResultJson$AlgorithmRunDeserializer.deserialize(AlgorithmRunResultJson.java:57) ~[aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.json.serializers.AlgorithmRunResultJson$AlgorithmRunDeserializer.deserialize(AlgorithmRunResultJson.java:30) ~[aeatk.jar:na]
+	at com.fasterxml.jackson.databind.MappingIterator.nextValue(MappingIterator.java:189) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.readRunsFromFile(FileSharingRunHistoryDecorator.java:421) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.reReadFiles(FileSharingRunHistoryDecorator.java:339) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:239) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:502) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.TeeRunHistory.append(TeeRunHistory.java:33) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.ThreadSafeRunHistoryWrapper.append(ThreadSafeRunHistoryWrapper.java:60) [aeatk.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.updateRunHistory(AbstractAlgorithmFramework.java:1229) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.evaluateRun(AbstractAlgorithmFramework.java:1279) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:948) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:778) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.intensify(AbstractAlgorithmFramework.java:766) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.run(AbstractAlgorithmFramework.java:580) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.oldMain(SMACExecutor.java:140) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.main(SMACExecutor.java:104) [smac.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_162]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_162]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_162]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_162]
+	at ca.ubc.cs.beta.aeatk.ant.execscript.Launcher.main(Launcher.java:37) [aeatk.jar:na]
+11:17:19.523 [main] WARN  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Error occurred reading file in shared run history /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-47.json. We will keep trying to read this file, but will only log another error after it succeeds once. We may not be able to get it's run data but we should be able to continue
+java.lang.RuntimeException: Unexpected character ('{' (code 123)): was expecting comma to separate OBJECT entries
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-47.json; line: 1810, column: 4]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNext(MappingIterator.java:112) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.readRunsFromFile(FileSharingRunHistoryDecorator.java:418) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.reReadFiles(FileSharingRunHistoryDecorator.java:339) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:239) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:502) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.TeeRunHistory.append(TeeRunHistory.java:33) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.ThreadSafeRunHistoryWrapper.append(ThreadSafeRunHistoryWrapper.java:60) [aeatk.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.updateRunHistory(AbstractAlgorithmFramework.java:1229) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.evaluateRun(AbstractAlgorithmFramework.java:1279) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:948) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:778) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.intensify(AbstractAlgorithmFramework.java:766) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.run(AbstractAlgorithmFramework.java:580) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.oldMain(SMACExecutor.java:140) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.main(SMACExecutor.java:104) [smac.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_162]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_162]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_162]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_162]
+	at ca.ubc.cs.beta.aeatk.ant.execscript.Launcher.main(Launcher.java:37) [aeatk.jar:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('{' (code 123)): was expecting comma to separate OBJECT entries
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-47.json; line: 1810, column: 4]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1524) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:475) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:688) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNextValue(MappingIterator.java:159) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNext(MappingIterator.java:108) ~[jackson-databind-2.3.1.jar:2.3.1]
+	... 19 common frames omitted
+11:17:19.692 [main] WARN  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Error occurred reading file in shared run history /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-38.json. We will keep trying to read this file, but will only log another error after it succeeds once. We may not be able to get it's run data but we should be able to continue
+java.lang.RuntimeException: Illegal character ((CTRL-CHAR, code 0)): only regular white space (\r, \n, \t) is allowed between tokens
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-38.json; line: 1742, column: 3]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNext(MappingIterator.java:112) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.readRunsFromFile(FileSharingRunHistoryDecorator.java:418) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.reReadFiles(FileSharingRunHistoryDecorator.java:339) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:239) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:502) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.TeeRunHistory.append(TeeRunHistory.java:33) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.ThreadSafeRunHistoryWrapper.append(ThreadSafeRunHistoryWrapper.java:60) [aeatk.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.updateRunHistory(AbstractAlgorithmFramework.java:1229) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.evaluateRun(AbstractAlgorithmFramework.java:1279) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:948) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:778) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.intensify(AbstractAlgorithmFramework.java:766) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.run(AbstractAlgorithmFramework.java:580) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.oldMain(SMACExecutor.java:140) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.main(SMACExecutor.java:104) [smac.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_162]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_162]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_162]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_162]
+	at ca.ubc.cs.beta.aeatk.ant.execscript.Launcher.main(Launcher.java:37) [aeatk.jar:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Illegal character ((CTRL-CHAR, code 0)): only regular white space (\r, \n, \t) is allowed between tokens
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-38.json; line: 1742, column: 3]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1524) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._throwInvalidSpace(ParserMinimalBase.java:503) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._reportInvalidChar(UTF8StreamJsonParser.java:3103) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._skipWSOrEnd(UTF8StreamJsonParser.java:2585) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:650) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNextValue(MappingIterator.java:159) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.databind.MappingIterator.hasNext(MappingIterator.java:108) ~[jackson-databind-2.3.1.jar:2.3.1]
+	... 19 common frames omitted
+11:17:19.759 [main] WARN  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Error occurred reading file in shared run history /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-46.json. We will keep trying to read this file, but will only log another error after it succeeds once. We may not be able to get it's run data but we should be able to continue
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('{' (code 123)): was expecting comma to separate OBJECT entries
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-46.json; line: 1722, column: 4]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1524) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:475) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:688) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase.nextValue(ParserMinimalBase.java:123) ~[jackson-core-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.json.serializers.AlgorithmRunResultJson$AlgorithmRunDeserializer.deserialize(AlgorithmRunResultJson.java:57) ~[aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.json.serializers.AlgorithmRunResultJson$AlgorithmRunDeserializer.deserialize(AlgorithmRunResultJson.java:30) ~[aeatk.jar:na]
+	at com.fasterxml.jackson.databind.MappingIterator.nextValue(MappingIterator.java:189) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.readRunsFromFile(FileSharingRunHistoryDecorator.java:421) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.reReadFiles(FileSharingRunHistoryDecorator.java:339) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:239) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:502) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.TeeRunHistory.append(TeeRunHistory.java:33) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.ThreadSafeRunHistoryWrapper.append(ThreadSafeRunHistoryWrapper.java:60) [aeatk.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.updateRunHistory(AbstractAlgorithmFramework.java:1229) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.evaluateRun(AbstractAlgorithmFramework.java:1279) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:948) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:778) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.intensify(AbstractAlgorithmFramework.java:766) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.run(AbstractAlgorithmFramework.java:580) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.oldMain(SMACExecutor.java:140) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.main(SMACExecutor.java:104) [smac.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_162]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_162]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_162]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_162]
+	at ca.ubc.cs.beta.aeatk.ant.execscript.Launcher.main(Launcher.java:37) [aeatk.jar:na]
+11:17:20.110 [main] WARN  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Error occurred reading file in shared run history /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-34.json. We will keep trying to read this file, but will only log another error after it succeeds once. We may not be able to get it's run data but we should be able to continue
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('{' (code 123)): was expecting comma to separate OBJECT entries
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-34.json; line: 1696, column: 4]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1524) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:475) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:688) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase.nextValue(ParserMinimalBase.java:123) ~[jackson-core-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.json.serializers.AlgorithmRunResultJson$AlgorithmRunDeserializer.deserialize(AlgorithmRunResultJson.java:57) ~[aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.json.serializers.AlgorithmRunResultJson$AlgorithmRunDeserializer.deserialize(AlgorithmRunResultJson.java:30) ~[aeatk.jar:na]
+	at com.fasterxml.jackson.databind.MappingIterator.nextValue(MappingIterator.java:189) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.readRunsFromFile(FileSharingRunHistoryDecorator.java:421) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.reReadFiles(FileSharingRunHistoryDecorator.java:339) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:239) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:502) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.TeeRunHistory.append(TeeRunHistory.java:33) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.ThreadSafeRunHistoryWrapper.append(ThreadSafeRunHistoryWrapper.java:60) [aeatk.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.updateRunHistory(AbstractAlgorithmFramework.java:1229) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.evaluateRun(AbstractAlgorithmFramework.java:1279) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:948) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:778) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.intensify(AbstractAlgorithmFramework.java:766) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.run(AbstractAlgorithmFramework.java:580) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.oldMain(SMACExecutor.java:140) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.main(SMACExecutor.java:104) [smac.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_162]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_162]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_162]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_162]
+	at ca.ubc.cs.beta.aeatk.ant.execscript.Launcher.main(Launcher.java:37) [aeatk.jar:na]
+11:17:20.125 [main] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Detected new source(s) of run data which we will read from : [live-rundata-100.json, live-rundata-101.json, live-rundata-102.json, live-rundata-103.json, live-rundata-104.json, live-rundata-105.json, live-rundata-106.json, live-rundata-107.json, live-rundata-108.json, live-rundata-11.json, live-rundata-110.json, live-rundata-112.json, live-rundata-113.json, live-rundata-114.json, live-rundata-115.json, live-rundata-116.json, live-rundata-117.json, live-rundata-118.json, live-rundata-119.json, live-rundata-120.json, live-rundata-121.json, live-rundata-122.json, live-rundata-123.json, live-rundata-124.json, live-rundata-125.json, live-rundata-126.json, live-rundata-127.json, live-rundata-128.json, live-rundata-129.json, live-rundata-13.json, live-rundata-130.json, live-rundata-131.json, live-rundata-132.json, live-rundata-133.json, live-rundata-134.json, live-rundata-135.json, live-rundata-136.json, live-rundata-137.json, live-rundata-138.json, live-rundata-139.json, live-rundata-140.json, live-rundata-141.json, live-rundata-142.json, live-rundata-143.json, live-rundata-144.json, live-rundata-146.json, live-rundata-147.json, live-rundata-148.json, live-rundata-149.json, live-rundata-150.json, live-rundata-151.json, live-rundata-152.json, live-rundata-153.json, live-rundata-154.json, live-rundata-155.json, live-rundata-156.json, live-rundata-157.json, live-rundata-158.json, live-rundata-159.json, live-rundata-160.json, live-rundata-2.json, live-rundata-22.json, live-rundata-3.json, live-rundata-37.json, live-rundata-40.json, live-rundata-41.json, live-rundata-42.json, live-rundata-48.json, live-rundata-49.json, live-rundata-50.json, live-rundata-51.json, live-rundata-52.json, live-rundata-53.json, live-rundata-54.json, live-rundata-55.json, live-rundata-56.json, live-rundata-57.json, live-rundata-58.json, live-rundata-59.json, live-rundata-60.json, live-rundata-61.json, live-rundata-62.json, live-rundata-63.json, live-rundata-64.json, live-rundata-65.json, live-rundata-66.json, live-rundata-67.json, live-rundata-68.json, live-rundata-69.json, live-rundata-70.json, live-rundata-71.json, live-rundata-72.json, live-rundata-73.json, live-rundata-74.json, live-rundata-75.json, live-rundata-76.json, live-rundata-77.json, live-rundata-78.json, live-rundata-81.json, live-rundata-83.json, live-rundata-84.json, live-rundata-85.json, live-rundata-86.json, live-rundata-87.json, live-rundata-88.json, live-rundata-89.json, live-rundata-90.json, live-rundata-91.json, live-rundata-92.json, live-rundata-93.json, live-rundata-94.json, live-rundata-95.json, live-rundata-96.json, live-rundata-97.json, live-rundata-98.json, live-rundata-99.json]
+11:48:45.279 [main] WARN  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Error occurred reading file in shared run history /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-41.json. We will keep trying to read this file, but will only log another error after it succeeds once. We may not be able to get it's run data but we should be able to continue
+com.fasterxml.jackson.core.JsonParseException: Unexpected character (':' (code 58)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-41.json; line: 1828, column: 26]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1524) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:557) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:475) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2343) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:818) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:698) ~[jackson-core-2.3.1.jar:2.3.1]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase.nextValue(ParserMinimalBase.java:123) ~[jackson-core-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.json.serializers.AlgorithmRunResultJson$AlgorithmRunDeserializer.deserialize(AlgorithmRunResultJson.java:57) ~[aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.json.serializers.AlgorithmRunResultJson$AlgorithmRunDeserializer.deserialize(AlgorithmRunResultJson.java:30) ~[aeatk.jar:na]
+	at com.fasterxml.jackson.databind.MappingIterator.nextValue(MappingIterator.java:189) ~[jackson-databind-2.3.1.jar:2.3.1]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.readRunsFromFile(FileSharingRunHistoryDecorator.java:421) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.reReadFiles(FileSharingRunHistoryDecorator.java:339) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:239) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.FileSharingRunHistoryDecorator.append(FileSharingRunHistoryDecorator.java:502) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.TeeRunHistory.append(TeeRunHistory.java:33) [aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.runhistory.ThreadSafeRunHistoryWrapper.append(ThreadSafeRunHistoryWrapper.java:60) [aeatk.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.updateRunHistory(AbstractAlgorithmFramework.java:1229) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.evaluateRun(AbstractAlgorithmFramework.java:1279) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.evaluateRun(AbstractAlgorithmFramework.java:1245) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:804) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.challengeIncumbent(AbstractAlgorithmFramework.java:778) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.intensify(AbstractAlgorithmFramework.java:766) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.configurator.AbstractAlgorithmFramework.run(AbstractAlgorithmFramework.java:580) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.oldMain(SMACExecutor.java:140) [smac.jar:na]
+	at ca.ubc.cs.beta.smac.executors.SMACExecutor.main(SMACExecutor.java:104) [smac.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_162]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_162]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_162]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_162]
+	at ca.ubc.cs.beta.aeatk.ant.execscript.Launcher.main(Launcher.java:37) [aeatk.jar:na]
+11:48:46.386 [main] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Detected new source(s) of run data which we will read from : [live-rundata-109.json, live-rundata-111.json, live-rundata-145.json, live-rundata-79.json, live-rundata-80.json, live-rundata-82.json]
+12:20:32.413 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent changed to: config 4 (internal ID: 0xC342), with penalized average runtime (PAR10): 5005.622559785845; estimate based on 4 runs.
+12:20:32.414 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample call for new incumbent config 4 (internal ID: 0xC342): 
+cd /proj/SMACK/smac/example_scenarios/seq_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_lcr.3_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+12:51:55.003 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 8004.498047828676; estimate now based on 5 runs.
+12:52:21.745 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-pthread/cs_time_var_mutex_true-unreach-call.i 0 8.608731523501874 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+12:52:21.746 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+12:52:21.746 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+12:52:21.766 [CLI TAE Callback Threads (3-7)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 90000.0 (secs) that exceeded it's cutoff time of 8.608731523501874 (secs) by 89991.3912684765 (secs). Next warning at 89992.3912684765 (secs)  
+13:23:45.154 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 10003.748373190563; estimate now based on 6 runs.
+14:41:40.949 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent changed to: config 6 (internal ID: 0x147B9), with penalized average runtime (PAR10): 6818.10942244527; estimate based on 6 runs.
+14:41:40.950 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample call for new incumbent config 6 (internal ID: 0x147B9): 
+cd /proj/SMACK/smac/example_scenarios/seq_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.3_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '21742' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+14:41:53.016 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 5845.804776668532; estimate now based on 7 runs.
+15:18:43.421 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4577.111825068747; estimate now based on 9 runs.
+15:18:48.995 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_lcr.4_false-unreach-call.1.ufo.BOUNDED-8.pals_true-termination.c 0 16.572573397654295 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+15:18:48.996 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+15:18:48.996 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+15:19:07.916 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4121.220026063882; estimate now based on 10 runs.
+16:41:20.693 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent changed to: config 10 (internal ID: 0x282C1), with penalized average runtime (PAR10): 4116.6624534845005; estimate based on 10 runs.
+16:41:20.694 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample call for new incumbent config 10 (internal ID: 0x282C1): 
+cd /proj/SMACK/smac/example_scenarios/seq_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.3_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '19379' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+16:42:04.046 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 3746.3568814450737; estimate now based on 11 runs.
+16:42:11.774 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.4_false-unreach-call.2.ufo.UNBOUNDED.pals.c 0 24.717721704739336 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '29320' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+16:42:11.775 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+16:42:11.775 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+18:00:44.655 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4709.125972601058; estimate now based on 13 runs.
+18:34:16.881 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4373.347957764329; estimate now based on 14 runs.
+19:44:55.445 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/rekcba_aso_false-unreach-call.3.M4.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '19379' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+19:44:55.447 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+19:44:55.447 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+20:16:31.117 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/systemc/token_ring.07_false-unreach-call_false-termination.cil.c 0 68.00060420145392 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+20:16:31.118 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+20:16:31.118 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+20:23:44.017 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 5103.668692737788; estimate now based on 16 runs.
+22:53:49.972 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent changed to: config 16 (internal ID: 0x49B69), with penalized average runtime (PAR10): 5091.567985266443; estimate based on 16 runs.
+22:53:49.972 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample call for new incumbent config 16 (internal ID: 0x49B69): 
+cd /proj/SMACK/smac/example_scenarios/seq_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_lcr.3_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '9633' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+22:54:15.489 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4793.557025544782; estimate now based on 17 runs.
+22:55:40.915 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4529.906012190711; estimate now based on 18 runs.
+02:36:33.766 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent changed to: config 19 (internal ID: 0x5EA67), with penalized average runtime (PAR10): 5343.424060783905; estimate based on 19 runs.
+02:36:33.767 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample call for new incumbent config 19 (internal ID: 0x5EA67): 
+cd /proj/SMACK/smac/example_scenarios/seq_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_lcr.3_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+02:51:17.588 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 5120.34996279481; estimate now based on 20 runs.
+02:55:13.741 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4877.18536395121; estimate now based on 21 runs.
+03:26:52.393 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4656.159038088564; estimate now based on 22 runs.
+03:27:36.976 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.3_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 14.549334243285656 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '5589' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+03:27:36.977 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+03:27:36.977 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+03:29:19.578 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4273.6272656222545; estimate now based on 24 runs.
+03:48:59.633 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4137.951980238004; estimate now based on 25 runs.
+03:49:07.658 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.4_false-unreach-call.2.ufo.UNBOUNDED.pals.c 0 23.592522729533915 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '11976' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+03:49:07.659 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+03:49:07.659 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+04:20:32.517 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4748.030750228851; estimate now based on 26 runs.
+06:31:34.513 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4410.354176674608; estimate now based on 28 runs.
+08:40:37.042 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4258.494630649208; estimate now based on 29 runs.
+08:40:43.707 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_lcr.4_false-unreach-call.1.ufo.BOUNDED-8.pals_true-termination.c 0 16.249831941324473 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+08:40:43.708 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+08:40:43.708 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+10:00:15.994 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4632.490361544421; estimate now based on 31 runs.
+10:33:30.103 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 5112.725037746158; estimate now based on 32 runs.
+10:45:45.098 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/rekcba_aso_false-unreach-call.3.M4.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '12800' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+10:45:45.098 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+10:45:45.099 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+11:49:07.750 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4958.429029327477; estimate now based on 33 runs.
+11:52:08.231 [CLI TAE Observer Threads (2-2)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 180.075 seconds for a run that should have taken at most 40.41210830991268 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.4_false-unreach-call.3.ufo.UNBOUNDED.pals.c 0 40.41210830991268 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+13:03:59.722 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 5250.570699017421; estimate now based on 35 runs.
+13:06:17.935 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 5105.633666932615; estimate now based on 36 runs.
+13:15:34.630 [CLI TAE Observer Threads (2-3)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 556.593 seconds for a run that should have taken at most 185.36404742707612 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.5_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 185.36404742707612 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+13:20:08.252 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 5508.184108366869; estimate now based on 37 runs.
+13:23:08.727 [CLI TAE Observer Threads (2-3)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 180.107 seconds for a run that should have taken at most 23.592522729533915 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.4_false-unreach-call.2.ufo.UNBOUNDED.pals.c 0 23.592522729533915 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '534' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+13:24:17.381 [CLI TAE Observer Threads (2-3)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:87, Seed:-1, Config:0xDFBEF, Kappa:23.592522729533915, Execution Config: 0x0001> at 236.2004 for exceeding 10.0 times its cutoff time of 23.592522729533915 (secs)
+13:56:01.905 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 5738.989890550985; estimate now based on 39 runs.
+13:56:08.432 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/systemc/transmitter.01_false-unreach-call_false-termination.cil.c 0 9.358145006346703 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+13:56:08.433 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+13:56:08.433 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+13:56:24.881 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 5595.872263085871; estimate now based on 40 runs.
+16:45:11.082 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 5947.192451791094; estimate now based on 41 runs.
+16:50:31.468 [CLI TAE Observer Threads (2-3)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 320.185 seconds for a run that should have taken at most 106.56335082684757 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-pthread/cs_read_write_lock_true-unreach-call.i 0 106.56335082684757 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+17:03:53.032 [CLI TAE Observer Threads (2-3)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:268, Seed:-1, Config:0x100B0B, Kappa:106.56335082684757, Execution Config: 0x0001> at 1065.8506 for exceeding 10.0 times its cutoff time of 106.56335082684757 (secs)
+18:07:00.485 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 6136.365951382864; estimate now based on 43 runs.
+18:10:00.962 [CLI TAE Observer Threads (2-3)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 180.074 seconds for a run that should have taken at most 23.592522729533915 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.4_false-unreach-call.2.ufo.UNBOUNDED.pals.c 0 23.592522729533915 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+18:11:09.097 [CLI TAE Observer Threads (2-3)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:87, Seed:-1, Config:0x11043E, Kappa:23.592522729533915, Execution Config: 0x0001> at 236.17094999999998 for exceeding 10.0 times its cutoff time of 23.592522729533915 (secs)
+18:42:34.910 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 6451.44854339689; estimate now based on 44 runs.
+18:48:20.012 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/rekcba_aso_false-unreach-call.3.M4.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+18:48:20.015 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+18:48:20.016 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+19:26:19.017 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 6606.6296216819865; estimate now based on 46 runs.
+20:45:30.234 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 6891.594948880242; estimate now based on 47 runs.
+21:17:01.247 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/systemc/token_ring.03_false-unreach-call_false-termination.cil.c 0 34.31383603100777 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '12788' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+21:17:01.248 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+21:17:01.248 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+21:19:13.236 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 6750.704811881007; estimate now based on 48 runs.
+22:26:48.207 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/rekh_nxt_true-unreach-call.3.M4.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+22:26:48.207 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+22:26:48.207 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+06:57:34.682 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 6487.727321848907; estimate now based on 50 runs.
+07:00:35.166 [CLI TAE Observer Threads (2-4)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 180.18 seconds for a run that should have taken at most 43.6914082508266 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_opt-floodmax.4_false-unreach-call.3.ufo.UNBOUNDED.pals.c 0 43.6914082508266 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+07:05:14.986 [CLI TAE Observer Threads (2-4)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:150, Seed:-1, Config:0x18043C, Kappa:43.6914082508266, Execution Config: 0x0001> at 437.27169999999995 for exceeding 10.0 times its cutoff time of 43.6914082508266 (secs)
+07:36:40.383 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 6752.673844949909; estimate now based on 51 runs.
+07:36:46.828 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_lcr.8_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 304.944685835737 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+07:36:46.828 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+07:36:46.828 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+08:08:12.804 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7007.430117162411; estimate now based on 52 runs.
+08:17:29.311 [CLI TAE Observer Threads (2-4)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 556.221 seconds for a run that should have taken at most 185.36404742707612 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.5_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 185.36404742707612 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+08:39:34.912 [CLI TAE Callback Threads (3-142)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 1882.1 (secs) that exceeded it's cutoff time of 185.36404742707612 (secs) by 1696.735952572924 (secs). Next warning at 1697.735952572924 (secs)  
+09:11:17.832 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_lcr-var-start-time.5_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 43.805047579455376 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '12069' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+09:11:17.833 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+09:11:17.833 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+09:44:05.159 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7488.636409119359; estimate now based on 54 runs.
+09:48:25.648 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7352.772776282952; estimate now based on 55 runs.
+09:58:29.460 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/rekcba_nxt_true-unreach-call.2.M4.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+09:58:29.464 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+09:58:29.464 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+10:01:31.130 [CLI TAE Observer Threads (2-4)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 180.106 seconds for a run that should have taken at most 40.41470893507004 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.4_false-unreach-call.3.ufo.UNBOUNDED.pals.c 0 40.41470893507004 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+10:35:28.467 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7578.616119563614; estimate now based on 56 runs.
+11:25:30.652 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7333.953111237527; estimate now based on 58 runs.
+11:59:46.606 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7210.947980298867; estimate now based on 59 runs.
+12:04:48.787 [CLI TAE Observer Threads (2-4)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 302.118 seconds for a run that should have taken at most 100.64810178090931 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_opt-floodmax.5_false-unreach-call.2.ufo.UNBOUNDED.pals.c 0 100.64810178090931 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+12:17:26.578 [CLI TAE Observer Threads (2-4)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:157, Seed:-1, Config:0x1D2F67, Kappa:100.64810178090931, Execution Config: 0x0001> at 1006.90595 for exceeding 10.0 times its cutoff time of 100.64810178090931 (secs)
+12:27:42.729 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/rekh_aso_true-unreach-call.1.M4.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+12:27:42.729 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+12:27:42.729 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+13:25:11.173 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/rekh_nxt_true-unreach-call.3.M4.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+13:25:11.174 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+13:25:11.175 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+16:31:32.348 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/rekcba_nxt_true-unreach-call.1.M4.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+16:31:32.350 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+16:31:32.353 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+19:36:42.650 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/rekcba_ctm_true-unreach-call.4_true-termination.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+19:36:42.654 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+19:36:42.655 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+21:11:54.206 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 6976.531854488842; estimate now based on 61 runs.
+21:25:14.948 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/rekcba_aso_false-unreach-call.3.M4.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+21:25:14.949 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+21:25:14.949 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+00:41:55.554 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7186.587792319667; estimate now based on 62 runs.
+00:46:25.731 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7072.825328406864; estimate now based on 63 runs.
+00:46:33.153 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_floodmax.4_false-unreach-call.3.ufo.UNBOUNDED.pals.c 0 40.41210830991268 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '3415' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+00:46:33.153 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+00:46:33.153 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+02:31:48.072 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/rekh_nxt_false-unreach-call.2.M1.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+02:31:48.073 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+02:31:48.073 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+02:31:48.082 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7470.584549071268; estimate now based on 65 runs.
+07:19:03.594 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7660.424177115644; estimate now based on 66 runs.
+07:36:10.248 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7547.882479158828; estimate now based on 67 runs.
+07:36:16.227 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_lcr-var-start-time.5_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 43.805047579455376 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+07:36:16.228 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+07:36:16.228 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+10:51:57.885 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7908.813421791906; estimate now based on 69 runs.
+10:52:37.727 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7795.9232350383745; estimate now based on 70 runs.
+11:24:20.291 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7686.283615642896; estimate now based on 71 runs.
+14:55:57.619 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7488.070968487522; estimate now based on 73 runs.
+16:02:55.690 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7388.635407534839; estimate now based on 74 runs.
+20:05:29.332 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7457.73549828407; estimate now based on 76 runs.
+21:11:02.940 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7362.813426163316; estimate now based on 77 runs.
+22:14:41.392 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7524.828638648402; estimate now based on 78 runs.
+00:27:58.546 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/rekh_nxt_false-unreach-call.2.M1.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+00:27:58.547 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+00:27:58.547 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+02:26:32.381 [CLI TAE Observer Threads (2-5)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 1174.65 seconds for a run that should have taken at most 391.5066370632231 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/seq_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_opt-floodmax.5_false-unreach-call.1.ufo.UNBOUNDED.pals.c 0 391.5066370632231 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+02:38:30.305 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7589.013154932879; estimate now based on 80 runs.
+03:49:55.424 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7742.235214748523; estimate now based on 81 runs.
+04:24:22.295 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7891.720151154029; estimate now based on 82 runs.
+07:47:45.515 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7942.002018244514; estimate now based on 84 runs.
+15:28:38.955 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7848.647436360773; estimate now based on 85 runs.
+15:30:12.554 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 7757.445928276993; estimate now based on 86 runs.
+19:46:48.200 [main] INFO  c.u.c.b.a.t.d.r.c.r.RunHistoryCachingTargetAlgorithmEvaluatorDecorator - RunHistoryCachingTargetAlgorithmEvaluatorDecorator: Cache misses 520, Cache requests 561, Hit Rate 7% 
+19:46:48.200 [main] INFO  c.u.c.b.a.e.h.LogRuntimeStatistics - *****Developer Statistics*****
+ Count: 44
+ Incumbent ID: 19 (internal ID:0x5EA67)
+ Number of PISPs for Incumbent: 86
+ Number of Instances for Incumbent: 86
+ Number of Configurations Run: 85
+ Performance of the Incumbent: 7757.446
+ Configuration Time Budget used: 1.99E7 s (0%)
+ Configuration Time Budget remaining: 2.13E9 s
+ Wall-clock Time Budget used: 378674.74 s (100%)
+ Wall-clock Time Budget remaining: -674.74 s
+ Algorithm Runs used: 561.00  (0%)
+ Algorithm Runs remaining: 9.22E18 
+ Model/Iteration used: 43.00  (0%)
+ Model/Iteration remaining: 2.15E9 
+ Sum of Target Algorithm Execution Times (treating minimum value as 0.1): 19855602.161 s
+ CPU time of Configurator: 5528.890 s
+ User time of Configurator: 5528.889 s
+ Outstanding Runs on Target Algorithm Evaluator: 0
+ Outstanding Requests on Target Algorithm Evaluator: 0
+ Total Reported Algorithm Runtime: 19855602.061 s
+ Sum of Measured Wallclock Runtime: 417792.811 s
+ Max Memory: 978 MB
+ Total Java Memory: 978 MB
+ Free Java Memory: 159 MB
+ * PISP count is roughly the number of runs, but doesn't included redundant runs on the same problem instance & seed
+19:46:48.203 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - 
+=======================================================================================
+SMAC has finished. Reason: wall-clock time limit (378674.742 s) has been reached.   
+Total number of runs performed: 561, total configurations tried: 85.
+Total CPU time used: 19861131 s, total wallclock time used: 378675 s.
+SMAC's final incumbent: config 19 (internal ID: 0x5EA67), with estimated penalized average runtime (PAR10): 7757.445928276993, based on 86 run(s) on 86 training instance(s).
+Sample call for this final incumbent:
+cd /proj/SMACK/smac/example_scenarios/seq_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/seq-mthreaded/pals_lcr.8_false-unreach-call.1.ufo.BOUNDED-16.pals_true-termination.c 0 2000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '2'
+=======================================================================================
+19:46:48.211 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Additional information about run 16 in:/proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+19:46:48.213 [FileSharingRunHistory Logger ( outputID:16)] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - At shutdown: /proj/SMACK/smac/example_scenarios/seq_rs/smac-output/smack-scenario_seq_rs/live-rundata-16.json had 491 runs added to it
+19:46:48.213 [FileSharingRunHistory Logger ( outputID:16)] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - At shutdown: we retrieved atleast 66850 runs and added them to our current data set [live-rundata-1.json=>502, live-rundata-10.json=>486, live-rundata-100.json=>466, live-rundata-101.json=>495, live-rundata-102.json=>409, live-rundata-103.json=>492, live-rundata-104.json=>391, live-rundata-105.json=>448, live-rundata-106.json=>468, live-rundata-107.json=>491, live-rundata-108.json=>537, live-rundata-109.json=>432, live-rundata-11.json=>499, live-rundata-110.json=>446, live-rundata-111.json=>494, live-rundata-112.json=>432, live-rundata-113.json=>401, live-rundata-114.json=>480, live-rundata-115.json=>481, live-rundata-116.json=>460, live-rundata-117.json=>541, live-rundata-118.json=>489, live-rundata-119.json=>504, live-rundata-12.json=>482, live-rundata-120.json=>449, live-rundata-121.json=>503, live-rundata-122.json=>563, live-rundata-123.json=>436, live-rundata-124.json=>449, live-rundata-125.json=>486, live-rundata-126.json=>430, live-rundata-127.json=>505, live-rundata-128.json=>471, live-rundata-129.json=>467, live-rundata-13.json=>558, live-rundata-130.json=>159, live-rundata-131.json=>457, live-rundata-132.json=>424, live-rundata-133.json=>554, live-rundata-134.json=>475, live-rundata-135.json=>439, live-rundata-136.json=>438, live-rundata-137.json=>479, live-rundata-138.json=>443, live-rundata-139.json=>442, live-rundata-14.json=>246, live-rundata-140.json=>442, live-rundata-141.json=>501, live-rundata-142.json=>442, live-rundata-143.json=>493, live-rundata-144.json=>445, live-rundata-145.json=>488, live-rundata-146.json=>471, live-rundata-147.json=>425, live-rundata-148.json=>401, live-rundata-149.json=>509, live-rundata-15.json=>420, live-rundata-150.json=>440, live-rundata-151.json=>511, live-rundata-152.json=>479, live-rundata-153.json=>498, live-rundata-154.json=>403, live-rundata-155.json=>493, live-rundata-156.json=>550, live-rundata-157.json=>428, live-rundata-158.json=>437, live-rundata-159.json=>467, live-rundata-160.json=>520, live-rundata-17.json=>434, live-rundata-18.json=>432, live-rundata-19.json=>371, live-rundata-2.json=>519, live-rundata-20.json=>558, live-rundata-21.json=>419, live-rundata-22.json=>461, live-rundata-23.json=>429, live-rundata-24.json=>465, live-rundata-25.json=>461, live-rundata-26.json=>431, live-rundata-27.json=>536, live-rundata-28.json=>504, live-rundata-29.json=>428, live-rundata-3.json=>400, live-rundata-30.json=>487, live-rundata-31.json=>440, live-rundata-32.json=>512, live-rundata-33.json=>0, live-rundata-34.json=>0, live-rundata-35.json=>0, live-rundata-36.json=>0, live-rundata-37.json=>396, live-rundata-38.json=>0, live-rundata-39.json=>0, live-rundata-4.json=>408, live-rundata-40.json=>547, live-rundata-41.json=>3, live-rundata-42.json=>479, live-rundata-43.json=>0, live-rundata-44.json=>0, live-rundata-45.json=>0, live-rundata-46.json=>1, live-rundata-47.json=>0, live-rundata-48.json=>428, live-rundata-49.json=>435, live-rundata-5.json=>481, live-rundata-50.json=>539, live-rundata-51.json=>458, live-rundata-52.json=>464, live-rundata-53.json=>431, live-rundata-54.json=>427, live-rundata-55.json=>470, live-rundata-56.json=>403, live-rundata-57.json=>454, live-rundata-58.json=>568, live-rundata-59.json=>470, live-rundata-6.json=>449, live-rundata-60.json=>525, live-rundata-61.json=>431, live-rundata-62.json=>502, live-rundata-63.json=>365, live-rundata-64.json=>404, live-rundata-65.json=>425, live-rundata-66.json=>548, live-rundata-67.json=>490, live-rundata-68.json=>491, live-rundata-69.json=>389, live-rundata-7.json=>429, live-rundata-70.json=>386, live-rundata-71.json=>491, live-rundata-72.json=>372, live-rundata-73.json=>503, live-rundata-74.json=>410, live-rundata-75.json=>71, live-rundata-76.json=>450, live-rundata-77.json=>481, live-rundata-78.json=>412, live-rundata-79.json=>461, live-rundata-8.json=>356, live-rundata-80.json=>448, live-rundata-81.json=>448, live-rundata-82.json=>343, live-rundata-83.json=>474, live-rundata-84.json=>146, live-rundata-85.json=>463, live-rundata-86.json=>519, live-rundata-87.json=>546, live-rundata-88.json=>534, live-rundata-89.json=>498, live-rundata-9.json=>515, live-rundata-90.json=>507, live-rundata-91.json=>456, live-rundata-92.json=>456, live-rundata-93.json=>405, live-rundata-94.json=>431, live-rundata-95.json=>384, live-rundata-96.json=>487, live-rundata-97.json=>486, live-rundata-98.json=>485, live-rundata-99.json=>367] which now has 66719 runs (491 local)

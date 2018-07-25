@@ -1,0 +1,925 @@
+08:53:40.588 [main] INFO  c.u.c.b.a.l.ComplexLoggingOptions - Logging to: /proj/SMACK/smac/example_scenarios/loop_rs/smac-output/smack-scenario_loop_rs/log-run100.txt
+08:53:40.602 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Algorithm Execution & Abstraction Toolkit is v2.10.03-master-814 (ebf4c8c913d5) 
+08:53:40.602 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Java Runtime Environment is OpenJDK 64-Bit Server VM (1.8.0_162) 
+08:53:40.602 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of OS is Linux 3.19.0-80-generic (amd64) 
+08:53:40.602 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of Random Forest Library is v1.10.01-master-120 (b68439c2c391) 
+08:53:40.602 [main] INFO  c.u.c.b.a.m.version.VersionTracker - Version of SMAC is v2.10.03-master-778 (3ee628ef9bf2) 
+08:53:40.603 [main] INFO  c.u.c.b.a.m.j.JCommanderHelper - Call String: smac --shared-model-mode true --scenario-file smack-scenario_loop_rs.txt --seed 100 --validation false 
+08:53:40.603 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - ********** The next bit of output can be ignored, it is merely useful for debugging **********
+08:53:40.604 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - ==========Enviroment Variables===========
+BOOGIE=mono /mnt/local/smack-project/boogie/Binaries/Boogie.exe
+CORRAL=mono /mnt/local/smack-project/corral/bin/Release/corral.exe
+HOME=/root
+LANG=en_US.UTF-8
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LESSOPEN=| /usr/bin/lesspipe %s
+LOCKPWN=mono /mnt/local/smack-project/lockpwn/Binaries/lockpwn.exe
+LOGNAME=root
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+MAIL=/var/mail/root
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+PWD=/proj/SMACK/smac/example_scenarios/loop_rs
+SHELL=/bin/bash
+SHLVL=1
+SUDO_COMMAND=/bin/su
+SUDO_GID=7938
+SUDO_UID=18233
+SUDO_USER=ankitagr
+SYMBOOGLIX=mono /mnt/local/smack-project/symbooglix/src/SymbooglixDriver/bin/Release/sbx.exe
+TERM=screen
+USER=root
+USERNAME=root
+XDG_RUNTIME_DIR=/run/user/18233
+XDG_SESSION_ID=1
+
+08:53:40.604 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - Hostname:node-7.spare.smack.emulab.net
+08:53:40.604 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - ==========System Properties==============
+ERRLOG=/proj/SMACK/smac/example_scenarios/loop_rs/smac-output/smack-scenario_loop_rs/log-err100.txt
+NUMRUN=100
+OUTPUTDIR=/proj/SMACK/smac/example_scenarios/loop_rs/smac-output/smack-scenario_loop_rs
+ROOT-LEVEL=INFO
+RUNLOG=/proj/SMACK/smac/example_scenarios/loop_rs/smac-output/smack-scenario_loop_rs/log-run100.txt
+STDOUT-LEVEL=INFO
+WARNLOG=/proj/SMACK/smac/example_scenarios/loop_rs/smac-output/smack-scenario_loop_rs/log-warn100.txt
+awt.toolkit=sun.awt.X11.XToolkit
+file.encoding=UTF-8
+file.encoding.pkg=sun.io
+file.separator=/
+java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment
+java.awt.printerjob=sun.print.PSPrinterJob
+java.class.path=/proj/SMACK/smac/conf/:/proj/SMACK/smac/patches/:/proj/SMACK/smac/lib/aeatk.jar:/proj/SMACK/smac/lib/aeatk-src.jar:/proj/SMACK/smac/lib/commons-collections-3.2.1.jar:/proj/SMACK/smac/lib/commons-collections-3.2.1-sources.jar:/proj/SMACK/smac/lib/commons-io-2.1.jar:/proj/SMACK/smac/lib/commons-math-2.2.jar:/proj/SMACK/smac/lib/commons-math3-3.3.jar:/proj/SMACK/smac/lib/DomainInter.jar:/proj/SMACK/smac/lib/exp4j-0.3.10.jar:/proj/SMACK/smac/lib/exp4j-0.4.3.BETA-3.jar:/proj/SMACK/smac/lib/fastrf.jar:/proj/SMACK/smac/lib/fastrf-src.jar:/proj/SMACK/smac/lib/guava-14.0.1.jar:/proj/SMACK/smac/lib/jackson-annotations-2.3.1.jar:/proj/SMACK/smac/lib/jackson-core-2.3.1.jar:/proj/SMACK/smac/lib/jackson-databind-2.3.1.jar:/proj/SMACK/smac/lib/Jama-1.0.2.jar:/proj/SMACK/smac/lib/jcip-annotations.jar:/proj/SMACK/smac/lib/jcip-annotations-src.jar:/proj/SMACK/smac/lib/jcommander.jar:/proj/SMACK/smac/lib/jmatharray.jar:/proj/SMACK/smac/lib/logback-access-1.1.2.jar:/proj/SMACK/smac/lib/logback-classic-1.1.2.jar:/proj/SMACK/smac/lib/logback-core-1.1.2.jar:/proj/SMACK/smac/lib/numerics4j-1.3.jar:/proj/SMACK/smac/lib/opencsv-2.3.jar:/proj/SMACK/smac/lib/slf4j-api-1.7.5.jar:/proj/SMACK/smac/lib/smac.jar:/proj/SMACK/smac/lib/smac-src.jar:/proj/SMACK/smac/lib/spi-0.2.4.jar:/proj/SMACK/smac/*.jar:/proj/SMACK/smac/patches/
+java.class.version=52.0
+java.endorsed.dirs=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed
+java.ext.dirs=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
+java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+java.io.tmpdir=/tmp
+java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+java.runtime.name=OpenJDK Runtime Environment
+java.runtime.version=1.8.0_162-8u162-b12-1~14.04-b12
+java.specification.name=Java Platform API Specification
+java.specification.vendor=Oracle Corporation
+java.specification.version=1.8
+java.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+java.version=1.8.0_162
+java.vm.info=mixed mode
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+java.vm.version=25.162-b12
+line.separator=
+
+logback.configurationFile=ca/ubc/cs/beta/aeatk/logging/complex-logback.xml
+os.arch=amd64
+os.name=Linux
+os.version=3.19.0-80-generic
+path.separator=:
+sun.arch.data.model=64
+sun.boot.class.path=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+sun.boot.library.path=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64
+sun.cpu.endian=little
+sun.cpu.isalist=
+sun.io.unicode.encoding=UnicodeLittle
+sun.java.command=ca.ubc.cs.beta.aeatk.ant.execscript.Launcher ca.ubc.cs.beta.smac.executors.SMACExecutor --shared-model-mode true --scenario-file smack-scenario_loop_rs.txt --seed 100 --validation false
+sun.java.launcher=SUN_STANDARD
+sun.jnu.encoding=UTF-8
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+sun.os.patch.level=unknown
+user.country=US
+user.dir=/proj/SMACK/smac/example_scenarios/loop_rs
+user.home=/root
+user.language=en
+user.name=root
+user.timezone=America/Denver
+
+08:53:40.622 [main] INFO  c.u.c.b.a.m.j.JCommanderHelper - ==========Configuration Options==========
+[SMACOptions]
+ adaptiveCapping = true
+ alwaysRunInitialConfiguration = false
+ capAddSlack = 1.0
+ capSlack = 1.3
+classicInitModeOpts = [ClassicInitializationProcedureOptions]
+		 initialIncumbentRuns = 1
+
+dciModeOpts = [DoublingCappingInitializationProcedureOptions]
+		 numberOfChallengers = 2
+		 numberOfRunsPerChallenger = 2
+
+ucip = [UnbiasChallengerInitializationProcedureOptions]
+		 numberOfChallengers = 2
+		 numberOfRunsPerChallenger = 2
+		 cpulimit = 0
+
+ deterministicInstanceOrdering = false
+ doValidation = false
+ execMode = SMAC
+ experimentDir = /proj/SMACK/smac/example_scenarios/loop_rs/
+ expFunc = null
+help = [HelpOptions]
+		 showHiddenParameters = false
+		 showHelp = false
+		 helpLevel = BASIC
+		 showVersion = false
+		 helpDefaults = /root/.aeatk/help.opt
+
+ initialChallengeRuns = 1
+ initialIncumbent = DEFAULT
+ initializationMode = CLASSIC
+ intensificationPercentage = 0.5
+ initialChallengers = []
+ initialChallengersIntensificationTime = 2147483647
+ iterativeCappingBreakOnFirstCompletion = false
+ iterativeCappingK = 1
+logOptions = [ComplexLoggingOptions]
+		 consoleLogLevel = INFO
+		 logLevel = INFO
+
+ maxIncumbentRuns = 2000
+mbOptions = [ModelBuildingOptions]
+		 maskCensoredDataAsKappaMax = false
+		 maskInactiveConditionalParametersAsDefaultValue = true
+		 maskCensoredDataAsUncensored = false
+		 imputationIterations = 2
+
+ modelHashCodeFile = null
+ numberOfChallengers = 10
+ numberOfRandomConfigsInEI = 10000
+ numberOfRandomConfigsUsedForLocalSearch = 0
+ numPCA = 7
+ optionFile = null
+ optionFile2 = null
+randomForestOptions = [RandomForestOptions]
+		 brokenVarianceCalculation = false
+		 freeMemoryPercentageToSubsample = 0.25
+		 fullTreeBootstrap = false
+		 ignoreConditionality = false
+		 imputeMean = false
+		 logModel = true
+		 minVariance = 1.0E-14
+		 numTrees = 10
+		 penalizeImputedValues = false
+		 preprocessMarginal = true
+		 ratioFeatures = 0.8333333333333334
+		 shuffleImputedValues = false
+		 splitMin = 10
+		 storeDataInLeaves = false
+		 subsamplePercentage = 0.9
+		 subsampleValuesWhenLowMemory = false
+
+runGroupOptions = [RunGroupOptions]
+		 runGroupName = %SCENARIO_NAME
+		 runGroupExit = false
+		 replacementChar = %
+
+scenarioConfig = [ScenarioOptions]
+		 _runObj = RUNTIME
+		 intraInstanceObj = null
+		 interInstanceObj = MEAN
+		limitOptions = [TerminationCriteriaOptions]
+				 tunerTimeout = 2147483647
+				 numIterations = 2147483647
+				 runtimeLimit = 378000
+				 totalNumRunsLimit = 9223372036854775807
+				 countSMACTimeAsTunerTime = true
+				 challengeIncumbentAttempts = 1000
+				 fileToWatch = null
+
+		instanceOptions = [ProblemInstanceOptions]
+				 instanceFile = allloop_rs.txt
+				 instanceFeatureFile = null
+				 testInstanceFile = Testloop_rs.txt
+				 checkInstanceFilesExist = false
+				 useInstances = true
+				 instanceSuffix = null
+				 testInstanceSuffix = null
+				 ignoreFeatures = false
+
+		 scenarioFile = /proj/SMACK/smac/example_scenarios/loop_rs/smack-scenario_loop_rs.txt
+		 outputDirectory = /proj/SMACK/smac/example_scenarios/loop_rs/smac-output
+		 invalidScenarioReason = null
+		algoExecOptions = [AlgorithmExecutionOptions]
+				 algoExec = ../wrapper.py
+				 algoExecDir = /proj/SMACK/smac/example_scenarios/loop_rs
+				 deterministic = true
+				 cutoffTime = 1000.0
+				 cutoffLength = -1.0
+				 additionalContext = {}
+				taeOpts = [TargetAlgorithmEvaluatorOptions]
+						 targetAlgorithmEvaluator = CLI
+						 abortOnCrash = false
+						 abortOnFirstRunCrash = false
+						 retryCount = 0
+						 cacheRuns = false
+						 cacheDebug = false
+						 useDynamicCappingExclusively = false
+						 reportStrictlyIncreasingRuntimes = false
+						 boundRuns = false
+						 maxConcurrentAlgoExecs = 1
+						 exitOnFailure = false
+						 runHashCodeFile = null
+						 leakMemory = false
+						 leakMemoryAmount = 1024
+						 verifySAT = null
+						 checkSATConsistency = true
+						 checkSATConsistencyException = true
+						 callObserverBeforeCompletion = true
+						prePostOptions = [PrePostCommandOptions]
+								 preCommand = null
+								 postCommand = null
+								 exceptionOnError = false
+								 logOutput = true
+								 directory = /proj/SMACK/smac/example_scenarios/loop_rs/.
+
+						 checkResultOrderConsistent = false
+						 skipOutstandingEvaluationsTAE = false
+						 logRequestResponses = false
+						 logRequestResponsesRCOnly = false
+						 trackRunsScheduled = false
+						 trackRunsScheduledResolution = 1.0
+						 uncleanShutdownCheck = true
+						 killCaptimeExceedingRun = true
+						 killCaptimeExceedingRunFactor = 10.0
+						 checkRunConfigsUnique = true
+						 checkRunConfigsUniqueException = true
+						 observeWalltimeIfNoRuntime = true
+						 observeWalltimeScale = 0.95
+						 observeWalltimeDelay = 5.0
+						 synchronousObserver = true
+						 taeDefaults = /root/.aeatk/tae.opt
+						ttaedo = [TransformTargetAlgorithmEvaluatorDecoratorOptions]
+								 transform = false
+								 transformValidValuesOnly = true
+								 SAT_runtime_transform = R
+								 SAT_quality_transform = Q
+								 UNSAT_runtime_transform = R
+								 UNSAT_quality_transform = Q
+								 TIMEOUT_runtime_transform = R
+								 TIMEOUT_quality_transform = Q
+								 other_runtime_transform = R
+								 other_quality_transform = Q
+
+						tForkOptions = [ForkingTargetAlgorithmEvaluatorDecoratorOptions]
+								 forkToTAE = null
+								fPolicyOptions = [ForkingTargetAlgorithmEvaluatorDecoratorPolicyOptions]
+										 fPolicy = null
+										 duplicateOnSlaveQuickTimeout = 5
+
+
+						 fileToWatch = null
+						 warnIfNoResponseFromTAE = 120
+						 taeStopProcessingOnShutdown = true
+						 filecache = false
+						 fileCacheSource = /proj/SMACK/smac/example_scenarios/loop_rs/./runcache
+						 fileCacheOutput = /proj/SMACK/smac/example_scenarios/loop_rs/./runcache
+						 fileCacheCrashOnMiss = false
+						 transformCrashedQuality = true
+						 transformCrashedQualityValue = 1.0E9
+						 filterZeroCutoffRuns = true
+
+				paramFileDelegate = [ParamConfigurationSpaceOptions]
+						 paramFile = ../params.pcs
+						 searchSubspace = null
+						 searchSubspaceFile = null
+						 continuousNeighbours = 4
+
+
+
+seedOptions = [SeedOptions]
+		 seedOffset = 0
+		 numRun = 100
+		 initialSeedMap = {}
+
+ smacDefaults = /root/.aeatk/smac.opt
+stateOpts = [StateFactoryOptions]
+		 stateSerializer = LEGACY
+		 statedeSerializer = LEGACY
+		 restoreStateFrom = null
+		 restoreIteration = null
+		 restoreScenario = null
+		 cleanOldStatesOnSuccess = true
+		 saveContextWithState = true
+
+trackingOptions = [ParamConfigurationOriginTrackingOptions]
+		 configTracking = false
+
+validationOptions = [ValidationOptions]
+		 maxTimestamp = -1.0
+		 minTimestamp = 0.0
+		 multFactor = 2.0
+		 numberOfTestInstances = 2147483647
+		 numberOfTestSeedsPerInstance = 1000
+		 numberOfValidationRuns = 1
+		 outputFileSuffix = 
+		 saveStateFile = false
+		 useWallClockTime = true
+		 validateAll = false
+		 validateOnlyIfTunerTimeReached = 0.0
+		 validateOnlyIfWallTimeReached = 0.0
+		 validateOnlyLastIncumbent = true
+		 validationHeaders = true
+		 validationRoundingMode = UP
+
+warmStartOptions = [WarmStartOptions]
+		 warmStartStateFrom = null
+		 restoreIteration = 2147483647
+
+ validationSeed = 0
+ saveRunsEveryIteration = false
+ stateQuickSaves = true
+ shutdownTAEWhenDone = true
+ validationCores = null
+ shareModelMode = true
+ shareRunDataFrequency = 300
+ shareModeModeTAE = true
+ writeRunData = true
+ defaultHandler = USE_ALL
+ sharedModeModeAssymetricMode = false
+
+[AnalyticTargetAlgorithmEvaluatorOptions]
+ simulateDelay = false
+ cores = 0
+ observerFrequency = 100
+ func = CAMELBACK
+ scaleDelay = 1.0
+
+[BlackHoleTargetAlgorithmEvaluatorOptions]
+ warnings = true
+
+[CommandLineTargetAlgorithmEvaluatorOptions]
+ observerFrequency = 500
+ concurrentExecution = true
+ cores = 1
+ logAllCallStrings = false
+ logAllResultLines = false
+ logAllCallsAndResultLines = false
+ logAllProcessOutput = false
+ listenForUpdates = true
+ paramArgumentsContainQuotes = false
+ pgEnvKillCommand = null
+ pgNiceKillCommand = bash -c "kill -s TERM -%pid"
+ pgForceKillCommand = bash -c "kill -s KILL -%pid"
+ procNiceKillCommand = kill -s TERM %pid
+ procForceKillCommand = kill -s KILL %pid
+ smacDefaults = /root/.aeatk/cli-tae.opt
+
+[ConstantTargetAlgorithmEvaluatorOptions]
+ runResult = SAT
+ runtime = 1.0
+ quality = 0.0
+ runlength = 0.0
+ additionalRunData = 
+
+[IPCTargetAlgorithmEvaluatorOptions]
+ persistent = false
+ ipcMechanism = UDP
+ encodingMechanism = CALL_STRING
+ remoteHost = 127.0.0.1
+ remotePort = 5050
+ udpPacketSize = 4096
+ localPort = 0
+ execScript = null
+ execScriptOutput = false
+ poolConnections = false
+ ipcDefaults = /root/.aeatk/ipc-tae.opt
+ asyncThreads = 33
+
+[PreloadedResponseTargetAlgorithmEvaluatorOptions]
+ preloadedResponses = 
+ runLength = -1.0
+ quality = 0.0
+ additionalRunData = 
+
+[RandomResponseTargetAlgorithmEvaluatorOptions]
+ simulateDelay = false
+ additionalRunData = 
+ cores = 0
+ maxResponse = 10.0
+ minResponse = 0.0
+ observerFrequency = 500
+ trendCoefficient = 0.0
+ seed = 1525964019739
+ persistent = false
+ scaleDelay = 1.0
+
+
+08:53:41.007 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - SMAC started at: May 10, 2018 8:53:41 AM. Minimizing penalized average runtime (PAR10).
+08:54:29.291 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/count_by_1_variant_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '1000' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+08:54:29.291 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+08:54:29.292 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+08:54:29.340 [CLI TAE Callback Threads (3-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 90000.0 (secs) that exceeded it's cutoff time of 1000.0 (secs) by 89000.0 (secs). Next warning at 89001.0 (secs)  
+08:54:29.340 [CLI TAE Callback Threads (3-1)] WARN  c.u.c.b.a.t.d.s.CrashedSolutionQualityTransformingTargetAlgorithmEvaluatorDecorator - Detected CRASHED run. The Solution Quality of CRASHED runs will be transformed to the MAX(quality, 1.0E9), to disable this use --transform-crashed-quality false to change the value use --transform-crashed-quality-value
+08:54:30.064 [main] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Detected new source(s) of run data which we will read from : [live-rundata-1.json, live-rundata-10.json, live-rundata-101.json, live-rundata-102.json, live-rundata-103.json, live-rundata-104.json, live-rundata-105.json, live-rundata-106.json, live-rundata-107.json, live-rundata-108.json, live-rundata-109.json, live-rundata-11.json, live-rundata-110.json, live-rundata-111.json, live-rundata-112.json, live-rundata-12.json, live-rundata-13.json, live-rundata-14.json, live-rundata-15.json, live-rundata-16.json, live-rundata-17.json, live-rundata-19.json, live-rundata-2.json, live-rundata-21.json, live-rundata-22.json, live-rundata-23.json, live-rundata-24.json, live-rundata-25.json, live-rundata-26.json, live-rundata-27.json, live-rundata-29.json, live-rundata-3.json, live-rundata-30.json, live-rundata-31.json, live-rundata-32.json, live-rundata-33.json, live-rundata-35.json, live-rundata-36.json, live-rundata-37.json, live-rundata-38.json, live-rundata-39.json, live-rundata-4.json, live-rundata-40.json, live-rundata-42.json, live-rundata-43.json, live-rundata-44.json, live-rundata-45.json, live-rundata-46.json, live-rundata-47.json, live-rundata-49.json, live-rundata-5.json, live-rundata-51.json, live-rundata-52.json, live-rundata-53.json, live-rundata-54.json, live-rundata-55.json, live-rundata-56.json, live-rundata-57.json, live-rundata-58.json, live-rundata-59.json, live-rundata-6.json, live-rundata-60.json, live-rundata-61.json, live-rundata-62.json, live-rundata-63.json, live-rundata-7.json, live-rundata-8.json, live-rundata-81.json, live-rundata-83.json, live-rundata-84.json, live-rundata-85.json, live-rundata-87.json, live-rundata-88.json, live-rundata-89.json, live-rundata-9.json, live-rundata-90.json, live-rundata-91.json, live-rundata-92.json, live-rundata-94.json, live-rundata-96.json, live-rundata-97.json, live-rundata-98.json, live-rundata-99.json]
+08:54:30.076 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - First incumbent: config 1 (internal ID: 0x000B), with penalized average runtime (PAR10): 10000.0; estimate based on 1 runs.
+08:54:30.076 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample call for new incumbent config 1 (internal ID: 0x000B): 
+cd /proj/SMACK/smac/example_scenarios/loop_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/count_by_1_variant_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '1000' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+08:54:34.356 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/trex02_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '1000' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+08:54:34.357 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+08:54:34.358 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+08:54:34.397 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 10000.0; estimate now based on 2 runs.
+08:56:33.606 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent changed to: config 2 (internal ID: 0x50FB), with penalized average runtime (PAR10): 59.531190037615; estimate based on 2 runs.
+08:56:33.606 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample call for new incumbent config 2 (internal ID: 0x50FB): 
+cd /proj/SMACK/smac/example_scenarios/loop_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/trex02_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '24994' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+09:05:02.157 [main] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Detected new source(s) of run data which we will read from : [live-rundata-113.json, live-rundata-114.json, live-rundata-115.json, live-rundata-117.json, live-rundata-118.json, live-rundata-121.json, live-rundata-122.json, live-rundata-124.json, live-rundata-125.json, live-rundata-126.json, live-rundata-127.json, live-rundata-128.json, live-rundata-129.json, live-rundata-130.json, live-rundata-131.json, live-rundata-132.json, live-rundata-133.json, live-rundata-134.json, live-rundata-136.json, live-rundata-137.json, live-rundata-139.json, live-rundata-140.json, live-rundata-141.json, live-rundata-142.json, live-rundata-143.json, live-rundata-145.json, live-rundata-146.json, live-rundata-147.json, live-rundata-148.json, live-rundata-149.json, live-rundata-150.json, live-rundata-152.json, live-rundata-155.json, live-rundata-156.json, live-rundata-157.json, live-rundata-158.json, live-rundata-159.json, live-rundata-160.json, live-rundata-18.json, live-rundata-20.json, live-rundata-28.json]
+09:05:02.159 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 209.04588071507666; estimate now based on 3 runs.
+09:11:39.120 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-industry-pattern/ofuf_1_true-unreach-call.c 0 661.500441458422 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+09:11:39.120 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+09:11:39.120 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+09:11:39.146 [CLI TAE Callback Threads (3-4)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 90000.0 (secs) that exceeded it's cutoff time of 661.500441458422 (secs) by 89338.49955854157 (secs). Next warning at 89339.49955854157 (secs)  
+09:11:39.386 [main] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Detected new source(s) of run data which we will read from : [live-rundata-119.json, live-rundata-151.json, live-rundata-34.json, live-rundata-41.json, live-rundata-48.json]
+09:43:01.462 [CLI TAE Callback Threads (3-5)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 1881.847 (secs) that exceeded it's cutoff time of 1000.0 (secs) by 881.847 (secs). Next warning at 882.847 (secs)  
+09:43:01.799 [main] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Detected new source(s) of run data which we will read from : [live-rundata-116.json, live-rundata-120.json, live-rundata-123.json, live-rundata-135.json, live-rundata-138.json, live-rundata-144.json, live-rundata-153.json, live-rundata-154.json, live-rundata-50.json, live-rundata-64.json, live-rundata-65.json, live-rundata-66.json, live-rundata-67.json, live-rundata-68.json, live-rundata-69.json, live-rundata-70.json, live-rundata-72.json, live-rundata-74.json, live-rundata-76.json, live-rundata-77.json, live-rundata-79.json, live-rundata-82.json, live-rundata-86.json, live-rundata-93.json, live-rundata-95.json]
+09:43:01.801 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2656.7844105363074; estimate now based on 4 runs.
+09:55:41.683 [main] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Detected new source(s) of run data which we will read from : [live-rundata-78.json]
+10:27:04.216 [main] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - Detected new source(s) of run data which we will read from : [live-rundata-71.json, live-rundata-73.json, live-rundata-75.json, live-rundata-80.json]
+10:27:04.218 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 4125.427528429046; estimate now based on 5 runs.
+11:15:12.545 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent changed to: config 5 (internal ID: 0x10D6C), with penalized average runtime (PAR10): 2200.954538583846; estimate based on 5 runs.
+11:15:12.546 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample call for new incumbent config 5 (internal ID: 0x10D6C): 
+cd /proj/SMACK/smac/example_scenarios/loop_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/NetBSD_loop_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+11:29:55.084 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1981.066019137705; estimate now based on 6 runs.
+12:32:58.404 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1699.0626026902914; estimate now based on 7 runs.
+13:35:49.339 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent changed to: config 7 (internal ID: 0x1C6DB), with penalized average runtime (PAR10): 1698.1942945207816; estimate based on 7 runs.
+13:35:49.339 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample call for new incumbent config 7 (internal ID: 0x1C6DB): 
+cd /proj/SMACK/smac/example_scenarios/loop_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/NetBSD_loop_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '23722' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+13:50:31.936 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1596.1296515763086; estimate now based on 8 runs.
+13:53:32.412 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 180.097 seconds for a run that should have taken at most 34.67503235523701 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-acceleration/array_true-unreach-call1_true-termination.i 0 34.67503235523701 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '7073' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+13:56:37.569 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:81, Seed:-1, Config:0x2278B, Kappa:34.67503235523701, Execution Config: 0x0001> at 346.91054999999994 for exceeding 10.0 times its cutoff time of 34.67503235523701 (secs)
+13:56:41.447 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1419.1493096086967; estimate now based on 9 runs.
+13:56:46.083 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/gauss_sum_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+13:56:46.083 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+13:56:46.084 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+14:11:28.616 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1365.387587642727; estimate now based on 10 runs.
+15:29:17.822 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent changed to: config 10 (internal ID: 0x2ADD3), with penalized average runtime (PAR10): 1278.473404407452; estimate based on 10 runs.
+15:29:17.822 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample call for new incumbent config 10 (internal ID: 0x2ADD3): 
+cd /proj/SMACK/smac/example_scenarios/loop_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/NetBSD_loop_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+15:43:59.951 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1242.39835273132; estimate now based on 11 runs.
+16:30:21.400 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1212.3180028398765; estimate now based on 12 runs.
+16:30:40.353 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1163.5829638518092; estimate now based on 13 runs.
+17:06:06.875 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1080.7377802815008; estimate now based on 14 runs.
+17:07:37.125 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1013.8988167921939; estimate now based on 15 runs.
+17:09:45.152 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/veris.c_OpenSER__cases1_stripFullBoth_arr_true-unreach-call_true-termination.i 0 31.29122069885135 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '26612' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+17:09:45.153 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+17:09:45.153 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+17:09:45.179 [CLI TAE Callback Threads (3-34)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 90000.0 (secs) that exceeded it's cutoff time of 31.29122069885135 (secs) by 89968.70877930115 (secs). Next warning at 89969.70877930115 (secs)  
+17:41:08.210 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1575.5301407426819; estimate now based on 16 runs.
+17:55:50.063 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1483.1096751690125; estimate now based on 17 runs.
+17:56:31.508 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1400.9509716034138; estimate now based on 18 runs.
+18:57:18.654 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1373.6136314743394; estimate now based on 19 runs.
+19:44:38.541 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1349.0187460064726; estimate now based on 20 runs.
+21:17:04.787 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Incumbent changed to: config 19 (internal ID: 0x636C8), with penalized average runtime (PAR10): 1333.1274912357344; estimate based on 20 runs.
+21:17:04.788 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Sample call for new incumbent config 19 (internal ID: 0x636C8): 
+cd /proj/SMACK/smac/example_scenarios/loop_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/NetBSD_loop_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+21:17:09.304 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1269.8579613708328; estimate now based on 21 runs.
+21:18:54.427 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/id_build_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '22709' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+21:18:54.428 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+21:18:54.428 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+21:18:55.432 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1666.6825994903404; estimate now based on 22 runs.
+22:21:39.866 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2029.0007473385865; estimate now based on 23 runs.
+22:53:03.143 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1944.6478175322231; estimate now based on 24 runs.
+22:54:21.680 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1867.0173974323288; estimate now based on 25 runs.
+22:54:30.254 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1795.3591668055622; estimate now based on 26 runs.
+23:25:56.988 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1729.0164328416204; estimate now based on 27 runs.
+23:27:25.073 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1667.447735173363; estimate now based on 28 runs.
+23:58:47.102 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1954.7771236156611; estimate now based on 29 runs.
+00:30:13.947 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/gauss_sum_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+00:30:13.947 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+00:30:13.947 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+00:44:57.262 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1919.0074581623057; estimate now based on 30 runs.
+01:05:18.896 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 1217.381 seconds for a run that should have taken at most 405.7504668723523 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/veris.c_OpenSER__cases1_stripFullBoth_arr_true-unreach-call_true-termination.i 0 405.7504668723523 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '27151' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+01:16:23.176 [CLI TAE Callback Threads (3-59)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 1881.781 (secs) that exceeded it's cutoff time of 405.7504668723523 (secs) by 1476.0305331276477 (secs). Next warning at 1477.0305331276477 (secs)  
+01:16:27.495 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1857.2194996110834; estimate now based on 31 runs.
+01:47:59.609 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/nested_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '1373' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+01:47:59.609 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+01:47:59.610 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+01:48:01.057 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1799.5127955898622; estimate now based on 32 runs.
+02:02:44.034 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1771.699951482533; estimate now based on 33 runs.
+02:34:10.646 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1719.6835065308655; estimate now based on 34 runs.
+02:34:14.787 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1670.6515191759302; estimate now based on 35 runs.
+03:37:03.341 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1902.0223103099322; estimate now based on 36 runs.
+04:27:59.865 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 262.578 seconds for a run that should have taken at most 87.5023714158416 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/linear_search_false-unreach-call.i 0 87.5023714158416 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+04:31:59.567 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1850.7762707117365; estimate now based on 37 runs.
+04:32:11.890 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/eureka_01_true-unreach-call.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '32318' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+04:32:11.890 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+04:32:11.896 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+04:32:16.875 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-lit/cggmp2005_true-unreach-call_true-termination.c.i 0 10.126507457691432 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '32318' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+04:32:16.880 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+04:32:16.880 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+04:32:16.916 [CLI TAE Callback Threads (3-67)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 90000.0 (secs) that exceeded it's cutoff time of 10.126507457691432 (secs) by 89989.8734925423 (secs). Next warning at 89990.8734925423 (secs)  
+04:32:18.735 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1802.1739272443797; estimate now based on 38 runs.
+04:32:33.187 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1758.653838854575; estimate now based on 39 runs.
+04:32:39.100 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1964.6874928832108; estimate now based on 40 runs.
+04:32:39.102 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1916.890688326306; estimate now based on 41 runs.
+05:35:33.650 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1892.2390310083224; estimate now based on 42 runs.
+05:40:00.972 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 267.313 seconds for a run that should have taken at most 88.79020147805215 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/linear_search_false-unreach-call.i 0 88.79020147805215 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+05:41:53.206 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2080.791611682547; estimate now based on 43 runs.
+05:41:58.536 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2053.538557030944; estimate now based on 44 runs.
+05:56:45.483 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2008.0028289636039; estimate now based on 45 runs.
+05:56:52.417 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1983.5154462482644; estimate now based on 46 runs.
+05:59:31.565 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:81, Seed:-1, Config:0xFCEE0, Kappa:15.06847011705041, Execution Config: 0x0001> at 151.1754 for exceeding 10.0 times its cutoff time of 15.06847011705041 (secs)
+05:59:36.272 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1941.4101897757132; estimate now based on 47 runs.
+06:02:12.817 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:87, Seed:-1, Config:0x1002FF, Kappa:14.789062727588416, Execution Config: 0x0001> at 148.25795 for exceeding 10.0 times its cutoff time of 14.789062727588416 (secs)
+06:02:19.650 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1901.0511698871878; estimate now based on 48 runs.
+06:17:02.029 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1880.2432037081026; estimate now based on 49 runs.
+06:18:06.521 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:33, Seed:-1, Config:0x10CD04, Kappa:6.040838163691759, Execution Config: 0x0001> at 60.8285 for exceeding 10.0 times its cutoff time of 6.040838163691759 (secs)
+06:18:08.128 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2042.6383396339406; estimate now based on 50 runs.
+07:48:54.453 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2010.617511487471; estimate now based on 51 runs.
+07:49:02.934 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/apache-escape-absolute_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '11376' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+07:49:02.935 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+07:49:02.935 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+07:49:04.911 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1988.9100203651542; estimate now based on 52 runs.
+08:51:54.492 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1951.4750728112244; estimate now based on 53 runs.
+08:52:00.155 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/string_concat-noarr_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+08:52:00.155 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+08:52:00.156 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+08:52:02.034 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1931.6600074238129; estimate now based on 54 runs.
+08:55:02.505 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 180.109 seconds for a run that should have taken at most 34.11280213703513 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/veris.c_OpenSER__cases1_stripFullBoth_arr_true-unreach-call_true-termination.i 0 34.11280213703513 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+08:58:01.419 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:59, Seed:-1, Config:0x132F86, Kappa:34.11280213703513, Execution Config: 0x0001> at 341.20485 for exceeding 10.0 times its cutoff time of 34.11280213703513 (secs)
+08:58:02.308 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1896.6293134342422; estimate now based on 55 runs.
+08:58:54.977 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/count_by_1_variant_true-unreach-call_true-termination.i 0 85.22231084142925 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+08:58:54.977 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+08:58:54.977 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+08:58:57.193 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2041.332361408631; estimate now based on 56 runs.
+09:03:23.998 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 266.589 seconds for a run that should have taken at most 88.79020147805215 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/linear_search_false-unreach-call.i 0 88.79020147805215 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+09:07:48.884 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2020.9896329996725; estimate now based on 57 runs.
+09:08:01.785 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1986.219475137761; estimate now based on 58 runs.
+09:22:44.099 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1967.510524491121; estimate now based on 59 runs.
+09:22:49.263 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/count_up_down_false-unreach-call_true-termination.i 0 6.077021722096204 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '18613' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+09:22:49.264 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+09:22:49.264 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+09:22:49.282 [CLI TAE Callback Threads (3-85)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported a runtime of 90000.0 (secs) that exceeded it's cutoff time of 6.077021722096204 (secs) by 89993.9229782779 (secs). Next warning at 89994.9229782779 (secs)  
+09:23:08.562 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1934.992030064254; estimate now based on 60 runs.
+10:09:21.385 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1917.7269242278728; estimate now based on 61 runs.
+10:09:25.626 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/trex02_true-unreach-call_true-termination.i 0 5.596672453331947 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+10:09:25.626 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+10:09:25.627 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+10:09:31.867 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1886.8654759852984; estimate now based on 62 runs.
+10:09:41.002 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1856.9688330491254; estimate now based on 63 runs.
+10:21:28.771 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1828.028598126011; estimate now based on 64 runs.
+11:23:50.562 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1799.9671263841356; estimate now based on 65 runs.
+11:23:56.642 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/eureka_05_true-unreach-call_true-termination.i 0 7.317740273076296 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '643' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+11:23:56.642 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+11:23:56.642 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+11:23:58.590 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1924.2100487116488; estimate now based on 66 runs.
+11:24:03.115 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1895.5498484639857; estimate now based on 67 runs.
+11:24:14.425 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1867.7306973828868; estimate now based on 68 runs.
+11:44:09.137 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1853.441568056729; estimate now based on 69 runs.
+11:44:26.601 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/string_true-unreach-call_true-termination.i 0 5.635733891624212 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+11:44:26.601 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+11:44:26.601 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+11:44:29.771 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1830.0728115728757; estimate now based on 70 runs.
+12:15:56.481 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1804.3537835503805; estimate now based on 71 runs.
+12:26:04.759 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1779.3461285398905; estimate now based on 72 runs.
+12:26:08.829 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1755.0187989554831; estimate now based on 73 runs.
+12:26:14.717 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/string_concat-noarr_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '10431' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+12:26:14.717 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+12:26:14.718 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+12:26:16.541 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1743.2168709845039; estimate now based on 74 runs.
+12:26:21.180 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1720.0573203563574; estimate now based on 75 runs.
+12:26:27.441 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1709.0249466425369; estimate now based on 76 runs.
+12:57:50.391 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1698.280533970166; estimate now based on 77 runs.
+12:59:23.887 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1804.7128348167025; estimate now based on 78 runs.
+12:59:27.803 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1908.4506470342126; estimate now based on 79 runs.
+13:00:45.816 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:36, Seed:-1, Config:0x1BC3A1, Kappa:7.317740273076296, Execution Config: 0x0001> at 73.6516 for exceeding 10.0 times its cutoff time of 7.317740273076296 (secs)
+13:00:47.938 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1884.735343283405; estimate now based on 80 runs.
+13:32:23.074 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1984.9237958354618; estimate now based on 81 runs.
+13:32:39.935 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-lit/css2003_true-unreach-call_true-termination.c.i 0 533.45153554191 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '5359' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+13:32:39.935 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+13:32:39.935 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+13:32:45.507 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1960.7564011550435; estimate now based on 82 runs.
+13:32:54.858 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1937.1893851756956; estimate now based on 83 runs.
+13:47:39.774 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2033.175225828366; estimate now based on 84 runs.
+14:02:22.225 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2009.313300629214; estimate now based on 85 runs.
+14:02:25.998 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/while_infinite_loop_2_true-unreach-call_false-termination.i 0 5.392662611204385 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '24974' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+14:02:25.998 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+14:02:25.998 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+14:05:48.091 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1988.2721372953624; estimate now based on 86 runs.
+14:05:58.591 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1965.4664719926845; estimate now based on 87 runs.
+15:08:49.648 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1953.1512847542676; estimate now based on 88 runs.
+15:08:53.908 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1931.2590282043627; estimate now based on 89 runs.
+15:09:00.868 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/string_concat-noarr_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+15:09:00.869 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+15:09:00.869 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+15:09:03.305 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1919.5975027243255; estimate now based on 90 runs.
+15:55:08.322 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1908.1929719028824; estimate now based on 91 runs.
+16:28:27.941 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:33, Seed:-1, Config:0x201DA2, Kappa:11.045284837830067, Execution Config: 0x0001> at 110.71679999999999 for exceeding 10.0 times its cutoff time of 11.045284837830067 (secs)
+16:28:30.630 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1895.0852583931771; estimate now based on 92 runs.
+16:37:53.262 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1875.0402134105655; estimate now based on 93 runs.
+16:38:11.794 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1855.2078128545775; estimate now based on 94 runs.
+16:38:11.798 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1843.1759301612135; estimate now based on 95 runs.
+16:38:42.274 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1824.1891197313748; estimate now based on 96 runs.
+17:10:04.931 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1806.6644934255978; estimate now based on 97 runs.
+17:10:11.409 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1788.2797996146264; estimate now based on 98 runs.
+17:43:44.371 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1770.25418675788; estimate now based on 99 runs.
+17:43:51.307 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1752.5898988699842; estimate now based on 100 runs.
+17:43:55.987 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1743.973428742717; estimate now based on 101 runs.
+18:35:06.936 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1726.921061431657; estimate now based on 102 runs.
+18:50:00.969 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1710.1871814936076; estimate now based on 103 runs.
+18:50:07.599 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1693.7834808826415; estimate now based on 104 runs.
+18:50:13.121 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1679.559829893559; estimate now based on 105 runs.
+19:04:58.092 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1758.0545484794688; estimate now based on 106 runs.
+19:24:47.011 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1743.1711536902026; estimate now based on 107 runs.
+19:39:35.734 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1727.068194841887; estimate now based on 108 runs.
+19:48:14.651 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1715.9318576427684; estimate now based on 109 runs.
+19:48:19.215 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/gauss_sum_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '25806' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+19:48:19.222 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+19:48:19.222 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+19:48:29.327 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1700.3932520736257; estimate now based on 110 runs.
+20:19:56.131 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1775.1644840369263; estimate now based on 111 runs.
+20:20:02.003 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/trex01_false-unreach-call_true-termination.i 0 7.387659315365553 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '17549' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+20:20:02.003 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+20:20:02.003 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+20:20:04.663 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1767.1859873043556; estimate now based on 112 runs.
+21:24:57.880 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1751.590193541696; estimate now based on 113 runs.
+21:25:11.479 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/bubble_sort_false-unreach-call.i 0 9.693418618637324 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '29032' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+21:25:11.479 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+21:25:11.479 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+21:25:14.324 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1743.9597630186984; estimate now based on 114 runs.
+22:43:25.985 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1815.7514172533186; estimate now based on 115 runs.
+23:48:14.585 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1800.1892333215578; estimate now based on 116 runs.
+23:48:20.399 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1784.846347199536; estimate now based on 117 runs.
+23:49:24.889 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:33, Seed:-1, Config:0x2B1838, Kappa:6.040838163691759, Execution Config: 0x0001> at 60.81995 for exceeding 10.0 times its cutoff time of 6.040838163691759 (secs)
+23:49:35.391 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1769.778880832549; estimate now based on 118 runs.
+23:49:39.671 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1754.941783311978; estimate now based on 119 runs.
+23:49:58.777 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1823.6506017843783; estimate now based on 120 runs.
+00:21:25.365 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1808.6109989851861; estimate now based on 121 runs.
+00:52:51.739 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1875.7535317803897; estimate now based on 122 runs.
+01:07:34.466 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1860.5341813835576; estimate now based on 123 runs.
+01:07:46.070 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/string_true-unreach-call_true-termination.i 0 5.635733891624212 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '3785' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+01:07:46.071 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+01:07:46.071 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+01:07:49.293 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1926.1750347594966; estimate now based on 124 runs.
+01:07:58.605 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1990.7656344814206; estimate now based on 125 runs.
+01:09:14.538 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:100, Seed:-1, Config:0x2DD4A5, Kappa:7.165188424634934, Execution Config: 0x0001> at 71.7535 for exceeding 10.0 times its cutoff time of 7.165188424634934 (secs)
+01:10:43.393 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1975.6429665883293; estimate now based on 126 runs.
+01:10:52.878 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1967.0308546456652; estimate now based on 127 runs.
+01:12:10.371 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:36, Seed:-1, Config:0x2E4B40, Kappa:7.317740273076296, Execution Config: 0x0001> at 73.20225 for exceeding 10.0 times its cutoff time of 7.317740273076296 (secs)
+01:12:13.816 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1958.551304282613; estimate now based on 128 runs.
+01:43:36.506 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2020.8881158773215; estimate now based on 129 runs.
+02:48:06.666 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:93, Seed:-1, Config:0x2F0F6B, Kappa:9.956110816794634, Execution Config: 0x0001> at 99.78705 for exceeding 10.0 times its cutoff time of 9.956110816794634 (secs)
+02:48:10.372 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2005.4368632848375; estimate now based on 130 runs.
+02:56:26.530 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1996.8571670073502; estimate now based on 131 runs.
+02:56:40.186 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/nested6_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+02:56:40.186 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+02:56:40.187 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+02:56:45.178 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-lit/jm2006_variant_true-unreach-call_true-termination.c.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+02:56:45.179 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+02:56:45.179 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+02:56:54.310 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1981.773018620222; estimate now based on 132 runs.
+02:56:59.151 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1966.9084415704597; estimate now based on 133 runs.
+02:57:11.083 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1952.269019730047; estimate now based on 134 runs.
+03:28:37.547 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1937.8356156578686; estimate now based on 135 runs.
+03:29:00.504 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-lit/gcnr2008_false-unreach-call_false-termination.i 0 6.810174033391476 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+03:29:00.505 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+03:29:00.505 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+04:19:04.974 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 3000.379 seconds for a run that should have taken at most 1000.0 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/sum03_true-unreach-call_false-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+06:24:30.989 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:49, Seed:-1, Config:0x636C8, Kappa:1000.0, Execution Config: 0x0001> at 10000.1313 for exceeding 10.0 times its cutoff time of 1000.0 (secs)
+06:24:31.218 [CLI TAE Callback Threads (3-145)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 10527.059 (secs) that exceeded it's cutoff time of 1000.0 (secs) by 9527.059 (secs). Next warning at 9528.059 (secs)  
+06:24:32.160 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1997.1162361309728; estimate now based on 136 runs.
+06:29:51.059 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2055.531446086221; estimate now based on 137 runs.
+06:30:00.407 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2040.665664164908; estimate now based on 138 runs.
+07:05:42.749 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2027.7843883003188; estimate now based on 139 runs.
+07:20:29.484 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2019.5987674134024; estimate now based on 140 runs.
+07:29:38.486 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2011.530636657208; estimate now based on 141 runs.
+07:29:49.203 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1997.4019010537043; estimate now based on 142 runs.
+07:29:53.829 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2053.3641255218604; estimate now based on 143 runs.
+07:30:28.491 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/n.c24_false-unreach-call.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '32633' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+07:30:28.492 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+07:30:28.492 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+07:31:16.666 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/SpamAssassin-loop_true-unreach-call_false-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '32633' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+07:31:16.667 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+07:31:16.667 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+07:31:22.498 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-acceleration/multivar_true-unreach-call1_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '32633' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+07:31:22.498 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+07:31:22.498 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+07:31:30.667 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2039.1338913738666; estimate now based on 144 runs.
+08:03:04.204 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2025.1793889654032; estimate now based on 145 runs.
+08:04:23.785 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:10, Seed:-1, Config:0x360B7A, Kappa:7.526658371436596, Execution Config: 0x0001> at 75.5611 for exceeding 10.0 times its cutoff time of 7.526658371436596 (secs)
+08:04:28.401 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2017.3466778422019; estimate now based on 146 runs.
+08:04:46.241 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2003.6604737343393; estimate now based on 147 runs.
+08:18:41.937 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1990.1488558569433; estimate now based on 148 runs.
+08:33:24.650 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2043.9062460860914; estimate now based on 149 runs.
+08:33:31.263 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/down_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '1443' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+08:33:31.264 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+08:33:31.264 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+08:33:35.447 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2030.3110295915567; estimate now based on 150 runs.
+08:33:40.673 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2022.7037836400032; estimate now based on 151 runs.
+08:33:49.440 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2015.1957071219572; estimate now based on 152 runs.
+09:20:01.978 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2002.2166788001418; estimate now based on 153 runs.
+10:00:44.627 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/count_by_k_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '24017' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+10:00:44.627 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+10:00:44.627 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+10:00:49.520 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1994.94183795018; estimate now based on 154 runs.
+10:01:56.006 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 1982.0964298478957; estimate now based on 155 runs.
+10:14:43.629 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-lit/gj2007_true-unreach-call_true-termination.c.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '27012' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+10:14:43.629 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+10:14:43.629 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+10:14:57.969 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/linear_search_false-unreach-call.i 0 96.26725547795297 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '27012' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+10:14:57.970 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+10:14:57.970 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+10:15:02.462 [main] INFO  c.u.c.b.s.c.SequentialModelBasedAlgorithmConfiguration - Updated estimated penalized average runtime (PAR10) of the same incumbent: 2033.4932476052809; estimate now based on 156 runs.
+11:48:06.945 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/n.c24_false-unreach-call.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+11:48:06.945 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+11:48:06.945 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+11:48:11.889 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/gauss_sum_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+11:48:11.890 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+11:48:11.890 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+13:05:29.049 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-acceleration/diamond_true-unreach-call1_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+13:05:29.049 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+13:05:29.049 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+14:07:05.332 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/gauss_sum_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+14:07:05.333 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+14:07:05.333 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+15:39:47.353 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/sum01_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '12097' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+15:39:47.353 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+15:39:47.353 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+16:11:30.717 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/while_infinite_loop_1_true-unreach-call_false-termination.i 0 12.123556331145764 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+16:11:30.717 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+16:11:30.717 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+16:43:29.663 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-acceleration/functions_false-unreach-call1_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+16:43:29.663 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+16:43:29.663 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+16:43:35.682 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-acceleration/simple_true-unreach-call3_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+16:43:35.683 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+16:43:35.683 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+17:41:44.113 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 1600.477 seconds for a run that should have taken at most 533.45153554191 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-lit/css2003_true-unreach-call_true-termination.c.i 0 533.45153554191 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+18:05:21.289 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/insertion_sort_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '29187' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+18:05:21.289 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+18:05:21.289 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+18:14:04.997 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-industry-pattern/ofuf_3_true-unreach-call.c 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '29187' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+18:14:04.998 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+18:14:04.998 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+18:17:06.617 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 180.086 seconds for a run that should have taken at most 27.579967573630814 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-acceleration/phases_true-unreach-call2_false-termination.i 0 27.579967573630814 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '29187' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+18:18:56.873 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:93, Seed:-1, Config:0x4A121F, Kappa:27.579967573630814, Execution Config: 0x0001> at 276.0852 for exceeding 10.0 times its cutoff time of 27.579967573630814 (secs)
+20:26:10.067 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/half_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+20:26:10.068 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+20:26:10.068 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+20:59:07.941 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/verisec_NetBSD-libc__loop_false-unreach-call_true-termination.i 0 46.44147007574439 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '6618' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+20:59:07.942 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+20:59:07.942 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+21:06:58.548 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-lit/gr2006_true-unreach-call_true-termination.c.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '27765' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+21:06:58.548 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+21:06:58.548 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+22:21:20.483 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-industry-pattern/ofuf_2_true-unreach-call.c 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '27765' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+22:21:20.484 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+22:21:20.484 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+22:22:47.013 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/s3_false-unreach-call.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '27765' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+22:22:47.013 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+22:22:47.013 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+01:48:42.551 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/MADWiFi-encode_ie_ok_true-unreach-call_true-termination.i 0 39.228286303925515 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+01:48:42.551 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+01:48:42.551 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+04:59:50.730 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 180.052 seconds for a run that should have taken at most 34.11280213703513 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/veris.c_OpenSER__cases1_stripFullBoth_arr_true-unreach-call_true-termination.i 0 34.11280213703513 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '11616' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+05:00:33.218 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/veris.c_OpenSER__cases1_stripFullBoth_arr_true-unreach-call_true-termination.i 0 34.11280213703513 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '11616' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+05:00:33.219 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+05:00:33.219 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+05:32:48.659 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/nec11_false-unreach-call_false-termination.i 0 5.946009781557321 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '8692' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+05:32:48.659 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+05:32:48.659 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+06:52:38.677 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 992.876 seconds for a run that should have taken at most 330.87898072634937 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/count_by_k_true-unreach-call_true-termination.i 0 330.87898072634937 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+07:07:28.808 [CLI TAE Callback Threads (3-213)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 1883.422 (secs) that exceeded it's cutoff time of 330.87898072634937 (secs) by 1552.5430192736508 (secs). Next warning at 1553.5430192736508 (secs)  
+07:07:47.969 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/insertion_sort_false-unreach-call_true-termination.i 0 9.128346842128039 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+07:07:47.969 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+07:07:47.969 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+08:12:48.454 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:45, Seed:-1, Config:0x5FBDD5, Kappa:6.62182121385932, Execution Config: 0x0001> at 66.51995 for exceeding 10.0 times its cutoff time of 6.62182121385932 (secs)
+09:52:03.178 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/insertion_sort_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '16894' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+09:52:03.178 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+09:52:03.178 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+10:23:45.935 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-industry-pattern/aiob_4_true-unreach-call.c 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '16894' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+10:23:45.935 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+10:23:45.935 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+10:24:05.771 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/bubble_sort_false-unreach-call.i 0 9.693418618637324 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+10:24:05.771 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+10:24:05.771 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+11:32:11.340 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-lit/cggmp2005_true-unreach-call_true-termination.c.i 0 10.14165476744175 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '18703' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+11:32:11.340 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+11:32:11.340 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+12:33:49.085 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/gauss_sum_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '26100' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+12:33:49.085 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+12:33:49.085 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+20:21:33.756 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/sum03_false-unreach-call_true-termination.i 0 15.035530075776578 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '9282' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+20:21:33.756 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+20:21:33.756 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+22:29:13.115 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/apache-get-tag_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '2607' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+22:29:13.116 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+22:29:13.116 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+23:07:15.679 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 336.023 seconds for a run that should have taken at most 111.90492472459675 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-acceleration/array_true-unreach-call2_true-termination.i 0 111.90492472459675 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '1658' -/deepAsserts 'True' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+23:21:17.673 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:82, Seed:-1, Config:0x7E7D44, Kappa:111.90492472459675, Execution Config: 0x0001> at 1119.3299 for exceeding 10.0 times its cutoff time of 111.90492472459675 (secs)
+23:55:44.231 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/large_const_true-unreach-call_true-termination.i 0 918.8789909597218 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '11577' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+23:55:44.231 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+23:55:44.231 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+00:01:40.179 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-industry-pattern/aiob_3_true-unreach-call.c 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+00:01:40.179 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+00:01:40.179 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+00:01:49.266 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/sum03_true-unreach-call_false-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+00:01:49.267 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+00:01:49.267 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+00:01:58.498 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/trex01_true-unreach-call_true-termination.i 0 5.628675397831201 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '0'  
+00:01:58.498 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+00:01:58.498 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+00:04:43.387 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:150, Seed:-1, Config:0x814FE8, Kappa:15.596852254468203, Execution Config: 0x0001> at 156.33579999999998 for exceeding 10.0 times its cutoff time of 15.596852254468203 (secs)
+02:33:53.942 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/trex01_true-unreach-call_true-termination.i 0 376.6139343272626 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '25672' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+02:33:53.943 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+02:33:53.943 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+02:40:46.394 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/count_up_down_false-unreach-call_true-termination.i 0 6.077021722096204 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+02:40:46.395 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+02:40:46.395 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+02:43:34.667 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:61, Seed:-1, Config:0x89B0B1, Kappa:14.702106442648173, Execution Config: 0x0001> at 147.33454999999998 for exceeding 10.0 times its cutoff time of 14.702106442648173 (secs)
+02:43:45.071 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/sum01_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '22677' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+02:43:45.071 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+02:43:45.071 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+04:05:11.774 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/string_true-unreach-call_true-termination.i 0 5.635733891624212 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '26677' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+04:05:11.775 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+04:05:11.775 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+05:08:20.715 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/sum03_true-unreach-call_false-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '26350' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+05:08:20.715 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+05:08:20.715 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+05:10:53.259 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/verisec_OpenSER__cases1_stripFullBoth_arr_false-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '26350' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+05:10:53.259 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+05:10:53.259 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+05:43:34.454 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/while_infinite_loop_4_false-unreach-call_true-termination.i 0 6.269678648906947 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '13691' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'False' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '2'  
+05:43:34.455 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+05:43:34.455 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+05:44:41.955 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-acceleration/diamond_false-unreach-call1.i 0 913.9709284420788 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '22735' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+05:44:41.955 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+05:44:41.955 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+05:58:07.927 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/linear_search_false-unreach-call.i 0 88.79020147805215 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '29508' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+05:58:07.927 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+05:58:07.927 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+05:58:42.527 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/insertion_sort_false-unreach-call_true-termination.i 0 9.128346842128039 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '16391' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+05:58:42.527 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+05:58:42.527 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+06:14:12.166 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/count_up_down_false-unreach-call_true-termination.i 0 6.077021722096204 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'True' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+06:14:12.167 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+06:14:12.167 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+11:24:21.046 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.h.KillCaptimeExceedingRunsRunsTargetAlgorithmEvaluatorDecorator - Killed run <Instance:4, Seed:-1, Config:0xA1AD61, Kappa:9.953511402356625, Execution Config: 0x0001> at 99.83644999999999 for exceeding 10.0 times its cutoff time of 9.953511402356625 (secs)
+12:28:00.031 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-acceleration/array_true-unreach-call3_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '12413' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'True' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+12:28:00.031 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+12:28:00.031 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+12:28:30.430 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-lit/cggmp2005_true-unreach-call_true-termination.c.i 0 5.08567019214034 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '16864' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+12:28:30.431 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+12:28:30.431 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+13:00:33.415 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-invgen/apache-get-tag_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '1'  
+13:00:33.415 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+13:00:33.415 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+15:03:36.920 [CLI TAE Observer Threads (2-1)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - We have been waiting for 784.298 seconds for a run that should have taken at most 261.3927657607675 seconds.
+ The sample call for the run that is delayed is: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-acceleration/array_false-unreach-call2_true-termination.i 0 261.3927657607675 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '32659' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'False' -/useArrayTheoryCheck '2'  
+15:22:07.770 [CLI TAE Callback Threads (3-303)] WARN  c.u.c.b.a.t.d.s.TimingCheckerTargetAlgorithmEvaluator - Algorithm Run Result reported wallclock time of 1895.544 (secs) that exceeded it's cutoff time of 261.3927657607675 (secs) by 1634.1512342392325 (secs). Next warning at 1635.1512342392325 (secs)  
+15:22:19.943 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/count_up_down_false-unreach-call_true-termination.i 0 6.077021722096204 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'True' -/di 'False' -/doNotUseLabels 'True' -/noCallTreeReuse 'True' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'False' -/useArrayTheoryCheck '0'  
+15:22:19.943 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+15:22:19.943 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+18:16:21.100 [main] INFO  c.u.c.b.a.t.d.r.c.r.RunHistoryCachingTargetAlgorithmEvaluatorDecorator - RunHistoryCachingTargetAlgorithmEvaluatorDecorator: Cache misses 617, Cache requests 734, Hit Rate 16% 
+18:16:21.100 [main] INFO  c.u.c.b.a.e.h.LogRuntimeStatistics - *****Developer Statistics*****
+ Count: 168
+ Incumbent ID: 19 (internal ID:0x636C8)
+ Number of PISPs for Incumbent: 156
+ Number of Instances for Incumbent: 156
+ Number of Configurations Run: 293
+ Performance of the Incumbent: 2033.493
+ Configuration Time Budget used: 2.30E7 s (1%)
+ Configuration Time Budget remaining: 2.12E9 s
+ Wall-clock Time Budget used: 379360.11 s (100%)
+ Wall-clock Time Budget remaining: -1360.11 s
+ Algorithm Runs used: 734.00  (0%)
+ Algorithm Runs remaining: 9.22E18 
+ Model/Iteration used: 167.00  (0%)
+ Model/Iteration remaining: 2.15E9 
+ Sum of Target Algorithm Execution Times (treating minimum value as 0.1): 23001796.190 s
+ CPU time of Configurator: 1794.078 s
+ User time of Configurator: 1794.078 s
+ Outstanding Runs on Target Algorithm Evaluator: 0
+ Outstanding Requests on Target Algorithm Evaluator: 0
+ Total Reported Algorithm Runtime: 23001795.190 s
+ Sum of Measured Wallclock Runtime: 475512.305 s
+ Max Memory: 968 MB
+ Total Java Memory: 968 MB
+ Free Java Memory: 62 MB
+ * PISP count is roughly the number of runs, but doesn't included redundant runs on the same problem instance & seed
+18:16:21.102 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - 
+=======================================================================================
+SMAC has finished. Reason: wall-clock time limit (379360.116 s) has been reached.   
+Total number of runs performed: 734, total configurations tried: 293.
+Total CPU time used: 23003590 s, total wallclock time used: 379360 s.
+SMAC's final incumbent: config 19 (internal ID: 0x636C8), with estimated penalized average runtime (PAR10): 2033.4932476052809, based on 156 run(s) on 156 training instance(s).
+Sample call for this final incumbent:
+cd /proj/SMACK/smac/example_scenarios/loop_rs; ../wrapper.py /proj/SMACK/sv-benchmarks/c/loop-new/gauss_sum_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'True' -/bopt:z3opt:SMT.MBQI 'False' -/deepAsserts 'False' -/di 'False' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'False' -/trackAllVars 'True' -/useArrayTheoryCheck '0'
+=======================================================================================
+18:16:21.103 [main] INFO  c.u.c.b.smac.executors.SMACExecutor - 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Additional information about run 100 in:/proj/SMACK/smac/example_scenarios/loop_rs/smac-output/smack-scenario_loop_rs
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+18:16:21.127 [FileSharingRunHistory Logger ( outputID:100)] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - At shutdown: /proj/SMACK/smac/example_scenarios/loop_rs/smac-output/smack-scenario_loop_rs/live-rundata-100.json had 545 runs added to it
+18:16:21.127 [FileSharingRunHistory Logger ( outputID:100)] INFO  c.u.c.b.a.r.FileSharingRunHistoryDecorator - At shutdown: we retrieved atleast 64523 runs and added them to our current data set [live-rundata-1.json=>343, live-rundata-10.json=>44, live-rundata-101.json=>586, live-rundata-102.json=>495, live-rundata-103.json=>484, live-rundata-104.json=>251, live-rundata-105.json=>158, live-rundata-106.json=>417, live-rundata-107.json=>450, live-rundata-108.json=>540, live-rundata-109.json=>596, live-rundata-11.json=>583, live-rundata-110.json=>419, live-rundata-111.json=>154, live-rundata-112.json=>556, live-rundata-113.json=>402, live-rundata-114.json=>176, live-rundata-115.json=>524, live-rundata-116.json=>29, live-rundata-117.json=>315, live-rundata-118.json=>549, live-rundata-119.json=>474, live-rundata-12.json=>560, live-rundata-120.json=>272, live-rundata-121.json=>231, live-rundata-122.json=>411, live-rundata-123.json=>477, live-rundata-124.json=>566, live-rundata-125.json=>561, live-rundata-126.json=>660, live-rundata-127.json=>527, live-rundata-128.json=>541, live-rundata-129.json=>474, live-rundata-13.json=>460, live-rundata-130.json=>524, live-rundata-131.json=>676, live-rundata-132.json=>312, live-rundata-133.json=>96, live-rundata-134.json=>587, live-rundata-135.json=>383, live-rundata-136.json=>76, live-rundata-137.json=>520, live-rundata-138.json=>178, live-rundata-139.json=>255, live-rundata-14.json=>517, live-rundata-140.json=>448, live-rundata-141.json=>474, live-rundata-142.json=>249, live-rundata-143.json=>344, live-rundata-144.json=>45, live-rundata-145.json=>541, live-rundata-146.json=>325, live-rundata-147.json=>354, live-rundata-148.json=>390, live-rundata-149.json=>58, live-rundata-15.json=>501, live-rundata-150.json=>509, live-rundata-151.json=>614, live-rundata-152.json=>554, live-rundata-153.json=>490, live-rundata-154.json=>558, live-rundata-155.json=>505, live-rundata-156.json=>280, live-rundata-157.json=>528, live-rundata-158.json=>227, live-rundata-159.json=>607, live-rundata-16.json=>85, live-rundata-160.json=>153, live-rundata-17.json=>191, live-rundata-18.json=>473, live-rundata-19.json=>572, live-rundata-2.json=>596, live-rundata-20.json=>206, live-rundata-21.json=>557, live-rundata-22.json=>461, live-rundata-23.json=>407, live-rundata-24.json=>299, live-rundata-25.json=>587, live-rundata-26.json=>516, live-rundata-27.json=>277, live-rundata-28.json=>580, live-rundata-29.json=>508, live-rundata-3.json=>55, live-rundata-30.json=>388, live-rundata-31.json=>407, live-rundata-32.json=>536, live-rundata-33.json=>414, live-rundata-34.json=>69, live-rundata-35.json=>374, live-rundata-36.json=>19, live-rundata-37.json=>537, live-rundata-38.json=>71, live-rundata-39.json=>288, live-rundata-4.json=>491, live-rundata-40.json=>492, live-rundata-41.json=>67, live-rundata-42.json=>41, live-rundata-43.json=>536, live-rundata-44.json=>495, live-rundata-45.json=>293, live-rundata-46.json=>568, live-rundata-47.json=>628, live-rundata-48.json=>306, live-rundata-49.json=>472, live-rundata-5.json=>557, live-rundata-50.json=>509, live-rundata-51.json=>510, live-rundata-52.json=>495, live-rundata-53.json=>515, live-rundata-54.json=>241, live-rundata-55.json=>183, live-rundata-56.json=>25, live-rundata-57.json=>459, live-rundata-58.json=>541, live-rundata-59.json=>575, live-rundata-6.json=>431, live-rundata-60.json=>195, live-rundata-61.json=>555, live-rundata-62.json=>544, live-rundata-63.json=>599, live-rundata-64.json=>482, live-rundata-65.json=>480, live-rundata-66.json=>596, live-rundata-67.json=>507, live-rundata-68.json=>419, live-rundata-69.json=>570, live-rundata-7.json=>165, live-rundata-70.json=>514, live-rundata-71.json=>532, live-rundata-72.json=>503, live-rundata-73.json=>513, live-rundata-74.json=>256, live-rundata-75.json=>476, live-rundata-76.json=>575, live-rundata-77.json=>60, live-rundata-78.json=>47, live-rundata-79.json=>498, live-rundata-8.json=>453, live-rundata-80.json=>252, live-rundata-81.json=>482, live-rundata-82.json=>502, live-rundata-83.json=>567, live-rundata-84.json=>552, live-rundata-85.json=>449, live-rundata-86.json=>55, live-rundata-87.json=>466, live-rundata-88.json=>313, live-rundata-89.json=>553, live-rundata-9.json=>511, live-rundata-90.json=>255, live-rundata-91.json=>427, live-rundata-92.json=>475, live-rundata-93.json=>484, live-rundata-94.json=>482, live-rundata-95.json=>531, live-rundata-96.json=>530, live-rundata-97.json=>380, live-rundata-98.json=>523, live-rundata-99.json=>129] which now has 63544 runs (545 local)

@@ -1,0 +1,18 @@
+08:49:17.563 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The following algorithm call failed: cd "/proj/SMACK/smac/example_scenarios/loop_rs" ;  ../wrapper.py /proj/SMACK/sv-benchmarks/c/loops/sum01_true-unreach-call_true-termination.i 0 1000.0 2147483647 -1 -/bopt:boolControlVC 'False' -/bopt:z3opt:SMT.MBQI 'True' -/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS '1000' -/deepAsserts 'False' -/di 'True' -/doNotUseLabels 'False' -/noCallTreeReuse 'False' -/noInitPruning 'False' -/nonUniformUnfolding 'False' -/staticInlining 'True' -/trackAllVars 'True' -/useArrayTheoryCheck '1'  
+08:49:17.564 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - The last 1 lines of output we saw were:
+08:49:17.565 [CLI TAE (Master Thread - #0)] ERROR c.u.c.b.a.t.b.c.CommandLineAlgorithmRun - > Result for SMAC: CRASHED, 90000, 0, 0, -1
+17:58:49.638 [CLI TAE Callback Threads (3-21)] ERROR c.u.c.b.a.t.d.s.SATConsistencyTargetAlgorithmEvaluator - SAT/UNSAT discrepancy detected on problem instance: Instance(82):/proj/SMACK/sv-benchmarks/c/loop-acceleration/array_true-unreach-call2_true-termination.i. Previous value: SAT, currentValue: UNSAT
+17:58:49.664 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - Message: RunResult dispatch detected inconsistence with previous result SAT currentResult: UNSAT run<Instance:82, Seed:-1, Config:0x26249, Kappa:1000.0, Execution Config: 0x0001> ==> <UNSAT, 9000.0, 0.0, 0.0, -1> W:(66.389)
+17:58:49.669 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - A serious problem occured during target algorithm execution and we are aborting execution 
+ca.ubc.cs.beta.aeatk.targetalgorithmevaluator.exceptions.TargetAlgorithmAbortException: RunResult dispatch detected inconsistence with previous result SAT currentResult: UNSAT run<Instance:82, Seed:-1, Config:0x26249, Kappa:1000.0, Execution Config: 0x0001> ==> <UNSAT, 9000.0, 0.0, 0.0, -1> W:(66.389)
+	at ca.ubc.cs.beta.aeatk.targetalgorithmevaluator.decorators.safety.SATConsistencyTargetAlgorithmEvaluator.processRun(SATConsistencyTargetAlgorithmEvaluator.java:54) ~[aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.targetalgorithmevaluator.decorators.AbstractForEachRunTargetAlgorithmEvaluatorDecorator.processRuns(AbstractForEachRunTargetAlgorithmEvaluatorDecorator.java:88) ~[aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.targetalgorithmevaluator.decorators.AbstractForEachRunTargetAlgorithmEvaluatorDecorator$1.onSuccess(AbstractForEachRunTargetAlgorithmEvaluatorDecorator.java:47) ~[aeatk.jar:na]
+	at ca.ubc.cs.beta.aeatk.targetalgorithmevaluator.base.cli.CommandLineTargetAlgorithmEvaluator$1$1.run(CommandLineTargetAlgorithmEvaluator.java:164) ~[aeatk.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_162]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_162]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_162]
+17:58:49.670 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - We tried to call the target algorithm wrapper, but this call failed.
+17:58:49.670 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - The problem is (most likely) somewhere in the wrapper or with the arguments to SMAC.
+17:58:49.670 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - The easiest way to debug this problem is to manually execute the call we tried and see why it did not return the correct result
+17:58:49.671 [main] ERROR c.u.c.b.smac.executors.SMACExecutor - The required output of the wrapper is something like "Result for ParamILS: x,x,x,x,x".);
