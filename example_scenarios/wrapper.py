@@ -54,26 +54,13 @@ def generatingCMD(cmd, params, configMap, instance):
 		else:
 			if params[i] == '-/bopt:/monomorphize' or params[i] == '-/bopt:/z3types' or params[i] == '-/bopt:boolControlVC':
 				if params[i+1] == 'True': configMap['-verifier-options'] += '+' + params[i][1:]
+			if params[i] == '-/bopt:liveVariableAnalysis' or params[i] == '-/bopt:removeEmptyBlocks' or params[i] == '-/bopt:coalesceBlocks' or params[i] == '-/bopt:vc' or params[i] == '-/bopt:subsumption' or params[i] == '-/bopt:typeEncoding' or params[i] == '-/bopt:z3lets':
+                configMap['-verifier-options'] += '+' + (params[i][1:] + ':' + params[i+1])
+			
 			else:
 				configMap['-verifier-options'] += '+' + (params[i][1:] + '=' + params[i+1])
 
-		'''
-		if params[i] == '-/useArrayTheoryCheck':
-			if params[i+1] == '1': configMap['-verifier-options'] += '+'+'/useArrayTheory';
-			elif params[i+1] == '2': configMap['-verifier-options'] += '+'+'/noArrayTheory';
-		elif params[i] == '-/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS':
-			configMap['-verifier-options'] += '+'+'/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS=' + params[i+1]
-		elif params[i] == '-/bopt:z3opt:SMT.RELEVANCY':
-			configMap['-verifier-options'] += '+'+'/bopt:z3opt:SMT.RELEVANCY=' + params[i+1]
-		elif params[i] == '-/bopt:z3opt:SMT.MBQI':
-			if params[i+1] == 'True': configMap['-verifier-options'] += '+'+'/bopt:z3opt:SMT.MBQI=true';
-			else: configMap['-verifier-options'] += '+'+'/bopt:z3opt:SMT.MBQI=false';
-		elif params[i] in vo:
-			if params[i+1] == 'True': configMap['-verifier-options'] += '+'+params[i][1:];
-		else:
-			configMap[params[i]] = params[i+1]
-		'''
-
+		
 	tmp_cmd = []
 	for name, value in configMap.items():
 		if name == '-unroll': tmp_cmd += ['-'+name,value];
