@@ -6,24 +6,25 @@ Created on Wed Jul 11 14:16:03 2018
 @author: backupldv
 """
 
-#import sys,
+import sys
 import glob2
 import numpy as np
 
 #collect best configurations for a given benchmark
 
 def collectBestIncumbents():
-    g = open(pathname+benchmark+'BestIncumbents.csv','w')
+    g = open(pathname+benchmark+'/'+'BestIncumbents.csv','w')
     for i in range(len(files)):
         with open(files[i],'r') as f: tmp = f.readlines();
         tmp = [x.strip() for x in tmp]
-        g.write(tmp[-1]+'\n')
+        g.write(tmp[-1].replace(' ', '')+'\n')
     g.close()
 
 
 if __name__ == "__main__":    
     pathname = '/proj/SMACK/smac/example_scenarios/'
-    benchmark = str(sys.argv[1])
+    #benchmark = str(sys.argv[1])
+    benchmark = 'arrays_rs'
     path = pathname + benchmark + '/smac-output/**'
     files = glob2.glob(path + '/traj-run*.txt')    
     collectBestIncumbents()
@@ -33,13 +34,13 @@ if __name__ == "__main__":
     dataset = pd.read_csv(pathname+benchmark+'BestIncumbents.csv', header = None)
     
     #slicing the junk from SMAC output
-    dataset = dataset.iloc[:,6:];
+    dataset = dataset.iloc[:,5:];
     
     #Assigning appropriate column names
-    dataset.columns = ['/bopt:/coalesceBlocks','/bopt:/liveVariableAnalysis',
-                       '/bopt:/monomorphize', '/bopt:/removeEmptyBlocks',
-                       '/bopt:/subsumption','/bopt:/typeEncoding', '/bopt:/vc',
-                       '/bopt:/z3lets','/bopt:/z3types', '/bopt:boolControlVC',
+    dataset.columns = ['/bopt:boolControlVC','/bopt:coalesceBlocks','/bopt:liveVariableAnalysis',
+                       '/bopt:monomorphize', '/bopt:removeEmptyBlocks',
+                       '/bopt:subsumption','/bopt:typeEncoding', '/bopt:vc',
+                       '/bopt:z3lets',
                        '/bopt:z3opt:NNF.SK_HACK', '/bopt:z3opt:SMT.ARITH.RANDOM_INITIAL_VALUE',
                        '/bopt:z3opt:SMT.ARRAY.EXTENSIONAL','/bopt:z3opt:SMT.ARRAY.WEAK',
                        '/bopt:z3opt:SMT.BV.REFLECT','/bopt:z3opt:SMT.CASE_SPLIT',
@@ -47,6 +48,7 @@ if __name__ == "__main__":
                        '/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS','/bopt:z3opt:SMT.PHASE_SELECTION',
                        '/bopt:z3opt:SMT.QI.EAGER_THRESHOLD','/bopt:z3opt:SMT.RELEVANCY',
                        '/bopt:z3opt:SMT.RESTART_FACTOR','/bopt:z3opt:SMT.RESTART_STRATEGY',
+                       '/bopt:/z3types',
                        '/deepAsserts','/di','/doNotUseLabels','/noCallTreeReuse',
                        '/noInitPruning','/nonUniformUnfolding','/staticInlining',
                        ',/trackAllVars','/useArrayTheoryCheck']
@@ -67,7 +69,7 @@ if __name__ == "__main__":
             
     
     #formatting the best configuration to search the best match in the original dataset
-    search_str = search_str.replace(' ','')
+    #search_str = search_str.replace(' ','')
     search_str = search_str.replace('&',' ')
     search_str_list = ''.join(search_str.replace('=',' '))
     search_str_list = search_str_list.strip().split(' ')
@@ -75,12 +77,12 @@ if __name__ == "__main__":
     
     
     #create sparse matrix
-    j = 1
+    j = 0
     #replace the matching values by 1 in appropriate columns
-    dataset[search_str_list[0]] = dataset[search_str_list[0]].map({'  '+search_str[0]:int(1)})
-    for i in range(2,len(search_str_list),2):
+    #dataset[search_str_list[0]] = dataset[search_str_list[0]].map({'  '+search_str[0]:int(1)})
+    for i in range(0,len(search_str_list),2):
         t = search_str_list[i]
-        dataset[t] = dataset[t].map({' '+search_str[j]:int(1)})
+        dataset[t] = dataset[t].map({search_str[j]:int(1)})
         j+=1    
     
     #replace all remaining values by Zero
