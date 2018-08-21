@@ -24,14 +24,14 @@ def collectBestIncumbents():
 if __name__ == "__main__":    
     pathname = '/proj/SMACK/smac/example_scenarios/'
     #benchmark = str(sys.argv[1])
-    benchmark = 'arrays_rs'
+    benchmark = 'plines_rs'
     path = pathname + benchmark + '/smac-output/**'
     files = glob2.glob(path + '/traj-run*.txt')    
     collectBestIncumbents()
     
     import pandas as pd
     #change the name to BestIncumbents.csv
-    dataset = pd.read_csv(pathname+benchmark+'BestIncumbents.csv', header = None)
+    dataset = pd.read_csv(pathname+benchmark+'/BestIncumbents.csv', header = None)
     
     #slicing the junk from SMAC output
     dataset = dataset.iloc[:,5:];

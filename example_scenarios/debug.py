@@ -22,7 +22,7 @@ default = [
 	'-x=svcomp',
 	'--verifier=svcomp',
 	'--clang-options=-m64',
-	'/proj/SMACK/sv-benchmarks/c/ntdrivers-simplified/floppy_simpl3_false-unreach-call_true-valid-memsafety_true-termination.cil.c',
+	'/proj/SMACK/sv-benchmarks/c/product-lines/elevator_spec14_product24_false-unreach-call_true-termination.cil.c',
 	'--verifier-options',
 	]
 
