@@ -55,7 +55,7 @@ def generatingCMD(cmd, params, configMap, instance):
 			if params[i] == '-/bopt:/monomorphize' or params[i] == '-/bopt:/z3types' or params[i] == '-/bopt:boolControlVC':
 				if params[i+1] == 'True': configMap['-verifier-options'] += '+' + params[i][1:]
 			if params[i] == '-/bopt:liveVariableAnalysis' or params[i] == '-/bopt:removeEmptyBlocks' or params[i] == '-/bopt:coalesceBlocks' or params[i] == '-/bopt:vc' or params[i] == '-/bopt:subsumption' or params[i] == '-/bopt:typeEncoding' or params[i] == '-/bopt:z3lets':
-                configMap['-verifier-options'] += '+' + (params[i][1:] + ':' + params[i+1])
+		                configMap['-verifier-options'] += '+' + (params[i][1:] + ':' + params[i+1])
 			
 			else:
 				configMap['-verifier-options'] += '+' + (params[i][1:] + '=' + params[i+1])

@@ -16,44 +16,44 @@ from subprocess import Popen, PIPE, STDOUT, check_output, CalledProcessError
 ##print parameters[i]
 #print err
 
-
 default = [
 	'/mnt/local/smack-project/smack/bin/smack',
 	'-x=svcomp',
 	'--verifier=svcomp',
 	'--clang-options=-m64',
-	'/proj/SMACK/sv-benchmarks/c/product-lines/elevator_spec14_product24_false-unreach-call_true-termination.cil.c',
+	'/proj/SMACK/sv-benchmarks/c/ldv-linux-3.14/linux-3.14__complex_emg__linux-drivers-clk1__drivers-net-wireless-b43legacy-b43legacy_true-unreach-call.cil.c',
 	'--verifier-options',
 	]
 
 parameters = [
-	'/bopt:coalesceBlocks:0',
-	'/bopt:liveVariableAnalysis:0',
-	'/bopt:monomorphize',
+	'/bopt:coalesceBlocks:1',
+	'/bopt:liveVariableAnalysis:1',
+#	'/bopt:monomorphize',
 	'/bopt:removeEmptyBlocks:0',
 	'/bopt:subsumption:0',
 	'/bopt:typeEncoding:p',
-	'/bopt:vc:n',
-	'/bopt:z3lets:0',
-	'/bopt:z3types',
-	'/bopt:z3opt:NNF.SK_HACK=true',
-	'/bopt:z3opt:SMT.ARITH.RANDOM_INITIAL_VALUE=true',
+	'/bopt:vc:d',
+	'/bopt:z3lets:3',
+#	'/bopt:z3types',
+	'/bopt:z3opt:NNF.SK_HACK=false',
+	'/bopt:z3opt:SMT.ARITH.RANDOM_INITIAL_VALUE=false',
 	'/bopt:z3opt:SMT.ARRAY.EXTENSIONAL=false',
 	'/bopt:z3opt:SMT.ARRAY.WEAK=true',
-	'/bopt:z3opt:SMT.BV.REFLECT=true',
-	'/bopt:z3opt:SMT.CASE_SPLIT=3',
+	'/bopt:z3opt:SMT.BV.REFLECT=false',
+	'/bopt:z3opt:SMT.CASE_SPLIT=5',
 	'/bopt:z3opt:SMT.DELAY_UNITS=true',
-	'/bopt:z3opt:SMT.MBQI=true',
-	'/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS=1000',
-	'/bopt:z3opt:SMT.PHASE_SELECTION=0',
-	'/bopt:z3opt:SMT.QI.EAGER_THRESHOLD=100',
-	'/bopt:z3opt:SMT.RELEVANCY=2',
-	'/bopt:z3opt:SMT.RESTART_FACTOR=1.5',
-	'/bopt:z3opt:SMT.RESTART_STRATEGY=0',
-	'/di',
-	'/staticInlining',
+	'/bopt:z3opt:SMT.MBQI=false',
+#	'/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS=1000',
+	'/bopt:z3opt:SMT.PHASE_SELECTION=4',
+	'/bopt:z3opt:SMT.QI.EAGER_THRESHOLD=438',
+	'/bopt:z3opt:SMT.RELEVANCY=0',
+	'/bopt:z3opt:SMT.RESTART_FACTOR=3.78',
+	'/bopt:z3opt:SMT.RESTART_STRATEGY=3',
+#	'/di',
+#	'/staticInlining',
 	'/trackAllVars',
-	'/useArrayTheory',
+#	'/useArrayTheory',
+	'/noInitPruning', '/nonUniformUnfolding', '/noArrayTheory'
 	]
 
 def run_params(params):
