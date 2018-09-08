@@ -21,20 +21,20 @@ default = [
 	'-x=svcomp',
 	'--verifier=svcomp',
 	'--clang-options=-m64',
-	'/proj/SMACK/sv-benchmarks/c/ldv-linux-3.14/linux-3.14__complex_emg__linux-drivers-clk1__drivers-net-wireless-b43legacy-b43legacy_true-unreach-call.cil.c',
+	'/proj/SMACK/sv-benchmarks/c/array-examples/standard_init8_true-unreach-call_ground.i',
 	'--verifier-options',
 	]
 
 parameters = [
 	'/bopt:coalesceBlocks:1',
 	'/bopt:liveVariableAnalysis:1',
-#	'/bopt:monomorphize',
+	'/bopt:monomorphize',
 	'/bopt:removeEmptyBlocks:0',
 	'/bopt:subsumption:0',
 	'/bopt:typeEncoding:p',
 	'/bopt:vc:d',
 	'/bopt:z3lets:3',
-#	'/bopt:z3types',
+	'/bopt:z3types',
 	'/bopt:z3opt:NNF.SK_HACK=false',
 	'/bopt:z3opt:SMT.ARITH.RANDOM_INITIAL_VALUE=false',
 	'/bopt:z3opt:SMT.ARRAY.EXTENSIONAL=false',
@@ -43,22 +43,23 @@ parameters = [
 	'/bopt:z3opt:SMT.CASE_SPLIT=5',
 	'/bopt:z3opt:SMT.DELAY_UNITS=true',
 	'/bopt:z3opt:SMT.MBQI=false',
-#	'/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS=1000',
+	'/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS=1000',
 	'/bopt:z3opt:SMT.PHASE_SELECTION=4',
 	'/bopt:z3opt:SMT.QI.EAGER_THRESHOLD=438',
 	'/bopt:z3opt:SMT.RELEVANCY=0',
 	'/bopt:z3opt:SMT.RESTART_FACTOR=3.78',
 	'/bopt:z3opt:SMT.RESTART_STRATEGY=3',
-#	'/di',
+	'/di',
 #	'/staticInlining',
 	'/trackAllVars',
-#	'/useArrayTheory',
+	'/useArrayTheory',
 	'/noInitPruning', '/nonUniformUnfolding', '/noArrayTheory'
 	]
 
 def run_params(params):
 	verifopts = ' '.join(params)
 	cmd = default[:-1] + [default[-1] + '=' + verifopts]
+	print cmd
 	io = Popen(cmd, stdout = PIPE, stderr = PIPE)
 	out,err = io.communicate()
 	print '\n'.join(err.splitlines()[:6])

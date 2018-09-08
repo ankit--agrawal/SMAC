@@ -52,9 +52,9 @@ def generatingCMD(cmd, params, configMap, instance):
 			elif params[i+1] == 'True': configMap['-verifier-options'] += '+' + params[i][1:]
 
 		else:
-			if params[i] == '-/bopt:/monomorphize' or params[i] == '-/bopt:/z3types' or params[i] == '-/bopt:boolControlVC':
+			if params[i] == '-/bopt:monomorphize' or params[i] == '-/bopt:z3types' or params[i] == '-/bopt:boolControlVC':
 				if params[i+1] == 'True': configMap['-verifier-options'] += '+' + params[i][1:]
-			if params[i] == '-/bopt:liveVariableAnalysis' or params[i] == '-/bopt:removeEmptyBlocks' or params[i] == '-/bopt:coalesceBlocks' or params[i] == '-/bopt:vc' or params[i] == '-/bopt:subsumption' or params[i] == '-/bopt:typeEncoding' or params[i] == '-/bopt:z3lets':
+			elif params[i] == '-/bopt:liveVariableAnalysis' or params[i] == '-/bopt:removeEmptyBlocks' or params[i] == '-/bopt:coalesceBlocks' or params[i] == '-/bopt:vc' or params[i] == '-/bopt:subsumption' or params[i] == '-/bopt:typeEncoding' or params[i] == '-/bopt:z3lets':
 		                configMap['-verifier-options'] += '+' + (params[i][1:] + ':' + params[i+1])
 			
 			else:
@@ -67,7 +67,8 @@ def generatingCMD(cmd, params, configMap, instance):
 		elif name == '-bit-precise' and value == 'True': tmp_cmd += ['-'+name,value];
 
 		elif name == '-verifier-options' and len(value) > 0:
-				if '+' in value: tmp_cmd += ['-'+name,value.replace('+',' ')[1:]];
+				#if '+' in value: tmp_cmd += ['-'+name,value.replace('+',' ')[1:]];
+				if '+' in value: tmp_cmd += ['-'+name + '=' + value.replace('+',' ')[1:]];
 
 	cmd += tmp_cmd;
 
