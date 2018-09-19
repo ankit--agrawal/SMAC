@@ -3,10 +3,11 @@
 
 import sys, os
 
-n = input("Enter # of emulab nodes: ") #number of emulab nodes
-k = input("Enter # of threads: ")
 benchmark = str(sys.argv[1]) #type of benchmark files
+n = int(input("Enter # of emulab nodes: ")) #number of emulab nodes
+k = int(input("Enter # of threads: "))
 
+#print benchmark, n ,k
 tmp = [i for i in range(1,(n+1)*k,k)]
 
 os.system('mkdir -p ' + benchmark)

@@ -23,8 +23,8 @@ def collectBestIncumbents():
 
 if __name__ == "__main__":    
     pathname = '/proj/SMACK/smac/example_scenarios/'
-    #benchmark = str(sys.argv[1])
-    benchmark = 'plines_rs'
+    benchmark = str(sys.argv[1])
+    #benchmark = 'cf_rs'
     path = pathname + benchmark + '/smac-output/**'
     files = glob2.glob(path + '/traj-run*.txt')    
     collectBestIncumbents()
@@ -51,7 +51,7 @@ if __name__ == "__main__":
                        '/bopt:/z3types',
                        '/deepAsserts','/di','/doNotUseLabels','/noCallTreeReuse',
                        '/noInitPruning','/nonUniformUnfolding','/staticInlining',
-                       ',/trackAllVars','/useArrayTheoryCheck']
+                       '/trackAllVars','/useArrayTheoryCheck']
 
     (m,n) = dataset.shape
     dataset_copy = dataset.iloc[:,0:n]
@@ -64,8 +64,10 @@ if __name__ == "__main__":
         tmp = dataset[dataset.columns[i]].value_counts()
         mod = pd.DataFrame({'flags':tmp.index, 'count':tmp.values}) 
         mod = mod.nlargest(2,'count') #pick the 2 largest values
-        if abs(mod.iloc[0,1] - mod.iloc[1,1]) > 15: #difference of at least 15
-            search_str = search_str + mod.iloc[0,0] + '&' #the best config (excluding don't cares)
+        p, q = mod.shape
+        if p > 1:
+            if abs(mod.iloc[0,1] - mod.iloc[1,1]) > 10: #difference of at least 15
+                search_str = search_str + mod.iloc[0,0] + '&' #the best config (excluding don't cares)
             
     
     #formatting the best configuration to search the best match in the original dataset
@@ -102,4 +104,5 @@ if __name__ == "__main__":
     Best = result.value.idxmax()
     
     #print the best configuration "Column name    value"
+    print("Best Config")
     print(dataset_copy.iloc[Best])
