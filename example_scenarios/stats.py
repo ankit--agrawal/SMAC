@@ -13,11 +13,14 @@ import numpy as np
 #collect best configurations for a given benchmark
 
 def collectBestIncumbents():
+    total = 0
     g = open(pathname+benchmark+'/'+'BestIncumbents.csv','w')
     for i in range(len(files)):
         with open(files[i],'r') as f: tmp = f.readlines();
         tmp = [x.strip() for x in tmp]
+        total = total + len(tmp)
         g.write(tmp[-1].replace(' ', '')+'\n')
+    print(total)
     g.close()
 
 
@@ -105,4 +108,10 @@ if __name__ == "__main__":
     
     #print the best configuration "Column name    value"
     print("Best Config")
-    print(dataset_copy.iloc[Best])
+    #print(type(dataset_copy.iloc[Best]))
+    finale = dataset_copy.iloc[Best].to_dict()
+    config = ""
+    for item in finale.values():    
+        config = config + item + " "
+
+    print(config)
