@@ -1,0 +1,14 @@
+digraph DAG {
+17 [ label = "ackermann" color=black shape=box];
+13 [ label = "ackermann" color=black shape=box];
+11 [ label = "ackermann" color=black shape=box];
+5 [ label = "ackermann" color=black shape=box];
+1 [ label = "main" color=black shape=box];
+0 [ label = "main_SeqInstr" color=black shape=box];
+0 -> 1 [ label = "-1"];
+1 -> 5 [ label = "13"];
+5 -> 11 [ label = "3"];
+11 -> 13 [ label = "3"];
+13 -> 17 [ label = "3"];
+13 -> 17 [ label = "2"];
+}
