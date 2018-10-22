@@ -26,8 +26,8 @@ def collectBestIncumbents():
 
 if __name__ == "__main__":    
     pathname = '/proj/SMACK/smac/example_scenarios/'
-    benchmark = str(sys.argv[1])
-    #benchmark = 'cf_rs'
+    #benchmark = str(sys.argv[1])
+    benchmark = 'seq_rs'
     path = pathname + benchmark + '/smac-output/**'
     files = glob2.glob(path + '/traj-run*.txt')    
     collectBestIncumbents()
@@ -51,7 +51,7 @@ if __name__ == "__main__":
                        '/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS','/bopt:z3opt:SMT.PHASE_SELECTION',
                        '/bopt:z3opt:SMT.QI.EAGER_THRESHOLD','/bopt:z3opt:SMT.RELEVANCY',
                        '/bopt:z3opt:SMT.RESTART_FACTOR','/bopt:z3opt:SMT.RESTART_STRATEGY',
-                       '/bopt:/z3types',
+                       '/bopt:z3types',
                        '/deepAsserts','/di','/doNotUseLabels','/noCallTreeReuse',
                        '/noInitPruning','/nonUniformUnfolding','/staticInlining',
                        '/trackAllVars','/useArrayTheoryCheck']
