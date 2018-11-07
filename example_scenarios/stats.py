@@ -12,7 +12,7 @@ import numpy as np
 
 #collect best configurations for a given benchmark
 
-def collectBestIncumbents():
+def collectBestIncumbents(files, pathname, benchmark):
     total = 0
     g = open(pathname+benchmark+'/'+'BestIncumbents.csv','w')
     for i in range(len(files)):
@@ -26,11 +26,11 @@ def collectBestIncumbents():
 
 if __name__ == "__main__":    
     pathname = '/proj/SMACK/smac/example_scenarios/'
-    #benchmark = str(sys.argv[1])
-    benchmark = 'seq_rs'
+    benchmark = str(sys.argv[1])
+    #benchmark = 'cf_rs'
     path = pathname + benchmark + '/smac-output/**'
     files = glob2.glob(path + '/traj-run*.txt')    
-    collectBestIncumbents()
+    collectBestIncumbents(files, pathname, benchmark)
     
     import pandas as pd
     #change the name to BestIncumbents.csv
@@ -114,4 +114,7 @@ if __name__ == "__main__":
     for item in finale.values():    
         config = config + item + " "
 
-    print(config)
+
+    smack_cmd = '/mnt/local/smack-project/smack/bin/smack ' + '-x=svcomp ' + '--verifier=svcomp ' + '--clang-options=-m64 ' + '--verifier-options ' + config
+
+    print(smack_cmd)

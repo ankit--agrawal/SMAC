@@ -1,0 +1,27 @@
+digraph DAG {
+0 [ label = "main_SeqInstr" color=black shape=box];
+1 [ label = "main" color=black shape=box];
+2 [ label = "$initialize" color=black shape=box];
+3 [ label = "__VERIFIER_nondet_char" color=black shape=box];
+4 [ label = "__VERIFIER_nondet_char" color=black shape=box];
+5 [ label = "gcd_test" color=black shape=box];
+6 [ label = "__VERIFIER_assert" color=black shape=box];
+7 [ label = "__SMACK_static_init" color=black shape=box];
+8 [ label = "__SMACK_init_func_memory_model" color=black shape=box];
+9 [ label = "__VERIFIER_assume" color=black shape=box];
+10 [ label = "__VERIFIER_assume" color=black shape=box];
+11 [ label = "gcd_test_loop_$bb10" color=black shape=box];
+12 [ label = "__VERIFIER_error" color=black shape=box];
+0 -> 1 [ label = "-1"];
+1 -> 2 [ label = "7"];
+1 -> 3 [ label = "9"];
+1 -> 4 [ label = "12"];
+1 -> 5 [ label = "15"];
+1 -> 6 [ label = "17"];
+2 -> 7 [ label = "23"];
+2 -> 8 [ label = "24"];
+3 -> 9 [ label = "22"];
+4 -> 10 [ label = "22"];
+5 -> 11 [ label = "-1"];
+6 -> 12 [ label = "1"];
+}
