@@ -22,10 +22,14 @@ def data_structure(result):
 		for column in columns:
 
 			if str(column.getAttribute('title')) == 'status':
-				if str(column.getAttribute('value')) == 'true' or str(column.getAttribute('value')) == 'false(reach)':
-					#print str(column.getAttribute('value'))
-
+				if str(column.getAttribute('value')) == 'false(reach)':
+					k.write(path + filename + '\n')
 					h.write(path + filename + '\n')
+
+				if str(column.getAttribute('value')) == 'true':
+					#print str(column.getAttribute('value'))
+					h.write(path + filename + '\n')
+
 				else:
 					e.write(path + filename + '\n')
 
@@ -40,13 +44,14 @@ h = open(benchmark+"/good"+benchmark+".txt","w")
 g = open(benchmark+"/all"+benchmark+".txt","w")
 e = open(benchmark+"/bad"+benchmark+".txt","w")
 f = open(benchmark+"/Test"+benchmark+".txt","w")
+k = open(benchmark+"/true_neg" + benchmark+".txt","w")
 
 # ---- creating tree root for .xml files
 for i in range(len(content)):
 	DOMTree_1 = xml.dom.minidom.parse(content[i])
 	result_1 = DOMTree_1.documentElement
 	data_structure(result_1)
-	h.close(); g.close(); e.close();
+	h.close(); g.close(); e.close(); k.close()
 
 g = open(benchmark+"/all"+benchmark+".txt",'r')
 test_content = g.readlines()

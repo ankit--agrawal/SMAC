@@ -42,16 +42,8 @@ if __name__ == "__main__":
     #Assigning appropriate column names
     dataset.columns = ['/bopt:boolControlVC','/bopt:coalesceBlocks','/bopt:liveVariableAnalysis',
                        '/bopt:monomorphize', '/bopt:removeEmptyBlocks',
-                       '/bopt:subsumption','/bopt:typeEncoding', '/bopt:vc',
-                       '/bopt:z3lets',
-                       '/bopt:z3opt:NNF.SK_HACK', '/bopt:z3opt:SMT.ARITH.RANDOM_INITIAL_VALUE',
-                       '/bopt:z3opt:SMT.ARRAY.EXTENSIONAL','/bopt:z3opt:SMT.ARRAY.WEAK',
-                       '/bopt:z3opt:SMT.BV.REFLECT','/bopt:z3opt:SMT.CASE_SPLIT',
-                       '/bopt:z3opt:SMT.DELAY_UNITS','/bopt:z3opt:SMT.MBQI',
-                       '/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS','/bopt:z3opt:SMT.PHASE_SELECTION',
-                       '/bopt:z3opt:SMT.QI.EAGER_THRESHOLD','/bopt:z3opt:SMT.RELEVANCY',
-                       '/bopt:z3opt:SMT.RESTART_FACTOR','/bopt:z3opt:SMT.RESTART_STRATEGY',
-                       '/bopt:z3types',
+                       '/bopt:subsumption','/bopt:typeEncoding', '/bopt:vc','/bopt:z3opt:SMT.MBQI',
+                       '/bopt:z3opt:SMT.MBQI.MAX_ITERATIONS',
                        '/deepAsserts','/di','/doNotUseLabels','/noCallTreeReuse',
                        '/noInitPruning','/nonUniformUnfolding','/staticInlining',
                        '/trackAllVars','/useArrayTheoryCheck']
